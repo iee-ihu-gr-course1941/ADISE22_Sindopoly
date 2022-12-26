@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+
+	$(document).ready(function(){ //on load//
+		var start=1;
+		function clicke(){
+			var results = document.getElementById("results");
+			results.innerHTML = "You came "+start+" times";
+			start=start+1;
+		}
+		$(b1).click(function(){
+			$(results).hide(300);
+		});
+		$(b2).click(function(){
+			$(results).show(300);
+		});
+		$(b2).mouseover(function(){
+			clicke();
+		});
+  		$(results).click(function(){//attaches an onclick listener on all divs that fires the function//
+    			$(results).innerText="oops";
+  		});
+	});
+
+	
+
+</script>
+</head>
+<body>
+<button id="b1"> Number 1 </button>
+<button id="b2"> Number 2 </button>
+<div id="results"> Results </div>
+</body>
+</html>
+
