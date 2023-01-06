@@ -1,4 +1,22 @@
 <?php
+    //SIDIRO CONNECT
+    $user='it175008';
+    $pass='#Mementomori199';
+    $host='localhost';
+    $db = 'sindopoly_db';
+
+
+    $mysqli = new mysqli($host, $user, $pass, $db,null,'/home/student/it/2017/it175008/mysql/run/mysql.sock');
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }else{
+        echo "Connection successful";
+        $result=mysqli_query($mysqli,"SELECT DATABASE()");//print default database
+        $row = mysqli_fetch_row($result);
+        printf("<br>Default database is %s", $row[0]);
+    }
+    //END OF SIDIRO CONNECT
+    /*
     //CONNECTION BLOCK--------------------------------------------------------------------------
     //mysqli_connect("127.0.0.1","it175008","PASSWORD","sindopoly",3333);//users
     $conn = new mysqli("127.0.0.1","it175008","#Mementomori199","sindopoly",3333);//users
@@ -12,6 +30,7 @@
         printf("<br>Default database is %s", $row[0],"<br>");
     }
     //CONNECTION BLOCK--------------------------------------------------------------------------
+    */
 
     $name=$_GET['name'];
     $pass=$_GET['pass'];

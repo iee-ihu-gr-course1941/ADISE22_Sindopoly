@@ -19,7 +19,7 @@
         $row = mysqli_fetch_row($result);
         printf("<br>Default database is %s", $row[0]);
     }
-
+    //END OF SIDIRO CONNECT
 
     /*
     //CONNECTION BLOCK--------------------------------------------------------------------------
