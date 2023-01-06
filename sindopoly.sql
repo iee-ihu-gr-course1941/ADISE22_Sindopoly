@@ -7,7 +7,7 @@
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8_general_ci */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -16,7 +16,7 @@
 
 
 -- Dumping database structure for sindopoly
-CREATE DATABASE IF NOT EXISTS `sindopoly` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci */;
+CREATE DATABASE IF NOT EXISTS `sindopoly` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8 */;
 USE `sindopoly`;
 
 -- Dumping structure for table sindopoly.player
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `player` (
   `name` varchar(255) DEFAULT NULL,
   `pass` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- Data exporting was unselected.
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `tile` (
   `id` int(11) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `price` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- Data exporting was unselected.
 
