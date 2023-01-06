@@ -5,7 +5,7 @@
     $db = 'sindopoly_db';
 
 
-    $user='it75008';
+    $user='it175008';
     $pass='';
 
 
