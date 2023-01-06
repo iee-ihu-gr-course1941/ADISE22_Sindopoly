@@ -23,7 +23,7 @@
     $pass=$_GET['pass'];
 
     $sql = "SELECT * FROM player ORDER BY id DESC LIMIT 1";
-    $sqlres=mysqli_query($conn,$sql);
+    $sqlres=mysqli_query($mysqli,$sql);
     $sqlarr=mysqli_fetch_array($sqlres);
     $result=$sqlarr["id"];
     
