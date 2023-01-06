@@ -6,7 +6,7 @@
     $db = 'sindopoly_db';
 
 
-    $user='root';
+    $user='it175008';
     $pass='';
     if(gethostname()=='users.iee.ihu.gr') {
         $mysqli = new mysqli($host, $user, $pass, $db,null,'/home/student/it/2018/it185193/mysql/run/mysql.sock');
