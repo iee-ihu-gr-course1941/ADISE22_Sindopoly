@@ -1,4 +1,28 @@
 <?php
+
+    
+    //KAREZOS CONNECT
+    $host='localhost';
+    $db = 'sindopoly_db';
+
+
+    $user='it175008';
+    $pass='#Mementomori199';
+
+
+    if(gethostname()=='users.iee.ihu.gr') {
+        $mysqli = new mysqli($host, $user, $pass, $db,null,'/home/student/it/2017/it175008/mysql/run/mysql.sock');
+    } else {
+            $mysqli = new mysqli($host, $user, $pass, $db);
+    }
+
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . 
+    $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+    //END OF KAREZOS CONNECT
+    
+    /*
     //SIDIRO CONNECT
     $user='it175008';
     $pass='';
@@ -16,6 +40,8 @@
         printf("<br>Default database is %s", $row[0]);
     }
     //END OF SIDIRO CONNECT
+    */
+
     /*
     //CONNECTION BLOCK--------------------------------------------------------------------------
     //mysqli_connect("127.0.0.1","it175008","PASSWORD","sindopoly",3333);//users
