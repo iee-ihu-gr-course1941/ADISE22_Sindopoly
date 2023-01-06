@@ -26,25 +26,17 @@
     }
 
     
-    $name="dimitris"
-    $pass="kopsidas";
+    
+    $name=$_GET['name'];
+    $pass=$_GET['pass'];
 
-    //FETCH PASSWORD THAT MATCHES THE NAME INSERTED
-    $sql = "SELECT pass FROM player WHERE NAME='$name'";
-    $sqlres=mysqli_query($conn,$sql);
-    $sqlarr=mysqli_fetch_array($sqlres);
-    $result=$sqlarr["pass"];
-    //CHECK IF FETCHED PASSWORD MATCHES THE PASSWORD INSERTED 
-    if($result==$pass){
-        echo "<br>Username and password are correct, welcome ".$name;
-    }else{
-        echo "<br>Wrong username and/or password.Try again";
-    }
+    $sql="INSERT INTO player(id,name,pass) VALUES (66,"pc","love");
+    
     
 
     $sql="SELECT * from player";
     $result=mysqli_query($mysqli,$sql);
     while($row = mysqli_fetch_array($result)) {
-        echo "id: " . $row["id"]. " Name: " . $row["NAME"]."<br>";
+        echo "<br>id: " . $row["id"]. " Name: " . $row["NAME"];
     }
 ?>
