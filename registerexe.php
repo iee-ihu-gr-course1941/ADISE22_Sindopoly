@@ -1,5 +1,24 @@
 <?php
 
+    //MASTER CONNECT
+    $host='localhost';
+    $db = 'sindopoly_db';
+    $user='it175008';
+    $pass='';
+    if(gethostname()=='users.iee.ihu.gr') {
+        $mysqli = new mysqli($host, $user, $pass, $db,null,'/home/student/it/2017/it175008/mysql/run/mysql.sock');
+    } else {
+        $mysqli = new mysqli($host, $user, $pass, $db);
+    }
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . 
+        $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }else{
+        echo ("Connected to Database<br>");
+    }
+    //MASTER CONNECT
+
+    /*
     //CONNECTION BLOCK--------------------------------------------------------------------------
     //mysqli_connect("127.0.0.1","it175008","PASSWORD","sindopoly",3333);//users
     $mysqli = new mysqli("127.0.0.1","it175008","#Mementomori199","sindopoly_db",3333);//users
@@ -13,7 +32,7 @@
         printf("<br>Default database is %s", $row[0],"<br>");
     }
     //CONNECTION BLOCK--------------------------------------------------------------------------
-   
+   */
     
     
     //FIND LAST ID
