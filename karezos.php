@@ -27,8 +27,8 @@
 
     
     
-    $name=$_GET['name'];
-    $pass=$_GET['pass'];
+    //$name=$_GET['name'];
+    //$pass=$_GET['pass'];
 
     $sql="INSERT INTO player(id,name,pass) VALUES (66,"pc","love");
     
