@@ -29,6 +29,7 @@
         <li><a href=\"dbconnection.php\">Goto DBConnection</a>.</li>
         <li><a href=\"Login.html\">Goto Login</a>.</li>
         </ul>";
+        echo "HELP";
         ?>
 
 
