@@ -6,7 +6,7 @@
 
 
     $user='it75008';
-    $pass='#Mementomori199';
+    $pass='';
 
 
     if(gethostname()=='users.iee.ihu.gr') {
