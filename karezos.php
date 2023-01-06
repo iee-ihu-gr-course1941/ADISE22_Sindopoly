@@ -25,4 +25,10 @@
         echo ("connected");
     }
 
+
+    $sql="SELECT * from player";
+    $result=mysqli_query($mysqli,$sql);
+    while($row = mysqli_fetch_array($result)) {
+        echo "id: " . $row["id"]. " Name: " . $row["NAME"]."<br>";
+    }
 ?>
