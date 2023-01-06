@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>AJAX</title>
+        <script>
+            xmlHttp = new XMLHttpRequest();
+            function getUsername() {
+                var username = document.getElementById("username").value;
+                if (username == null || username == "") {
+                    return;
+                }
+                var url = "getname.php?username=" + username;
+                xmlHttp.open("GET", url, true);
+                xmlHttp.onreadystatechange = setName;
+                xmlHttp.send(null);
+            }
+
+            function setName() {
+                if (xmlHttp.readyState == 4) {
+                    if (xmlHttp.status == 200) {
+                        var response = xmlHttp.responseText;
+                        var name = document.getElementById("name");
+                        name.innerHTML = "The name is " + response;
+                    } else {
+                        alert("Error");
+                    }
+                }
+            }
+            //END OF AJAX PRACTICE
+
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="username"
+            onchange="getUsername();">
+            <p id="name"></p>
+        </form>
+        <!--END OF AJAX PRACTICE-->
+
+    </body>
+</html>
