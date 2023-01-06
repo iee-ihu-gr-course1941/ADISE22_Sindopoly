@@ -82,7 +82,7 @@
        
         $result=mysqli_query($mysqli,$sql);
         while($row = mysqli_fetch_array($result)) {
-            echo "<br>".$row["name"]. " & " . $row["password"].".";
+            echo "<br>".$row["name"]. " & " . $row["pass"].".";
         }
 
 
