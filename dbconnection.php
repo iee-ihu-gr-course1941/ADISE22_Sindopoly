@@ -3,6 +3,20 @@
     //mysqli_connect("127.0.0.1","it175008","#Mementomori199","sindopoly",3306);//local
     //$conn = mysqli_connect("127.0.0.1","it175008","#Mementomori199","sindopoly",3306);//local
 
+    //SIDIRO CONNECT
+    $user='root';
+    $pass='000000';
+    $host='localhost';
+    $db = 'THE_DB';
+
+
+    $mysqli = new mysqli($host, $user, $pass, $db,null,'/home/staff/asidirop/mysql/run/mysql.sock');
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    } 
+
+
+    /*
     //CONNECTION BLOCK--------------------------------------------------------------------------
     $conn = new mysqli("127.0.0.1","it175008","#Mementomori199","sindopoly",3333);//users
     if (!$conn) {
@@ -14,7 +28,7 @@
         printf("<br>Default database is %s", $row[0]);
     }
     //CONNECTION BLOCK--------------------------------------------------------------------------
-
+    */
     /*
     $sql = "INSERT INTO player(id,NAME) VALUES (0,'$str')";
     $sql = 'UPDATE tile SET NAME="MPD" WHERE ID=0';
