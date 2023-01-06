@@ -30,13 +30,19 @@
     //$name=$_GET['name'];
     //$pass=$_GET['pass'];
 
-    $sql="INSERT INTO player(id,name,pass) VALUES (66,'pc','love')";
+    $sql="INSERT INTO player(id,name,pass) VALUES ('100','karezos','athanasios')";
+        if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
     
     
-
+    /*
     $sql="SELECT * from player";
     $result=mysqli_query($mysqli,$sql);
     while($row = mysqli_fetch_array($result)) {
         echo "<br>id: " . $row["id"]. " Name: " . $row["NAME"];
     }
+    */
 ?>
