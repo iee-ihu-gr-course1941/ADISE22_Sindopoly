@@ -59,22 +59,32 @@
 
     
     if($found==0){
-        echo "<br>User doesnt exist";
+        echo "<br>User doesnt exist<br>";
     }else{
-        echo "<br>User exists";
+        echo "<br>User exists<br>";
     }
     
     //IF NO IDENTICAL USER FOUND THEN CREATE NEW USER
     if($found==0){
         $sql="INSERT INTO player(id,name,pass) VALUES ('$id','$name','$pass')";
         if ($mysqli->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "<br>New record created successfully<br>";
       } else {
         echo "Error: " . $sql . "<br>" . $mysqli->error;
       }
     }elseif ($found==1){
-        echo "<br>User already registered in database, no new user created";
+        echo "<br>User already registered in database, no new user created<br>";
     }
 
-    
+    //FUCK ABOUT
+    echo "<p><h1><b>Shitposts so far</b></h1></p>";
+    $sql = "SELECT * FROM player";
+       
+        $result=mysqli_query($mysqli,$sql);
+        while($row = mysqli_fetch_array($result)) {
+            echo "<br>".$row["id"]. " " . $row["NAME"]."<br>";
+        }
+
+
+
 ?>

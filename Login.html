@@ -2,6 +2,7 @@
     <head>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script type="text/javascript">
+            /*
             function loadDoc(url) {//asynchronous
                 xmlhttp=new XMLHttpRequest();
                 xmlhttp.onreadystatechange=onComplete;//call onComplete when readyState changes
@@ -13,7 +14,7 @@
                     document.getElementById('test').innerHTML=xmlhttp.responseText;
                 }
             }
-            /*
+            
             function loadDoc(url) {//synchronous
                 xmlhttp=new XMLHttpRequest();
                 xmlhttp.open("GET",url,false);//initialize synchronous if false
@@ -24,6 +25,7 @@
         </script>
     </head>
         <body>
+            
             <p>LOGIN</p>
             <form action="loginexe.php" method="GET">
                 username: <input name="name">
@@ -41,8 +43,11 @@
             </form>
 
             
+            
+            <!--
             <div id="test">Click me for AJAX</div>
             <input type="submit" value="Click" onclick="loadDoc('test1.txt')"/>
-            
+            -->
+
         </body>
 </html>
