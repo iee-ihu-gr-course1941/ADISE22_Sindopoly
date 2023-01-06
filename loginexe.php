@@ -1,7 +1,7 @@
 <?php
     //SIDIRO CONNECT
     $user='it175008';
-    $pass='#Mementomori199';
+    $pass='';
     $host='localhost';
     $db = 'sindopoly_db';
 
