@@ -31,10 +31,10 @@
     //$pass=$_GET['pass'];
 
     $sql="INSERT INTO player(id,name,pass) VALUES ('100','karezos','athanasios')";
-        if ($conn->query($sql) === TRUE) {
+        if ($mysqli->query($sql) === TRUE) {
         echo "New record created successfully";
       } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $mysqli->error;
       }
     
     
