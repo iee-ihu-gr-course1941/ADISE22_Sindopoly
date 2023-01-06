@@ -22,15 +22,15 @@
         $mysqli->connect_errno . ") " . $mysqli->connect_error;
     }
     else {
-        echo ("connected");
+        echo ("Connected to Database<br>");
     }
 
     
     
-    //$name=$_GET['name'];
-    //$pass=$_GET['pass'];
+    $name=$_GET['name'];
+    $pass=$_GET['pass'];
 
-    $sql="INSERT INTO player(id,name,pass) VALUES (200,'karezos','athanasios')";
+    $sql="INSERT INTO player(id,name,pass) VALUES (200,'$name','$pass')";
         if ($mysqli->query($sql) === TRUE) {
         echo "New record created successfully";
       } else {
