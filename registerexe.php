@@ -1,6 +1,6 @@
 <?php
 
-
+    /*
     //KAREZOS CONNECT
     $host='localhost';
     $db = 'sindopoly_db';
@@ -21,9 +21,9 @@
     $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
     //END OF KAREZOS CONNECT
+    */
 
-
-    /*
+    
     //SIDIRO CONNECT
     $user='it175008';
     $pass='';
@@ -41,7 +41,7 @@
         printf("<br>Default database is %s", $row[0]);
     }
     //END OF SIDIRO CONNECT
-    */
+    
 
     /*
     //CONNECTION BLOCK--------------------------------------------------------------------------
