@@ -14,7 +14,27 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Dumping database structure for sindopoly
+CREATE DATABASE IF NOT EXISTS `sindopoly` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
+USE `sindopoly`;
+
+-- Dumping structure for table sindopoly.player
+CREATE TABLE IF NOT EXISTS `player` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `pass` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_bin COLLATE=utf8_bin;
+
 -- Data exporting was unselected.
+
+-- Dumping structure for table sindopoly.tile
+CREATE TABLE IF NOT EXISTS `tile` (
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_bin COLLATE=utf8_bin;
 
 -- Data exporting was unselected.
 
