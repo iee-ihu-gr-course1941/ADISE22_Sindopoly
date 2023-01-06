@@ -25,12 +25,12 @@
         echo ("connected");
     }
 
-    /*
+    
     $name="dimitris"
     $pass="kopsidas";
 
     //FETCH PASSWORD THAT MATCHES THE NAME INSERTED
-    $sql = "SELECT pass FROM player WHERE name='$name'";
+    $sql = "SELECT pass FROM player WHERE NAME='$name'";
     $sqlres=mysqli_query($conn,$sql);
     $sqlarr=mysqli_fetch_array($sqlres);
     $result=$sqlarr["pass"];
@@ -40,7 +40,7 @@
     }else{
         echo "<br>Wrong username and/or password.Try again";
     }
-    */
+    
 
     $sql="SELECT * from player";
     $result=mysqli_query($mysqli,$sql);
