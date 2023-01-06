@@ -2,7 +2,7 @@
 
     //CONNECTION BLOCK--------------------------------------------------------------------------
     //mysqli_connect("127.0.0.1","it175008","PASSWORD","sindopoly",3333);//users
-    $conn = new mysqli("127.0.0.1","it175008","PASSWORD","sindopoly",3333);//users
+    $conn = new mysqli("127.0.0.1","it175008","#Mementomori199","sindopoly_db",3333);//users
     //$mysqli=new mysqli("127.0.0.1","it175008","PASSWORD","sindopoly",3333);
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
@@ -13,7 +13,7 @@
         printf("<br>Default database is %s", $row[0],"<br>");
     }
     //CONNECTION BLOCK--------------------------------------------------------------------------
-    */
+    
 
     $name=$_GET['name'];
     $pass=$_GET['pass'];
