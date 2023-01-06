@@ -25,6 +25,7 @@
         echo ("connected");
     }
 
+    /*
     $name="dimitris"
     $pass="kopsidas";
 
@@ -39,6 +40,7 @@
     }else{
         echo "<br>Wrong username and/or password.Try again";
     }
+    */
 
     $sql="SELECT * from player";
     $result=mysqli_query($mysqli,$sql);
