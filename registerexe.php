@@ -14,7 +14,7 @@
         echo "Failed to connect to MySQL: (" . 
         $mysqli->connect_errno . ") " . $mysqli->connect_error;
     }else{
-        echo ("Connected to Database<br>");
+        echo ("Connected to Database of Sindopoly<br>");
     }
     //MASTER CONNECT
 
