@@ -19,7 +19,7 @@
     /*
     //CONNECTION BLOCK--------------------------------------------------------------------------
     //mysqli_connect("127.0.0.1","it175008","PASSWORD","sindopoly",3333);//users
-    $conn = new mysqli("127.0.0.1","it175008","#Mementomori199","sindopoly",3333);//users
+    $conn = new mysqli("127.0.0.1","it175008","PASSWORD","sindopoly",3333);//users
     //$mysqli=new mysqli("127.0.0.1","it175008","PASSWORD","sindopoly",3333);
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
