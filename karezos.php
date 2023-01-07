@@ -16,7 +16,7 @@
             type: 'POST',
             url: '/login.php',
             data: { action: 'cry'},
-            loginf: function (response) {
+            success: function (response) {
               $('#response-container').html(response);
             },
             error: function (error) {
