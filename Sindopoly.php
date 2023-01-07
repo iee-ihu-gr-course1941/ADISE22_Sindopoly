@@ -16,8 +16,12 @@
   }
   //MASTER CONNECT
 
-  $name=$_GET['name'];
-  $name=$_GET['name'];
+  $type=$_GET['type'];
+  if($type=='type'){
+    echo "<br>Create game<br>";
+  }else if($type=='login'){
+    echo "<br>Join game<br>"
+  }
 
   //Get position of players
   $sql = "SELECT pos FROM table_name WHERE name";
