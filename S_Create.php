@@ -15,7 +15,7 @@
     }
 
     if($found==0){//IF NOT IDENTICAL GAME WAS FOUND
-        $sql="INSERT INTO game(id,name,pass) 
+        $sql="INSERT INTO game(gamename,p1name,p2name) 
         VALUES ('$gamename','$createplayer1name','$createplayer2name')";
         if ($mysqli->query($sql) === TRUE) {
             echo "<br>New game created successfully<br>";
