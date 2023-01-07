@@ -19,7 +19,7 @@
   $type=$_GET['type'];
   if($type=="create"){
     echo "<br>Create game<br>";
-  }else if($type=="login"){
+  }else if($type=="join"){
     echo "<br>Join game<br>";
   }
 
