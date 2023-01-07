@@ -10,7 +10,7 @@
     $createplayer2name=$_GET['createplayer2name'];
     require_once "S_Create.php";
     echo "called S_Create.php";
-      
+
   }else if($type=="join"){
     echo "<br>Join game<br>";
     $gamename=$_GET['gamename'];
@@ -27,7 +27,7 @@
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
 
-  echo rand(1,6);
+  echo "<br>".rand(1,6);
   $result=mysqli_query($mysqli,$sql);
 
   while($row = mysqli_fetch_array($result)) {
