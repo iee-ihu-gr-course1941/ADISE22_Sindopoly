@@ -13,7 +13,7 @@
 
   $.ajax({
     type: 'POST',
-    url: '/S_Join.php',
+    url: 'S_Join.php',
     data: {
       username: username,
       pass: pass
