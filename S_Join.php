@@ -24,13 +24,13 @@
     }
 
     if($found==1){
-        echo "Welcome ".$joinname;
+        echo "Welcome Player 1".$joinname;
         $youare=1;
     }else if($found==2){
-        echo "Welcome ".$joinname;
+        echo "Welcome Player 2".$joinname;
         $youare=2;
     }else{
-        echo "User not found";
+        echo "User not found in game nickname given.Try again";
     }
 
 ?>
