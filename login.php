@@ -2,4 +2,5 @@
 function cry(){
     echo "HELP";
 }
+echo "hello";
 ?>
