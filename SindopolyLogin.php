@@ -40,7 +40,7 @@
                     Player 1 name: <input name="player1name">
                     <br>
                     Player 2 name: <input name="player2name">
-                    
+                    <br>
                     <input type="submit" value="Start game!">
                 </form>
             </div>
