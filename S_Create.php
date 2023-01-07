@@ -9,7 +9,7 @@
     $sql="SELECT gamename FROM game";
     $result=mysqli_query($mysqli,$sql);
     while($row = mysqli_fetch_array($result)) {
-      if($gamename==$row["name"]){//COMPARE ALL NAME ROWS FROM DB WITH NAME GIVEN
+      if($gamename==$row["gamename"]){//COMPARE ALL NAME ROWS FROM DB WITH NAME GIVEN
           $found=1; 
       }
     }
