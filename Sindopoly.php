@@ -1,4 +1,5 @@
 <?php
+
   //MASTER CONNECT
   $host='localhost';
   $db = 'sindopoly_db';
@@ -15,27 +16,34 @@
       echo ("Connected to Database of Sindopoly<br>");
   }
   //MASTER CONNECT
+  
 
   $type=$_GET['type'];
   if($type=="create"){
     echo "<br>Create game<br>";
+    $gamename=$_GET['gamename'];
+    $createplayer1name=$_GET['createplayer2name'];
+    $createplayer1name=$_GET['createplayer2name'];
   }else if($type=="join"){
     echo "<br>Join game<br>";
+    $gamename=$_GET['gamename'];
+    $joinname=$_GET['joinname'];
+    echo $joinname;
   }
 
   //Get position of players
-  $sql = "SELECT pos FROM table_name WHERE name";
+  $sql = "SELECT p1pos FROM game WHERE name='$gamename'";
+  $result=mysqli_query($mysqli,$sql);
+  while($row = mysqli_fetch_array($result)) {
+    echo "<br>Player 1 position is : ".$row["p1pos"];
+  }
 ?>
 <html>
     <head>
         <title>Sindopoly</title>
         <link rel="stylesheet" type="text/css" href="Sindopoly.css">
         
-        <script>
-          function dice(){
-
-          }
-        </script>
+    
     </head>
     <body>
       <div class="board">
@@ -51,6 +59,8 @@
         <div class="cell" id="10">Connecticut Avenue</div>
         <!-- additional cells go here -->
         <button type="button" onclick="dice()">Roll Dice</button>
+        <br><div class="cell" id="11">Player name: <p id="pname1"></p></div>
+        <br><div class="cell" id="12">Player name: <p id="pname2"></p></div>
       </div>
 
 

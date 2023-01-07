@@ -51,7 +51,7 @@
                 <form action="Sindopoly.php" method="GET">
                     Game name: <input name="gamename">
                     <br>
-                    Username: <input name="loginname">
+                    Username: <input name="joinname">
                     <br>
                     <input type="hidden" name="type" value="join">
                     <input type="submit" value="Join game!">
