@@ -1,0 +1,12 @@
+{
+    "prices": {
+        "properties": [
+        {
+            "name": "Τμήμα Γεωπονίας",
+            "type": 0,
+            "location": 1,
+            "price": 60,
+            "rent": 55
+        }]
+    }
+}
