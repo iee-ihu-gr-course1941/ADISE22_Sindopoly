@@ -36,7 +36,7 @@
 
 
   //Get position of players
-  $sql = "SELECT p1pos FROM game WHERE name='$gamename'";
+  $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
   echo "<br> OK1";
   $result=mysqli_query($mysqli,$sql);
   echo "<br> OK2";
