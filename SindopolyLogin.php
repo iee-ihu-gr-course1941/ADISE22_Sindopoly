@@ -50,7 +50,7 @@
                 <form action="Sindopoly.php" method="GET">
                     Game name: <input name="name">
                     <br>
-                    Username: <input name="player1name">
+                    Username: <input name="playername">
                     <br>
                     <input type="submit" value="Join game!">
                 </form>
