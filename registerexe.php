@@ -66,7 +66,7 @@
     
     //IF NO IDENTICAL USER FOUND THEN CREATE NEW USER
     if($found==0){
-        $sql="INSERT INTO shitpost(id,name,pass) VALUES ('$id','$name','$pass')";
+        $sql="INSERT INTO shitposts(id,name,pass) VALUES ('$id','$name','$pass')";
         if ($mysqli->query($sql) === TRUE) {
         echo "<br>New record created successfully<br>";
       } else {
