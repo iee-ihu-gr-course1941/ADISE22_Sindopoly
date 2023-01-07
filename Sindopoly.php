@@ -40,20 +40,7 @@
     <head>
         <title>Sindopoly</title>
         <link rel="stylesheet" type="text/css" href="Sindopoly.css">
-        <script>
-          function callPHPFunction() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-                // The PHP function will return the result as a string, which you can use in your JavaScript code
-                var result = this.responseText;
-                // You can use the result in your JavaScript code here
-              }
-            };
-            xhttp.open("POST", "<?php echo $_SERVER['PHP_SELF']; ?>", true);
-            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhttp.send("function=yourFunction");
-        }
+        
 </script>
     
     </head>
