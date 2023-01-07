@@ -7,7 +7,7 @@
   <body>
     <h1>My PHP Page</h1>
     <button id="btn-send-request">Send Request</button>
-    <div id="response-container"></div>
+    <div id="response-container">fk</div>
     
     <script>
       $(document).ready(function () {
