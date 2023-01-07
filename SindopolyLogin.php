@@ -13,13 +13,15 @@
         } else {
             $mysqli = new mysqli($host, $user, $pass, $db);
         }
+        /*
         if ($mysqli->connect_errno) {
             echo "Failed to connect to MySQL: (" . 
             $mysqli->connect_errno . ") " . $mysqli->connect_error;
         }else{
             echo "Connection successful";
-            /*echo "<script>document.getElementById('element').innerHTML = 'Connection with Sindopoly successful';</script>";*/
+            echo "<script>document.getElementById('element').innerHTML = 'Connection with Sindopoly successful';</script>";
         }
+        */
         //MASTER CONNECT
         ?>
     </head>
