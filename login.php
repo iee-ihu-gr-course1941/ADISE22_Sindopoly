@@ -1,5 +1,5 @@
 <?php 
-function loginf(){
-    echo "I am ";
+function cry(){
+    echo "HELP";
 }
 ?>
