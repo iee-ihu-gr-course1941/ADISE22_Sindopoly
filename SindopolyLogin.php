@@ -35,11 +35,11 @@
                 <h1>Create new game</h1>
                 <h3>To create a new game give the game a nickname and insert the usernames of the players</h3>
                 <form action="Sindopoly.php" method="GET">
-                    Game's nickname: <input name="name">
+                    Game's nickname: <input name="gamename">
                     <br>
-                    Player 1 username: <input name="player1name">
+                    Player 1 username: <input name="createplayer1name">
                     <br>
-                    Player 2 username: <input name="player2name">
+                    Player 2 username: <input name="createplayer2name">
                     <br>
                     <input type="hidden" name="type" value="create">
                     <input type="submit" value="Start game!">
@@ -49,10 +49,11 @@
                 <h1>Login in existing game</h1>
                 <h3>To join a game insert the game's nickname and your username</h3>
                 <form action="Sindopoly.php" method="GET">
-                    Game name: <input name="name">
+                    Game name: <input name="gamename">
                     <br>
-                    Username: <input name="playername">
+                    Username: <input name="loginname">
                     <br>
+                    <input type="hidden" name="type" value="join">
                     <input type="submit" value="Join game!">
                 </form>
             </div>
