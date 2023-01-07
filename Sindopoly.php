@@ -4,7 +4,7 @@
   $type=$_GET['type'];//CHECK IF CREATE OR JOIN GAME
   $gamename=$_GET['gamename'];
   $youare=0;//INDICATES IF CURRENT PLAYER IS 1 OR 2 
-  $youname='null';
+  $youname='null';//INDICATES THE PLAYERS NAME
 
   if($type=="create"){//IF NEW GAME------------------------------
     echo "<br>Created game<br>";
@@ -18,7 +18,7 @@
   }
 
   
-  echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: "$')</script>";
+  echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: "json_encode($youname)')</script>";
   /*
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
