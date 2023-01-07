@@ -24,11 +24,11 @@
   }
 
   echo "<script type='text/javascript'>";
-
+  echo "function changeText() {";
   echo "  var p1 = document.getElementById('p1name');";
   echo "  var message = " . json_encode($youname) . ";";
   echo "  p1.innerHTML = message;";
-
+  echo "}";
   echo "</script>";
 
   /*
@@ -59,9 +59,10 @@
         <div class="cell" id="9">Vermont Avenue</div>
         <div class="cell" id="10">Connecticut Avenue</div>
         <!-- additional cells go here -->
-        <button type="button" onclick="dicephp()">Roll Dice PHP</button>
-        <br><div class="cell" id="11"><p id="p1name">Ori</p></div>
+        <button type="button" onclick="changeText()">Roll Dice PHP</button>
+        <br><div class="cell" id="11"></div>
         <br><div class="cell" id="12">Player name: <p id="p2name"></p></div>
       </div>
+      <p id="p1name" style="text:red;">Original</p>
     </body>
 </html>
