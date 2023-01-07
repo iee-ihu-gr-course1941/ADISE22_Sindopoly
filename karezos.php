@@ -15,7 +15,7 @@
           $.ajax({
             type: 'GET',
             url: 'kar.txt',
-            dataType:"text"
+            dataType:"text",
             success: function(response){
         //if request if made successfully then the response represent the data
 
