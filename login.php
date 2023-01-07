@@ -1,6 +1,6 @@
 <?php 
-function cry($name,$pass){
-    echo "Name:".$name." Pass: ".$pass;
+function cry(){
+    echo "HELP";
 }
-
+echo "hello";
 ?>
