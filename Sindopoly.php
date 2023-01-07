@@ -43,6 +43,7 @@
   while($row = mysqli_fetch_array($result)) {
     $pos1=$row["p1pos"];
     echo $pos1;
+    echo rand(1,6);
   }
 ?>
 <html>
