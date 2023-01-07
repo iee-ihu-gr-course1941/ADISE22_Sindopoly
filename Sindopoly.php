@@ -38,19 +38,34 @@
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
 
+  echo rand(1,6);
   $result=mysqli_query($mysqli,$sql);
 
   while($row = mysqli_fetch_array($result)) {
     $pos1=$row["p1pos"];
     echo $pos1;
-    echo rand(1,6);
+    
   }
 ?>
 <html>
     <head>
         <title>Sindopoly</title>
         <link rel="stylesheet" type="text/css" href="Sindopoly.css">
-        
+        <script>
+          function callPHPFunction() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                // The PHP function will return the result as a string, which you can use in your JavaScript code
+                var result = this.responseText;
+                // You can use the result in your JavaScript code here
+              }
+            };
+            xhttp.open("POST", "<?php echo $_SERVER['PHP_SELF']; ?>", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("function=yourFunction");
+        }
+</script>
     
     </head>
     <body>
@@ -66,7 +81,7 @@
         <div class="cell" id="9">Vermont Avenue</div>
         <div class="cell" id="10">Connecticut Avenue</div>
         <!-- additional cells go here -->
-        <button type="button" onclick="dice()">Roll Dice</button>
+        <button type="button" onclick="dicephp()">Roll Dice PHP</button>
         <br><div class="cell" id="11">Player name: <p id="pname1"></p></div>
         <br><div class="cell" id="12">Player name: <p id="pname2"></p></div>
       </div>
