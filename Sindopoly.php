@@ -60,7 +60,7 @@
         <div class="cell" id="10">Connecticut Avenue</div>
         <!-- additional cells go here -->
         <button type="button" onclick="dicephp()">Roll Dice PHP</button>
-        <br><div class="cell" id="11">Player name: <p id="p1name"></p></div>
+        <br><div class="cell" id="11"><p id="p1name">Ori</p></div>
         <br><div class="cell" id="12">Player name: <p id="p2name"></p></div>
       </div>
     </body>
