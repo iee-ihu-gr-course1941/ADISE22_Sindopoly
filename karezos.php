@@ -18,11 +18,10 @@
             dataType:"text",
             success: function(response){
         //if request if made successfully then the response represent the data
-
         $( "#rescon" ).html( response );
-    }
+        }
         });
-      });
+        }}
     </script>
   </body>
 </html>
