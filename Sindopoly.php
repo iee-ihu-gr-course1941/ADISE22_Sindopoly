@@ -17,12 +17,10 @@
     require_once "S_Join.php"; 
   }
 
-  if($youname="null"){
+  if($youname=="null"){
     echo "<script type='text/javascript'>alert('ERROR')</script>";
-
   }else{
     echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: " . json_encode($youname) . "')</script>";
-
   }
   /*
   //Get position of players
