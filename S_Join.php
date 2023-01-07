@@ -1,11 +1,19 @@
 <?php
+
+    function loginf(){
+        echo "I am ".$GLOBALS['input']['username'];
+    }
+
+    /*
     global $mysqli;
     global $gamename;
     global $joinname;
     $found=0;//STAYS ZERO IF USER NOT FOUND
     global $youare;
     global $youname;
-    
+    */
+
+    /*
     //CHECK IF JOINED PLAYER IS PLAYER 1
     $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
     $result=mysqli_query($mysqli,$sql);
@@ -35,5 +43,5 @@
     }
     
     $youname=$joinname;
-    
+    */
 ?>

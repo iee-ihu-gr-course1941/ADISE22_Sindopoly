@@ -1,6 +1,29 @@
 <?php
+  //KAREZOS
+  $method = $_SERVER['REQUEST_METHOD'];
+  $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
+  $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
+  //KAREZOS
 
   require_once "S_DBConnect.php";  
+  require_once "S_Join.php";  
+
+  const username="karezos";
+  const pass="pass";
+
+  $.ajax({
+    type: 'POST',
+    url: '/S_Join.php',
+    data: {
+      username: username,
+      pass: pass
+    },
+    loginf: function (data){
+      console.log(data);
+    }
+  });
+
+  /*
   $type=$_GET['type'];//CHECK IF CREATE OR JOIN GAME
   $gamename=$_GET['gamename'];
   $youare=0;//INDICATES IF CURRENT PLAYER IS 1 OR 2 
@@ -30,7 +53,7 @@
   echo "  p1.innerHTML = message;";
   echo "}";
   echo "</script>";
-
+  */
   /*
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
@@ -41,6 +64,7 @@
   }
   */
 ?>
+<!--
 <html>
     <head>
         <title>Sindopoly</title>
@@ -58,7 +82,7 @@
         <div class="cell" id="8">Chance</div>
         <div class="cell" id="9">Vermont Avenue</div>
         <div class="cell" id="10">Connecticut Avenue</div>
-        <!-- additional cells go here -->
+        
         <button type="button" onclick="changeText()">Roll Dice PHP</button>
         <br><div class="cell" id="11"></div>
         <br><div class="cell" id="12">Player name: <p id="p2name"></p></div>
@@ -66,3 +90,4 @@
       <p id="p1name" style="text:red;">Original</p>
     </body>
 </html>
+-->
