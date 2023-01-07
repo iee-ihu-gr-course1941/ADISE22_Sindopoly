@@ -78,7 +78,7 @@
 
     //FUCK ABOUT
     echo "<p><h1><b>Shitpost Leaderboard</b></h1></p>";
-    $sql = "SELECT * FROM player";
+    $sql = "SELECT * FROM shitposts";
        
         $result=mysqli_query($mysqli,$sql);
         while($row = mysqli_fetch_array($result)) {
