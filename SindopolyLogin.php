@@ -11,8 +11,9 @@
               </div>
               <div class="half">
                 <h1>Login in existing game</h1>
+                <?php echo "help";?>
               </div>
-              <?php echo "help";?>
+              
               
             
         </body>
