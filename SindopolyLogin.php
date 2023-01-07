@@ -34,13 +34,14 @@
             <div class="half">
                 <h1>Create new game</h1>
                 <h3>To create a new game give the game a nickname and insert the names of the players</h3>
-                <form action="registerexe.php" method="GET">
-                    Game name: <input name="name" size="150px">
+                <form action="Sindopoly.php" method="GET">
+                    Game name: <input name="name">
                     <br>
-                    Player 1 name: <input name="player1name" size="50px">
+                    Player 1 name: <input name="player1name">
                     <br>
-                    Player 2 name: <input name="player2name" size="50px">
-                <input type="submit">
+                    Player 2 name: <input name="player2name">
+                    <br>
+                    <input type="Start game">
                 </form>
             </div>
             <div class="half">
