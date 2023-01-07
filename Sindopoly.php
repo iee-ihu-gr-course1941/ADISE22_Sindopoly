@@ -17,8 +17,13 @@
     require_once "S_Join.php"; 
   }
 
-  
-  echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: " . json_encode($youname) . "')</script>";
+  if($youname="null"){
+    echo "<script type='text/javascript'>alert('ERROR')</script>";
+
+  }else{
+    echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: " . json_encode($youname) . "')</script>";
+
+  }
   /*
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
