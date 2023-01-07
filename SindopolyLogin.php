@@ -33,20 +33,20 @@
             </div>
             <div class="half">
                 <h1>Create new game</h1>
-                <h3>To create a new game give the game a nickname and insert the names of the players</h3>
+                <h3>To create a new game give the game a nickname and insert the usernames of the players</h3>
                 <form action="Sindopoly.php" method="GET">
-                    Game name: <input name="name">
+                    Game's nickname: <input name="name">
                     <br>
-                    Player 1 name: <input name="player1name">
+                    Player 1 username: <input name="player1name">
                     <br>
-                    Player 2 name: <input name="player2name">
+                    Player 2 username: <input name="player2name">
                     <br>
                     <input type="submit" value="Start game!">
                 </form>
             </div>
             <div class="half">
                 <h1>Login in existing game</h1>
-                <h3>To join a game insert the game's name and your username</h3>
+                <h3>To join a game insert the game's nickname and your username</h3>
                 <form action="Sindopoly.php" method="GET">
                     Game name: <input name="name">
                     <br>
