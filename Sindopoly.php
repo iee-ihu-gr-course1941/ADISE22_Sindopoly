@@ -4,30 +4,30 @@
   $type=$_GET['type'];//CHECK IF CREATE OR JOIN GAME
   $gamename=$_GET['gamename'];
   $youare=0;//INDICATES IF CURRENT PLAYER IS 1 OR 2 
+  $youname='null';
 
   if($type=="create"){//IF NEW GAME------------------------------
-    echo "<br>Create game<br>";
+    echo "<br>Created game<br>";
     $createplayer1name=$_GET['createplayer1name'];
     $createplayer2name=$_GET['createplayer2name'];
     require_once "S_Create.php";
-    $youare=1;
   }else if($type=="join"){//IF JOIN GAME-------------------------
-    echo "<br>Join game<br>";
+    echo "<br>Joined game<br>";
     $joinname=$_GET['joinname'];
     require_once "S_Join.php"; 
   }
 
   
-  echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . "')</script>";
-
+  echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: "$')</script>";
+  /*
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
   $result=mysqli_query($mysqli,$sql);
   while($row = mysqli_fetch_array($result)) {
     $pos1=$row["p1pos"];
     //echo $pos1;
-    
   }
+  */
 ?>
 <html>
     <head>

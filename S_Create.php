@@ -3,6 +3,8 @@
     global $gamename;
     global $createplayer1name;
     global $createplayer2name;
+    global $youare;
+    global $youname;
   
     //CHECK IF GAME WITH SAME GAMENAME ALREADY EXISTS
     $found=0;//STAYS 0 IF IDENTICAL NAME ISNT FOUND
@@ -25,4 +27,8 @@
     }else if($found==1){//IF GAME ALREADY EXISTS
         echo "Game with nickname given already exists.Go back to the previous page and join the game";
     }
+
+    $youare=1;
+    $youname=$createplayer1name;
+
 ?>

@@ -4,6 +4,7 @@
     global $joinname;
     $found=0;//STAYS ZERO IF USER NOT FOUND
     global $youare;
+    global $youname;
     
     //CHECK IF JOINED PLAYER IS PLAYER 1
     $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
@@ -32,5 +33,5 @@
     }else{
         echo "User not found in game with given nickname.Try again";
     }
-
+    $youname=$joinname;
 ?>
