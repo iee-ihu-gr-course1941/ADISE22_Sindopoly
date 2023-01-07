@@ -1,19 +1,19 @@
 <?php
 
   require_once "S_DBConnect.php";  
-
   $type=$_GET['type'];//CHECK IF CREATE OR JOIN GAME
-  if($type=="create"){//GET DATA FROM LOGIN SCREEN
+  $gamename=$_GET['gamename'];
+  $youare=0;//INDICATES IF CURRENT PLAYER IS 1 OR 2 
+
+  if($type=="create"){//IF NEW GAME
     echo "<br>Create game<br>";
-    $gamename=$_GET['gamename'];
     $createplayer1name=$_GET['createplayer1name'];
     $createplayer2name=$_GET['createplayer2name'];
     require_once "S_Create.php";
-    echo "called S_Create.php";
+    echo "<br>called S_Create.php";
 
-  }else if($type=="join"){
+  }else if($type=="join"){//IF JOIN GAME
     echo "<br>Join game<br>";
-    $gamename=$_GET['gamename'];
     $joinname=$_GET['joinname'];
     echo "<br>".$gamename;
     echo "<br>".$joinname;
@@ -32,17 +32,14 @@
 
   while($row = mysqli_fetch_array($result)) {
     $pos1=$row["p1pos"];
-    echo $pos1;
+    //echo $pos1;
     
   }
 ?>
 <html>
     <head>
         <title>Sindopoly</title>
-        <link rel="stylesheet" type="text/css" href="Sindopoly.css">
-        
-</script>
-    
+        <link rel="stylesheet" type="text/css" href="Sindopoly.css">    
     </head>
     <body>
       <div class="board">
@@ -61,8 +58,5 @@
         <br><div class="cell" id="11">Player name: <p id="pname1"></p></div>
         <br><div class="cell" id="12">Player name: <p id="pname2"></p></div>
       </div>
-
-
-      
     </body>
 </html>
