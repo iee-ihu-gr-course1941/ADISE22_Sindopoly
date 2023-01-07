@@ -23,10 +23,13 @@
     echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: " . json_encode($youname) . "')</script>";
   }
 
-  echo "<script type='text/javascript'>
-          var p1 = document.getElementById('p1name');
-          p1.innerHTML = ". json_encode($youname) .";
-        </script>";
+  echo "<script type='text/javascript'>";
+
+  echo "  var p1 = document.getElementById('p1name');";
+  echo "  var message = " . json_encode($youname) . ";";
+  echo "  p1.innerHTML = message;";
+
+  echo "</script>";
 
   /*
   //Get position of players
