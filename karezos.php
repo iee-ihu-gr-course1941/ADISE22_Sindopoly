@@ -13,13 +13,15 @@
       $(document).ready(function () {
         $('#btn').click(function () {
           $.ajax({
-            type: 'GET',
-            url: 'kar.txt',
-            dataType:"text",
-            success: function(response){
-        //if request if made successfully then the response represent the data
-        $( "#rescon" ).html( response );
-        }
+            type: 'POST',
+            url: 'login.php',
+            
+            success: function (response) {
+              $('#rescon').html(response);
+            },
+            error: function (error) {
+              console.error('Error:', error);
+            }
         });
         });
       });

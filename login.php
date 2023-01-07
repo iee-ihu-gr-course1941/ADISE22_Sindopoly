@@ -1,5 +1,7 @@
 <?php
+$test="kolotrypa";
 function greet($name) {
-  echo "Hello, $name!";
+  global $test;
+  echo $test;
 }
 ?>
