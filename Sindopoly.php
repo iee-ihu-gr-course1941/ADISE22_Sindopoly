@@ -17,11 +17,17 @@
     require_once "S_Join.php"; 
   }
 
-  if($youname=="null"){
+  if($youname=="null"){//GREET THE PLAYER
     echo "<script type='text/javascript'>alert('ERROR')</script>";
   }else{
     echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: " . json_encode($youname) . "')</script>";
   }
+
+  echo "<script type='text/javascript'>
+          var p1 = document.getElementById('p1name');
+          p1.innerHTML = ". json_encode($youname) .";
+        </script>";
+
   /*
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
@@ -51,8 +57,8 @@
         <div class="cell" id="10">Connecticut Avenue</div>
         <!-- additional cells go here -->
         <button type="button" onclick="dicephp()">Roll Dice PHP</button>
-        <br><div class="cell" id="11">Player name: <p id="pname1"></p></div>
-        <br><div class="cell" id="12">Player name: <p id="pname2"></p></div>
+        <br><div class="cell" id="11">Player name: <p id="p1name"></p></div>
+        <br><div class="cell" id="12">Player name: <p id="p2name"></p></div>
       </div>
     </body>
 </html>
