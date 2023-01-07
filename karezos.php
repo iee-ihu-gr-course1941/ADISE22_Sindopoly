@@ -21,7 +21,8 @@
         $( "#rescon" ).html( response );
         }
         });
-        }}
+        });
+      });
     </script>
   </body>
 </html>
