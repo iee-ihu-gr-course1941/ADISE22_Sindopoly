@@ -30,7 +30,7 @@
         echo "<br>Welcome Player 2 ".$joinname."<br>";
         $youare=2;
     }else{
-        echo "User not found in game nickname given.Try again";
+        echo "User not found in game with given nickname.Try again";
     }
 
 ?>

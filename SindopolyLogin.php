@@ -35,7 +35,7 @@
                 </form>
             </div>
             <div class="half">
-                <h1>Join in existing game</h1>
+                <h1>Join an existing game</h1>
                 <h3>To join a game insert the game's nickname and your username</h3>
                 <form action="Sindopoly.php" method="GET">
                     Game's nickname: <input name="gamename">

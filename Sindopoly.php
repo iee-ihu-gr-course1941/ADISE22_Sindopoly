@@ -17,7 +17,7 @@
   }
 
   
-
+  echo "<br>".$youare;
 
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
