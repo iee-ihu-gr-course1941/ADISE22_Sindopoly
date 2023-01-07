@@ -33,5 +33,6 @@
     }else{
         echo "User not found in game with given nickname.Try again";
     }
+    echo $joinname;
     $youname=$joinname;
 ?>
