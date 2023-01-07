@@ -1,6 +1,5 @@
-<?php 
-function cry(){
-    echo "HELP";
+<?php
+function greet($name) {
+  echo "Hello, $name!";
 }
-echo "hello";
 ?>

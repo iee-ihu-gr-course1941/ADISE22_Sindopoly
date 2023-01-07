@@ -17,7 +17,7 @@
           $.ajax({
             type: 'POST',
             url: 'login.php',
-            data: { action: 'cry' },
+            data: { action: 'greet', name: 'John' },
             success: function (response) {
               $('#response-container').html(response);
             },
@@ -28,5 +28,6 @@
         });
       });
     </script>
+
   </body>
 </html>
