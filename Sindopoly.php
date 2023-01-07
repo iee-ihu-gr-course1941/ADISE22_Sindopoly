@@ -10,7 +10,8 @@
 
   const username="karezos";
   const pass="pass";
-
+  echo "<br>1";
+  /*
   $.ajax({
     type: 'POST',
     url: 'S_Join',
@@ -22,7 +23,8 @@
       console.log(data);
     }
   });
-
+  */
+  echo "<br>2";
   /*
   $type=$_GET['type'];//CHECK IF CREATE OR JOIN GAME
   $gamename=$_GET['gamename'];
