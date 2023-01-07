@@ -22,13 +22,14 @@
   if($type=="create"){//GET DATA FROM LOGIN SCREEN
     echo "<br>Create game<br>";
     $gamename=$_GET['gamename'];
-    $createplayer1name=$_GET['createplayer2name'];
-    $createplayer1name=$_GET['createplayer2name'];
+    $createplayer1name=$_GET['createplayer1name'];
+    $createplayer2name=$_GET['createplayer2name'];
   }else if($type=="join"){
     echo "<br>Join game<br>";
     $gamename=$_GET['gamename'];
     $joinname=$_GET['joinname'];
-    echo $joinname;
+    echo "<br>".$gamename;
+    echo "<br>".$joinname;
   }
 
   
