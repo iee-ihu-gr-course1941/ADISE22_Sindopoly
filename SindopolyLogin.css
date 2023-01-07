@@ -1,0 +1,14 @@
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+  margin:0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+.mid{
+  width: 100%;
+}
+.half {
+  width: 50%;
+  float: left;
+}
