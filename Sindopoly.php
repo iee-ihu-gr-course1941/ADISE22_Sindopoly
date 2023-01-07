@@ -18,7 +18,7 @@
   }
 
   
-  echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: "json_encode($youname)')</script>";
+  echo "<script type='text/javascript'>alert('Welcome Player " . json_encode($youare) . " Username: " . json_encode($youname) . "')</script>";
   /*
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
