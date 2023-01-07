@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>My PHP Page</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
   </head>
   <body>
     <h1>My PHP Page</h1>
