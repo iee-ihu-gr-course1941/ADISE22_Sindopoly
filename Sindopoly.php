@@ -19,7 +19,7 @@
   
 
   $type=$_GET['type'];
-  if($type=="create"){
+  if($type=="create"){//GET DATA FROM LOGIN SCREEN
     echo "<br>Create game<br>";
     $gamename=$_GET['gamename'];
     $createplayer1name=$_GET['createplayer2name'];
@@ -30,6 +30,9 @@
     $joinname=$_GET['joinname'];
     echo $joinname;
   }
+
+  
+
 
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE name='$gamename'";
