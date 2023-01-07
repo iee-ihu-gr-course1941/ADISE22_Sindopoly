@@ -4,18 +4,19 @@
     global $createplayer1name;
     global $createplayer2name;
   
-    //CHECK IF USERNAME ALREADY EXISTS
+    //CHECK IF GAME WITH SAME GAMENAME ALREADY EXISTS
     $found=0;//STAYS 0 IF IDENTICAL NAME ISNT FOUND
     $sql="SELECT gamename FROM game";
     $result=mysqli_query($mysqli,$sql);
-    while($row = mysqli_fetch_array($result2)) {
+    while($row = mysqli_fetch_array($result)) {
       if($gamename==$row["name"]){//COMPARE ALL NAME ROWS FROM DB WITH NAME GIVEN
           $found=1; 
       }
     }
 
     if($found==0){//IF NOT IDENTICAL GAME WAS FOUND
-        $sql="INSERT INTO shitposts(id,name,pass) VALUES ('$gamename','$createplayer1name','$createplayer2name')";
+        $sql="INSERT INTO game(id,name,pass) 
+        VALUES ('$gamename','$createplayer1name','$createplayer2name')";
         if ($mysqli->query($sql) === TRUE) {
             echo "<br>New game created successfully<br>";
         } else {

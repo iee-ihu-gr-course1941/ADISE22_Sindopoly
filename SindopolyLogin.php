@@ -26,9 +26,9 @@
                 <form action="Sindopoly.php" method="GET">
                     Game's nickname: <input name="gamename">
                     <br>
-                    Player 1 username: <input name="createplayer1name">
+                    Your username: <input name="createplayer1name">
                     <br>
-                    Player 2 username: <input name="createplayer2name">
+                    Your friend's username: <input name="createplayer2name">
                     <br>
                     <input type="hidden" name="type" value="create">
                     <input type="submit" value="Start game!">

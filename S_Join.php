@@ -1,18 +1,22 @@
 <?php
-  //MASTER CONNECT
-  $host='localhost';
-  $db = 'sindopoly_db';
-  $user='it175008';
-  $pass='';
-  if(gethostname()=='users.iee.ihu.gr') {
-      $mysqli = new mysqli($host, $user, $pass, $db,null,'/home/student/it/2017/it175008/mysql/run/mysql.sock');
-  } else {
-      $mysqli = new mysqli($host, $user, $pass, $db);
-  }
-  if ($mysqli->connect_errno) {
-      echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-  }else{
-      echo ("Connected to Database of Sindopoly<br>");
-  }
-  //MASTER CONNECT
+    global $mysqli;
+    global $gamename;
+    global $joinname;
+  
+    
+    
+    $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
+    $found=0;
+    $result=mysqli_query($mysqli,$sql);
+    while($row = mysqli_fetch_array($result)) {
+        if($joinname==$row["p2name"]){
+            $found=1; 
+        }
+    }
+    if($found==0){
+        echo "Welcome ".$joinname;
+    }else{
+        echo "User not found";
+    }
+
 ?>
