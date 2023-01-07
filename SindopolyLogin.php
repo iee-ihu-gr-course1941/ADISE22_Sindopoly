@@ -1,10 +1,10 @@
+<?php
+    require_once "S_DBConnect.php";
+?>
 <html>
     <head>
         <title>Sindopoly Login</title>
         <link rel="stylesheet" type="text/css" href="SindopolyLogin.css">
-        <?php 
-        require_once "S_DBConnect.php";
-        ?>
     </head>
         <body>
             <div class="mid">
