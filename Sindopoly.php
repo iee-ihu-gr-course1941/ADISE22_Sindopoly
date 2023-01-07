@@ -17,7 +17,7 @@
   //MASTER CONNECT
 
   $type=$_GET['type'];
-  if($type=='type'){
+  if($type=="create"){
     echo "<br>Create game<br>";
   }else if($type=='login'){
     echo "<br>Join game<br>";
