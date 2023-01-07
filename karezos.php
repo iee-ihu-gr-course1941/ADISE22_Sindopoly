@@ -8,7 +8,7 @@
     <h1>My PHP Page</h1>
     <button id="btn-send-request">Send Request</button>
     <div id="response-container"></div>
-    
+    <!--
     <script>
       $(document).ready(function () {
         $('#btn-send-request').click(function () {
@@ -25,6 +25,6 @@
           });
         });
       });
-    </script>
+    </script>-->
   </body>
 </html>
