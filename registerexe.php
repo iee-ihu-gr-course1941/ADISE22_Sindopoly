@@ -47,7 +47,7 @@
     
     //CHECK IF USERNAME ALREADY EXISTS
     $found=0;//STAYS 0 IF IDENTICAL NAME ISNT FOUND
-    $sql="SELECT name FROM player";
+    $sql="SELECT name FROM shitposts";
     $result2=mysqli_query($mysqli,$sql);
     while($row = mysqli_fetch_array($result2)) {
         if($name==$row["name"]){//COMPARE ALL NAME ROWS FROM DB WITH NAME GIVEN
