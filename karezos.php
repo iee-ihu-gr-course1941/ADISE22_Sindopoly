@@ -14,7 +14,7 @@
         $('#btn-send-request').click(function () {
           $.ajax({
             type: 'POST',
-            url: '/path/to/script.php',
+            url: 'login.php',
             data: { username: 'myusername', password: 'mypassword' },
             loginf: function (response) {
               $('#response-container').html(response);
