@@ -1,47 +1,30 @@
-<?php
-
-    //MASTER CONNECT
-    $host='localhost';
-    $db = 'sindopoly_db';
-    $user='it175008';
-    $pass='';
-    if(gethostname()=='users.iee.ihu.gr') {
-        $mysqli = new mysqli($host, $user, $pass, $db,null,'/home/student/it/2017/it175008/mysql/run/mysql.sock');
-    } else {
-        $mysqli = new mysqli($host, $user, $pass, $db);
-    }
-    if ($mysqli->connect_errno) {
-        echo "Failed to connect to MySQL: (" . 
-        $mysqli->connect_errno . ") " . $mysqli->connect_error;
-    }else{
-        echo ("Connected to Database<br>");
-    }
-    //MASTER CONNECT
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My PHP Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>My PHP Page</h1>
+    <button id="btn-send-request">Send Request</button>
+    <div id="response-container"></div>
     
-    
-    $name=$_GET['name'];
-    $pass=$_GET['pass'];
-
-    $sql = "SELECT * FROM player ORDER BY id DESC LIMIT 1";
-    $sqlres=mysqli_query($mysqli,$sql);
-    $sqlarr=mysqli_fetch_array($sqlres);
-    $result=$sqlarr["id"];
-    
-    $id=$result+1;
-
-    $sql="INSERT INTO player(id,name,pass) VALUES ('$id','$name','$pass')";
-        if ($mysqli->query($sql) === TRUE) {
-        echo "New record created successfully";
-      } else {
-        echo "Error: " . $sql . "<br>" . $mysqli->error;
-      }
-    
-    
-    /*
-    $sql="SELECT * from player";
-    $result=mysqli_query($mysqli,$sql);
-    while($row = mysqli_fetch_array($result)) {
-        echo "<br>id: " . $row["id"]. " Name: " . $row["NAME"];
-    }
-    */
-?>
+    <script>
+      $(document).ready(function () {
+        $('#btn-send-request').click(function () {
+          $.ajax({
+            type: 'POST',
+            url: '/path/to/script.php',
+            data: { username: 'myusername', password: 'mypassword' },
+            success: function (response) {
+              $('#response-container').html(response);
+            },
+            error: function (error) {
+              console.error('Error:', error);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

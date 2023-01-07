@@ -5,6 +5,8 @@
   $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
   //KAREZOS
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>;
+
   require_once "S_DBConnect.php";  
   require_once "S_Join.php";  
 
