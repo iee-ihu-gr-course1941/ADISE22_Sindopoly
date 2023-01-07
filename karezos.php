@@ -16,7 +16,7 @@
             type: 'POST',
             url: '/path/to/script.php',
             data: { username: 'myusername', password: 'mypassword' },
-            success: function (response) {
+            loginf: function (response) {
               $('#response-container').html(response);
             },
             error: function (error) {
