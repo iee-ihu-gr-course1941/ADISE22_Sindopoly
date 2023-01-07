@@ -41,6 +41,7 @@
                     <br>
                     Player 2 username: <input name="player2name">
                     <br>
+                    <input type="hidden" name="type" value="create">
                     <input type="submit" value="Start game!">
                 </form>
             </div>
