@@ -5,26 +5,24 @@
   $gamename=$_GET['gamename'];
   $youare=0;//INDICATES IF CURRENT PLAYER IS 1 OR 2 
 
-  if($type=="create"){//IF NEW GAME-------------
+  if($type=="create"){//IF NEW GAME------------------------------
     echo "<br>Create game<br>";
     $createplayer1name=$_GET['createplayer1name'];
     $createplayer2name=$_GET['createplayer2name'];
     require_once "S_Create.php";
-  }else if($type=="join"){//IF JOIN GAME-------------
+    $youare=1;
+  }else if($type=="join"){//IF JOIN GAME-------------------------
     echo "<br>Join game<br>";
     $joinname=$_GET['joinname'];
     require_once "S_Join.php"; 
   }
 
   
-  echo "<br>You are Player ".$youare;
+  echo "<script>document.getElementById('pname1').innerHTML('$youare');</script>";
 
   //Get position of players
   $sql = "SELECT p1pos FROM game WHERE gamename='$gamename'";
-
-  //echo "<br>".rand(1,6);
   $result=mysqli_query($mysqli,$sql);
-
   while($row = mysqli_fetch_array($result)) {
     $pos1=$row["p1pos"];
     //echo $pos1;
