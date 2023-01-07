@@ -34,6 +34,6 @@
         echo "User not found in game with given nickname.Try again";
     }
     
-    global $youname=$joinname;
+    $youname=$joinname;
     
 ?>
