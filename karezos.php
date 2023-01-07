@@ -17,7 +17,7 @@
           $.ajax({
             type: 'POST',
             url: 'login.php',
-            data: { action: 'cry' },
+            data: { action: 'cry', name: 'myname', pass: 'mypass' },
             success: function (response) {
               $('#response-container').html(response);
             },
