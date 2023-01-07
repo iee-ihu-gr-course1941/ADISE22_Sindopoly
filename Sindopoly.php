@@ -20,7 +20,7 @@
   if($type=='type'){
     echo "<br>Create game<br>";
   }else if($type=='login'){
-    echo "<br>Join game<br>"
+    echo "<br>Join game<br>";
   }
 
   //Get position of players
