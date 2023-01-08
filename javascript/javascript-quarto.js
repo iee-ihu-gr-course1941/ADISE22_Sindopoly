@@ -11,6 +11,12 @@ $(function() {
 
 function givedata() {
 
+    $.ajax({
+        url: "api/v1/index.php/exchange",
+        success: cry
+    }
+    );
+
     /*
     var p1=$("#p1name").val();
     var p2=$("#p2name").val();
@@ -25,6 +31,12 @@ function givedata() {
 
     })
     
+
+
+
+
+
+
     $.ajax({
         url: "api/v1/index.php/exchange",
         method: 'POST',
@@ -33,6 +45,10 @@ function givedata() {
         data: JSON.stringify({ p1name: p1, p2name: p2 }),
     });
     */
+}
+
+function cry(data){
+    alert(data[0]);
 }
 function getdata() {
     
