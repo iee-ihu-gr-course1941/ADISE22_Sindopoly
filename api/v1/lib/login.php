@@ -7,7 +7,7 @@ function login(){
 
     echo "<br>INSIDE INSERT";
     global $mysqli;
-    $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('kostis','patata','xontros')";
+    $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('help','karezos','kopsidas')";
     $mysqli->query($sql);
     echo "<br>DID THE INSERT";
 }
