@@ -27,11 +27,9 @@ function getdata() {
         method: 'GET',
         dataType: "json",
         contentType: 'application/json',
-        //data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
-        success: function(data){
-            alert(data);
-        }
-        // error: login_error 
+    }).done(function(data){
+        var result=$.parseJSON(data);
+        alert(result);
     });
 
 }

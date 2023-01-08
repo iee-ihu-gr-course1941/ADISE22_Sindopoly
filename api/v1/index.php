@@ -20,7 +20,7 @@ $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
 
 
-$gamename="1";
+$gamename="metal gear";
 $p1name="2";
 $p2name="3";
 
@@ -43,7 +43,6 @@ switch ($request[0]) {
 function senddata(){
     header('Content-type: application/json');
     echo  json_encode($gamename);
-    echo "fart";
 }
 
 
