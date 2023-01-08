@@ -1,14 +1,14 @@
 <?php
 
-//echo "1<br>";
+
 require_once "lib/dbconnect.php";
-//echo "2<br>";
+
 require_once "lib/login.php";
-//echo "3<br>";
+
 require_once "lib/game.php";
-//echo "4<br>";
+
 require_once "lib/board.php";
-//echo "1<br>";
+
 
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -39,13 +39,22 @@ switch ($request[0]) {
 
 }
 
-echo  json_encode($gamename);
+/*
+$message="The game is ".$gamename;
+$response=array();
+$response["success"]=true;
+$response["message"]=$message;
+
+echo json_encode($response);
+
+
 function senddata(){
     header('Content-type: application/json');
     echo  json_encode($gamename);
 }
+*/
 
-
+echo json_encode($gamename);
 
 ?>
 

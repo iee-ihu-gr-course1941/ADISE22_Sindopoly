@@ -10,20 +10,34 @@ $(function() {
 });
 
 function givedata() {
+
+    /*
+    var p1=$("#p1name").val();
+    var p2=$("#p2name").val();
+    alert(p1,p2);
+
+    $.post("api/v1/index.php",
+    {
+        p1name: p1
+    },
+    function(res,status){
+        var data=JSON.parse(res);
+
+    })
+    
     $.ajax({
         url: "api/v1/index.php/exchange",
         method: 'POST',
         dataType: "json",
         contentType: 'application/json',
-        data: JSON.stringify({ p1name: $('#p1name').val(), p2name: $('#p2name').val() }),
-        //success: onsuccess
-        // error: login_error 
+        data: JSON.stringify({ p1name: p1, p2name: p2 }),
     });
-
+    */
 }
 function getdata() {
-    var p1=$("#p1name").val();
-    alert(p1);
+    
+
+    /*
     $.ajax({
         url: "api/v1/index.php/exchange",
         method: 'GET',
@@ -33,7 +47,7 @@ function getdata() {
         var result=$.parseJSON(data);
         alert(result);
     });
-
+    */
 }
 
 
