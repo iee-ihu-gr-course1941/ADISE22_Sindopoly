@@ -1,7 +1,5 @@
 <?php 
-if (!defined('Access')) {
-    die('Direct access not permitted');
-}
+
 
 require_once "lib/game.php";
 
