@@ -39,7 +39,7 @@ switch ($request[0]) {
 
 }
 
-
+echo  json_encode($gamename);
 function senddata(){
     header('Content-type: application/json');
     echo  json_encode($gamename);
