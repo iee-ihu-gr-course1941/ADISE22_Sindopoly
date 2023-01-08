@@ -3,17 +3,30 @@ if(!defined('Access')) {
 	   die('Direct access not permitted');
 }
 
-function login()
+function login(){
+    global $mysqli;
+    $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES (?,?,?)";
+
+    $st = $mysqli->prepare($sql);
+
+    $rc = $st->bind_param("sss", "help", "karezos","kopsidas");
+
+	$rc = $st->execute();
+ 
+    print json_encode(['success'=>"TRUE"]);
+}
+
+/*
+function loginpast()
 {
     global $mysqli;
-    $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('help','karezos','kopsidas')";
-    if ($mysqli->query($sql) === TRUE) {
-        echo "<br>New game created successfully<br>";
-    } else {
-        echo "Error: " . $sql . "<br>" . $mysqli->error;
+    $sql = "SELECT id, username, password FROM users WHERE username = ? OR email = ?";
+    $st = $mysqli->prepare($sql);
+    if (false === $st) {
+        print json_encode(['errormesg' => "Prepare Failed"]);
+        exit;
     }
-}
-    /*
+
     $rc = $st->bind_param("ss", $GLOBALS['input']['username'], $GLOBALS['input']['username']);
     if (false === $rc) {
         print json_encode(['errormesg' => "Bind Failed"]);
@@ -71,7 +84,7 @@ function login()
         exit;
     }
     print json_encode(['errormesg'=>"TRUE"]);
-    */
+    
 }
 
 function register()
@@ -175,5 +188,5 @@ function register()
     }
     print json_encode(['success'=>"TRUE"]);
 }
-
+*/
 ?>
