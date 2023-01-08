@@ -22,7 +22,8 @@ function givedata() {
 
 }
 function getdata() {
-    alert("FUCK");
+    var p1=$("$p1name").val();
+    alert(p1);
     $.ajax({
         url: "api/v1/index.php/exchange",
         method: 'GET',
