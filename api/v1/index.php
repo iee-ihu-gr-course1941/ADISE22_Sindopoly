@@ -23,7 +23,7 @@ echo "<br>FM FR";
 
 
 switch ($request[0]) {
-    case 'login':
+    case 'exchange':
         if ($method == 'POST') {
             login();
         } else {

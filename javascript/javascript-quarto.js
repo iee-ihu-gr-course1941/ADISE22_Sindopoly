@@ -11,7 +11,7 @@ $(function() {
 
 function givedata() {
     $.ajax({
-        url: "api/v1/index.php/login",
+        url: "api/v1/index.php/exchange",
         method: 'POST',
         dataType: "json",
         contentType: 'application/json',
