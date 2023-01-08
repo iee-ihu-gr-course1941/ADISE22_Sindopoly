@@ -25,7 +25,7 @@ switch($r=array_shift($request)){
 */
 
 
-function printme(){
+function printgame(){
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
         $sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
         $st=$mysqli->prepare($sql);
@@ -37,6 +37,7 @@ function printme(){
         print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS 100% !!PUT GLOBAL WHEN NEEDED
 }
 
+printgame();
 printme();
 
 

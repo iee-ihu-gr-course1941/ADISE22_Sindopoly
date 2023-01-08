@@ -1,7 +1,7 @@
 <?php
     function printgame(){
         global $mysqli;
-        $sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
+        $sql="SELECT gamename FROM game";
         $st=$mysqli->prepare($sql);
     
         $st->execute();
