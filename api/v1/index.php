@@ -16,6 +16,7 @@ $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
 echo "<br>FML<br>";
 //echo $request[0];
+/*
 switch ($request[0]) {
     case 'login':
         if ($method == 'POST') {
@@ -28,6 +29,7 @@ switch ($request[0]) {
         break;
 
 }
+*/
 ?>
 
 
