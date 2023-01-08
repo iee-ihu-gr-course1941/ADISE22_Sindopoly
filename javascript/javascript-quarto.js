@@ -16,8 +16,8 @@ function givedata() {
         dataType: "json",
         contentType: 'application/json',
         //data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
-        success: onsuccess
-            // error: login_error 
+        //success: onsuccess
+        // error: login_error 
     });
 
 }
@@ -28,20 +28,13 @@ function getdata() {
         dataType: "json",
         contentType: 'application/json',
         //data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
-        success: onsuccess
-            // error: login_error 
+        //success: onsuccess
+        // error: login_error 
     });
 
 }
 
 
 
-function onsuccess(data) {
 
-    //var success = data.errormesg;
-
-    //alert(success);
-
-    alert("good job");
-}
 
