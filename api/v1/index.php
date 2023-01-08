@@ -1,6 +1,4 @@
 <?php
-
-
 require_once "lib/dbconnect.php";
 
 require_once "lib/login.php";
@@ -10,23 +8,12 @@ require_once "lib/game.php";
 require_once "lib/board.php";
 
 
-
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
-$request_path = trim($_SERVER['PATH_INFO'],'/');
 $input = json_decode(file_get_contents('php://input'),true);
 
+//$request_path = trim($_SERVER['PATH_INFO'],'/');
 //$GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
-
-global $myqsli;//WORKS
-$sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
-$st=$mysqli->prepare($sql);
-
-$st->execute();
-$res = $st->get_result();
-
-header('Content-type: application/json');
-print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS
 
 switch ($request[0]) {
     case 'exchange':
@@ -42,7 +29,7 @@ switch ($request[0]) {
 
 function printgame(){
     global $myqsli;
-    $sql="SELECT gamename,p1name,p2name FROM sgame";
+    $sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
     $st=$mysqli->prepare($sql);
 
     $st->execute();
