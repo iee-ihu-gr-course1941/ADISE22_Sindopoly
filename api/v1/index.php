@@ -39,7 +39,7 @@ switch($r=array_shift($request)){
 */
 
 function printme(){
-        $myqsli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
+        global $myqsli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
         $sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
         $st=$mysqli->prepare($sql);
     
