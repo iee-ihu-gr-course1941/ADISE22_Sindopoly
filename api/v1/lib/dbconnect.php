@@ -5,7 +5,6 @@ if(!defined('Access')) {
 
 $host='localhost';
 $db = 'sindopoly_db';
-
 $user='it175008';
 $pass='';
 
