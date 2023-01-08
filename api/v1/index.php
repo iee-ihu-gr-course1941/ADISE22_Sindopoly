@@ -19,7 +19,7 @@ $input = json_decode(file_get_contents('php://input'),true);
 //$GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
 global $myqsli;//WORKS
-$sql="SELECT gamename,p1name,p2name,p1money,p2money FROM sgame";
+$sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
 $st=$mysqli->prepare($sql);
 
 $st->execute();
