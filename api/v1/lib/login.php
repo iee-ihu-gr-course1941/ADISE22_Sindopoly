@@ -3,13 +3,15 @@
 
 
 echo "startlogin<br>";
+
+
 function login(){
 
     echo "<br>INSIDE INSERT";
     global $mysqli;
-    global $gamename="test";
-    global $p1name;
-    global $p2name;
+    //global $gamename="test";
+    //global $p1name;
+    //global $p2name;
     //$sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('$gamename','$p1name','$p2name')";
     $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('f','k','u')";
     $mysqli->query($sql);
