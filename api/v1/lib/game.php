@@ -22,4 +22,12 @@
         header('Content-type: application/json');
         print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS 100% !!PUT GLOBAL WHEN NEEDED
     }
+
+    function defaultgame(){
+        global $mysqli;
+        $sql="INSERT INTO game(gamename,p1name,p2name) VALUES ('ftanei','poia','eleos')";
+        $st=$mysqli->prepare($sql);
+    
+        $st->execute();
+    }
 ?>

@@ -29,7 +29,9 @@ if($request[0]=='show'){
 if($request[0]=='showfull'){
     printgameall();
 }
-
+if($method=='POST'){
+    defaultgame();
+}
 
 
 
