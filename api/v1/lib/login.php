@@ -9,7 +9,7 @@ $p2name="solid"
 
 $who="potato";
 
-function postdata(){
+function login(){
 
     echo "<br>INSIDE INSERT";
     global $mysqli;
