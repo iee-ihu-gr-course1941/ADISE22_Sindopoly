@@ -26,7 +26,7 @@ switch($r=array_shift($request)){
 
 
 function printme(){
-        $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
+        global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
         $sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
         $st=$mysqli->prepare($sql);
     
