@@ -1,9 +1,9 @@
 <?php
 require_once "../lib/dbconnect.php";
-require_once "../lib/create.php";
-require_once "../lib/join.php";
+require_once "../lib/board.php";
+require_once "../lib/game.php";
+require_once "../lib/users.php";
 
-echo "help";
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
 $request_path = trim($_SERVER['PATH_INFO'],'/');
@@ -22,7 +22,7 @@ if(isset($_SERVER['HTTP_X_TOKEN'])) {
 //
 if (preg_match('/^board$/', $request_path, $matches) ) {
     if($method=='GET') { show_board($input);}
-    elseif($method=='POST') { reset_board();  show_board($input);}
+    elseif($method=='POST') { reset_board();}
     else { header('HTTP/1.1 405 Method Not Allowed');}
 } else if (preg_match('/^board\/piece\/([0-9])\/([0-9])$/', $request_path, $matches )) {
     if($method=='GET') { show_piece($matches[1],$matches[2]); }
