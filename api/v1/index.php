@@ -19,7 +19,7 @@ switch($r=array_shift($request)){
     case 'exchange':
         if($method=='GET'){
             printgame();
-        }
+        }break;
 }
 
 
