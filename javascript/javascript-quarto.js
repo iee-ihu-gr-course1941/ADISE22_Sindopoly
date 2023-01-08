@@ -15,7 +15,7 @@ function login_to_game() {
         dataType: "json",
         contentType: 'application/json',
         data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
-        success: login
+        success: onsuccess
             // error: login_error 
     });
 
