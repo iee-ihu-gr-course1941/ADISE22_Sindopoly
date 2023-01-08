@@ -15,7 +15,7 @@ function givedata() {
         method: 'POST',
         dataType: "json",
         contentType: 'application/json',
-        data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
+        //data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
         success: onsuccess
             // error: login_error 
     });
@@ -23,7 +23,7 @@ function givedata() {
 }
 function getdata() {
     $.ajax({
-        url: "api/v1/index.php/login",
+        url: "api/v1/index.php/exchange",
         method: 'GET',
         dataType: "json",
         contentType: 'application/json',
