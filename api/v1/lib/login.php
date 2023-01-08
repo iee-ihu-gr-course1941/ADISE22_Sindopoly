@@ -7,15 +7,24 @@ $gamename="metal";
 $p1name="gear";
 $p2name="solid"
 
-function give(){
+$who="potato";
 
-    echo "<br>IM FROM INSIDE THE LOGIN FUNCTION";
+function postdata(){
+
+    echo "<br>INSIDE INSERT";
     global $mysqli;
     $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('$gamename','$p1name','$p2name')";
     $mysqli->query($sql);
-    echo "<br>DID THE QUERY";
+    echo "<br>DID THE INSERT";
 }
-function get(){
-    echo "fat";
+function getdata(){
+    echo "<br>DID THE SELECT";
+    global $mysqli;
+    $sql = "SELECT gamename FROM sgame WHERE p1name='gear'";
+    $result=mysqli_query($mysqli,$sql);
+    while($row = mysqli_fetch_array($result)) {
+        $who=$row['gamename'];
+    echo "<br>DID THE SELECT";
+    }
 }
 ?>

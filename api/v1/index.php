@@ -23,11 +23,11 @@ echo "<br>FM FR";
 switch ($request[0]) {
     case 'data':
         if ($method == 'POST') {
-            login();
+            give();
             echo "did give";
         } else if($method=="GET"){
             get();
-            echo "did get"
+            echo "did get";
         }
         break;
     
