@@ -4,6 +4,8 @@ if(!defined('Access')) {
 }
 
 function login(){
+
+    echo "IM FROM LOGIN";
     global $mysqli;
     $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES (?,?,?)";
 
