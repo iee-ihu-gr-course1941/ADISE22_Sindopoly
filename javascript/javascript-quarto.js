@@ -10,7 +10,7 @@ $(function() {
 
 function login_to_game() {
     $.ajax({
-        url: "api/v1/login.php",
+        url: "api/v1/login",
         method: 'POST',
         dataType: "json",
         contentType: 'application/json',
@@ -65,9 +65,11 @@ function available_piece() {
 
 function onsuccess(data) {
 
-    var success = data.errormesg;
+    //var success = data.errormesg;
 
-    alert(success);
+    //alert(success);
+
+    alert("good job");
 }
 
 function login_error(data) {
