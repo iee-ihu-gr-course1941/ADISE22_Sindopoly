@@ -4,7 +4,7 @@ if(!defined('Access')) {
 }
 
 
-echo "outside<br>"
+echo "outside<br>";
 function login(){
 
     echo "<br>INSIDE INSERT";
