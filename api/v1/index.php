@@ -15,33 +15,45 @@ $input = json_decode(file_get_contents('php://input'),true);
 //$request_path = trim($_SERVER['PATH_INFO'],'/');
 //$GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
+switch($r=array_shift($resuqest)){
+    case 'exchange':
+        if($method=='GET'){
+            printgame();
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 switch ($request[0]) {
     case 'exchange':
         printgame();
 
-        /*
+        
         if ($method == 'POST') {
             echo "POST COMPLETE";
             //givedata();
-        }*/
+        }
         break;
-}
-
-function printgame(){
-    global $myqsli;
-    $sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
-    $st=$mysqli->prepare($sql);
-
-    $st->execute();
-    $res = $st->get_result();
-
-    header('Content-type: application/json');
-    print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);
-}
-
-
-
-
+}*/
 ?>
 
 
