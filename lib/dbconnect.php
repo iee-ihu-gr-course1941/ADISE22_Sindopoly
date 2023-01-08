@@ -1,6 +1,6 @@
 <?php
 
-  
+    echo "TRYING CONNECTION";
   $host='localhost';
   $db = 'sindopoly_db';
   $user='it175008';
@@ -12,7 +12,7 @@
         } else {
             $pass=null;
             $mysqli = new mysqli($host, $user, $pass, $db);
-            echo "CONNECTION DONE"
+            echo "CONNECTION DONE";
         }
         if ($mysqli->connect_errno) {
             echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
