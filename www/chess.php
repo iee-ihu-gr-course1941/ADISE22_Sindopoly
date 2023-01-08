@@ -22,7 +22,7 @@ if(isset($_SERVER['HTTP_X_TOKEN'])) {
 //
 if (preg_match('/^board$/', $request_path, $matches) ) {
     if($method=='GET') { show_board($input);}
-    elseif($method=='POST') { reset_board();}
+    elseif($method=='POST') { reset_board();  show_board($input);}
     else { header('HTTP/1.1 405 Method Not Allowed');}
 } else if (preg_match('/^board\/piece\/([0-9])\/([0-9])$/', $request_path, $matches )) {
     if($method=='GET') { show_piece($matches[1],$matches[2]); }
