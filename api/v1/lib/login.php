@@ -3,12 +3,8 @@ if(!defined('Access')) {
 	   die('Direct access not permitted');
 }
 
-$gamename="metal";
-$p1name="gear";
-$p2name="solid"
 
-$who="potato";
-
+echo "outside<br>"
 function login(){
 
     echo "<br>INSIDE INSERT";
