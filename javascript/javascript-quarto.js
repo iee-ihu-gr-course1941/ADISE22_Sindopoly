@@ -12,8 +12,8 @@ $(function() {
 function givedata() {
 
     $.ajax({
-        url: "api/v1/index.php/exchange",
-        success: cry
+        url: "api/v1/index.php/",
+        type: "POST"
     }
     );
 
