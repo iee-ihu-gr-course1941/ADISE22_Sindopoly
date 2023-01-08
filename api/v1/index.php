@@ -28,8 +28,10 @@ switch ($request[0]) {
     case 'exchange':
         if ($method == 'POST') {
             givedata();
+            echo "POST COMPLETE";
         } else if($method == 'GET'){
             senddata();
+            echo "GET COMPLETE";
         }
         break;
 
