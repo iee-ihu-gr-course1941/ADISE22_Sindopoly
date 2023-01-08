@@ -5,8 +5,6 @@ require_once "lib/login.php";
 
 require_once "lib/game.php";
 
-require_once "lib/board.php";
-
 
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
@@ -25,30 +23,12 @@ switch($r=array_shift($request)){
 */
 
 
-function printme(){
-        global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
-        $sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
-        $st=$mysqli->prepare($sql);
-    
-        $st->execute();
-        $res = $st->get_result();
-    
-        header('Content-type: application/json');
-        print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS 100% !!PUT GLOBAL WHEN NEEDED
+if($request[0]=='show'){
+    printgame();
 }
-
-printgame();
-printme();
-
-
-
-
-
-
-
-
-
-
+if($request[0]=='showfull'){
+    printgamefull();
+}
 
 
 
