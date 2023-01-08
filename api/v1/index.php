@@ -27,11 +27,13 @@ $p2name="3";
 switch ($request[0]) {
     case 'exchange':
         if ($method == 'POST') {
-            givedata();
             echo "POST COMPLETE";
+            givedata();
+            
         } else if($method == 'GET'){
-            senddata();
             echo "GET COMPLETE";
+            senddata();
+            
         }
         break;
 
