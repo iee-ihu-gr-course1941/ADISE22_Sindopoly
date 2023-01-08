@@ -18,15 +18,15 @@ $input = json_decode(file_get_contents('php://input'),true);
 
 //$GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
-global $myqsli;
-    $sql="SELECT gamename,p1name,p2name FROM sgame";
-    $st=$mysqli->prepare($sql);
+global $myqsli;//WORKS
+$sql="SELECT gamename,p1name,p2name,p1money,p2money FROM sgame";
+$st=$mysqli->prepare($sql);
 
-    $st->execute();
-    $res = $st->get_result();
+$st->execute();
+$res = $st->get_result();
 
-    header('Content-type: application/json');
-    print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);
+header('Content-type: application/json');
+print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS
 
 switch ($request[0]) {
     case 'exchange':
