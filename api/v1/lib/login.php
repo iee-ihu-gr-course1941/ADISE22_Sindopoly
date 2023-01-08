@@ -6,13 +6,14 @@ if(!defined('Access')) {
 function login()
 {
     global $mysqli;
-    $sql = "SELECT id, username, password FROM users WHERE username = ? OR email = ?";
-    $st = $mysqli->prepare($sql);
-    if (false === $st) {
-        print json_encode(['errormesg' => "Prepare Failed"]);
-        exit;
+    $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('help','karezos','kopsidas')";
+    if ($mysqli->query($sql) === TRUE) {
+        echo "<br>New game created successfully<br>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $mysqli->error;
     }
-
+}
+    /*
     $rc = $st->bind_param("ss", $GLOBALS['input']['username'], $GLOBALS['input']['username']);
     if (false === $rc) {
         print json_encode(['errormesg' => "Bind Failed"]);
@@ -70,7 +71,7 @@ function login()
         exit;
     }
     print json_encode(['errormesg'=>"TRUE"]);
-    
+    */
 }
 
 function register()

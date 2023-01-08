@@ -22,7 +22,7 @@ switch ($request[0]) {
             header("HTTP/1.1 400 Bad Request");
             print json_encode(['errormesg' => "Method $method not allowed here."]);
         }
-        break;
+        break;/*
     case 'register':
         if ($method == 'POST') {
             if (!isset($GLOBALS['input']['username'],$GLOBALS['input']['email'], $GLOBALS['input']['password'],$GLOBALS['input']['passwordRepeat'])){
@@ -118,7 +118,7 @@ switch ($request[0]) {
     default:
         header("HTTP/1.1 404 Not Found");
         print json_encode(['errormesg' => "Not found."]);
-        break;
+        break;*/
 }
 
 

@@ -11,8 +11,10 @@ $pass='';
 
 if(gethostname()=='users.iee.ihu.gr') {
 	$mysqli = new mysqli($host, $user, $pass, $db,null,'/home/student/it/2017/it75008/mysql/run/mysql.sock');
+    echo "Connected sock";
 } else {
         $mysqli = new mysqli($host, $user, $pass, $db);
+        echo "Connected classic";
 }
 
 if ($mysqli->connect_errno) {
