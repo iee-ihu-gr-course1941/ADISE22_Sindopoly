@@ -28,7 +28,7 @@ switch ($request[0]) {
     case 'exchange':
         if ($method == 'POST') {
             echo "POST COMPLETE";
-            givedata();
+            //givedata();
             
         } else if($method == 'GET'){
             echo "GET COMPLETE";
@@ -54,7 +54,7 @@ function senddata(){
 }
 */
 
-echo json_encode($gamename);
+print json_encode($gamename, JSON_PRETTY_PRINT);
 
 ?>
 
