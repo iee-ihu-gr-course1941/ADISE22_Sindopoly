@@ -11,8 +11,6 @@ $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
 $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
-
-$somedata="fuck";
 //Print it out for example purposes.
 // echo $_COOKIE['tokenC'];
 
@@ -21,22 +19,21 @@ echo "<br>FM FR";
 
 
 switch ($request[0]) {
-    case 'data':
+    case 'login':
         if ($method == 'POST') {
-            postdata();
-            echo "did give";
-        } else if($method=="GET"){
-            getdata();
-            echo "did get";
+            login();
+            echo "did login";
+        } else {
+            header("HTTP/1.1 400 Bad Request");
+            print json_encode(['errormesg' => "Method $method not allowed here."]);
         }
         break;
-    
+
 }
 
 
 
 
-echo "<br>".$somedata;
 ?>
 
 

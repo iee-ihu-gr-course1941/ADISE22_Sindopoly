@@ -11,7 +11,7 @@ $(function() {
 
 function givedata() {
     $.ajax({
-        url: "api/v1/index.php/data",
+        url: "api/v1/index.php/login",
         method: 'POST',
         dataType: "json",
         contentType: 'application/json',/*
@@ -24,11 +24,11 @@ function givedata() {
 }
 function getdata() {
     $.ajax({
-        url: "api/v1/index.php/data",
+        url: "api/v1/index.php/login",
         method: 'GET',
         dataType: "json",
         contentType: 'application/json',
-        data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
+        //data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
         success: onsuccess
             // error: login_error 
     });
