@@ -15,7 +15,7 @@ $input = json_decode(file_get_contents('php://input'),true);
 //$request_path = trim($_SERVER['PATH_INFO'],'/');
 //$GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
-switch($r=array_shift($resuqest)){
+switch($r=array_shift($request)){
     case 'exchange':
         if($method=='GET'){
             printgame();
