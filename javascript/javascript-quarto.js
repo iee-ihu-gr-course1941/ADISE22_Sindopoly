@@ -14,9 +14,9 @@ function givedata() {
         url: "api/v1/index.php/login",
         method: 'POST',
         dataType: "json",
-        contentType: 'application/json',/*
+        contentType: 'application/json',
         data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() 
-    }),*/
+    }),
         success: onsuccess
             // error: login_error 
     });
