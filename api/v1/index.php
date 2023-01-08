@@ -39,6 +39,7 @@ switch ($request[0]) {
 function senddata(){
     header('Content-type: application/json');
     echo  json_encode($gamename);
+    echo "fart";
 }
 
 
