@@ -2,7 +2,7 @@
 
 
 
-echo "outside<br>";
+echo "startlogin<br>";
 function login(){
 
     echo "<br>INSIDE INSERT";
@@ -21,4 +21,5 @@ function getdata(){
     echo "<br>DID THE SELECT";
     }
 }
+echo "endlogin<br>";
 ?>
