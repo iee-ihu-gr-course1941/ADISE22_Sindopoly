@@ -21,7 +21,7 @@ if(isset($_SERVER['HTTP_X_TOKEN'])) {
 // Το παλιό αρχείο είναι το chess-orig.php
 //
 if (preg_match('/^board$/', $request_path, $matches) ) {
-if($method=='GET') { /*show_board($input);*/}
+if($method=='GET') { show_board($input);}
     elseif($method=='POST') { reset_board();  show_board($input);}
     else { header('HTTP/1.1 405 Method Not Allowed');}
 } else if (preg_match('/^board\/piece\/([0-9])\/([0-9])$/', $request_path, $matches )) {
@@ -29,7 +29,7 @@ if($method=='GET') { /*show_board($input);*/}
     elseif($method=='PUT') {move_piece($matches[1],$matches[2],$input['x'],$input['y'], $input['token']); }    
     else {header('HTTP/1.1 405 Method Not Allowed');}
 } else if (preg_match('/^status$/', $request_path, $matches )) {
-if($method=='GET') {/*show_status();*/}
+if($method=='GET') {show_status();}
     else {header('HTTP/1.1 405 Method Not Allowed');}
 } else if (preg_match('/^players\/([BW])$/', $request_path, $matches) ) {
     if($method=='GET') { show_user($matches[1]);} 
