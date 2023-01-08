@@ -9,9 +9,9 @@ function login(){
 
     echo "<br>INSIDE INSERT";
     global $mysqli;
-     $gamename="test";
-     $p1name="shit";
-     $p2name="fuck";
+    global $gamename;
+    global $p1name;
+    global $p2name;
     $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('$gamename','$p1name','$p2name')";
     //$sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('f','k','u')";
     $mysqli->query($sql);

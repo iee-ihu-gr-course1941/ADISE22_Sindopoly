@@ -20,7 +20,9 @@ $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
 echo "<br>FM FR";
 
-
+$gamename="f";
+     $p1name="m";
+     $p2name="l";
 
 switch ($request[0]) {
     case 'exchange':
