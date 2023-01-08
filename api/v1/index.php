@@ -15,7 +15,7 @@ $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 // echo $_COOKIE['tokenC'];
 
 echo "FML";
-
+/*
 switch ($request[0]) {
     case 'login':
         if ($method == 'POST') {
@@ -27,7 +27,7 @@ switch ($request[0]) {
         }
         break;
 
-}
+}*/
 ?>
 
 
