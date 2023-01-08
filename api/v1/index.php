@@ -18,11 +18,14 @@ switch ($request[0]) {
     case 'login':
         if ($method == 'POST') {
             login();
+            echo "did login";
         } else {
             header("HTTP/1.1 400 Bad Request");
             print json_encode(['errormesg' => "Method $method not allowed here."]);
         }
         break;
+
 }
+?>
 
 
