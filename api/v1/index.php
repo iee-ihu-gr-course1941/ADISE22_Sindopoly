@@ -23,10 +23,10 @@ echo "<br>FM FR";
 switch ($request[0]) {
     case 'data':
         if ($method == 'POST') {
-            give();
+            postdata();
             echo "did give";
         } else if($method=="GET"){
-            get();
+            getdata();
             echo "did get";
         }
         break;
