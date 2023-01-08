@@ -10,12 +10,12 @@ $(function() {
 
 function login_to_game() {
     $.ajax({
-        url: "api/v1/index",
+        url: "api/v1/index/login",
         method: 'POST',
         dataType: "json",
         contentType: 'application/json',
         data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
-        success: onsuccess
+        success: login
             // error: login_error 
     });
 
