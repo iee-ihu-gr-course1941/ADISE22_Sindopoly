@@ -28,13 +28,15 @@ function getdata() {
         dataType: "json",
         contentType: 'application/json',
         //data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
-        success: onsuccess
+        success: function(data){
+            alert(data);
+        }
         // error: login_error 
     });
 
 }
 
-function onsuccess(){}
+
 
 
 
