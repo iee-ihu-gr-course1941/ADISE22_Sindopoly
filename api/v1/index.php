@@ -27,7 +27,7 @@ if($request[0]=='show'){
     printgame();
 }
 if($request[0]=='showfull'){
-    printgamefull();
+    printgameall();
 }
 
 
