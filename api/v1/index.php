@@ -20,17 +20,16 @@ $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
 echo "<br>FM FR";
 
-$gamename="f";
-     $p1name="m";
-     $p2name="l";
+$gamename="1";
+$p1name="2";
+$p2name="3";
 
 switch ($request[0]) {
     case 'exchange':
         if ($method == 'POST') {
-            login();
-        } else {
-            header("HTTP/1.1 400 Bad Request");
-            print json_encode(['errormesg' => "Method $method not allowed here."]);
+            givedata();
+        } else if($method == 'GET'){
+            
         }
         break;
 
