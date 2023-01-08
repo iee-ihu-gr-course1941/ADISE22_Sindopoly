@@ -1,7 +1,5 @@
 <?php
-if(!defined('Access')) {
-	   die('Direct access not permitted');
-}
+
 
 
 echo "outside<br>";

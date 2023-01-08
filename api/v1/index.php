@@ -1,5 +1,5 @@
 <?php
-define('Access', TRUE);
+
 echo "1<br>";
 require_once "lib/dbconnect.php";
 echo "2<br>";
@@ -25,7 +25,7 @@ echo "<br>FM FR";
 switch ($request[0]) {
     case 'login':
         if ($method == 'POST') {
-            //login();
+            login();
         } else {
             header("HTTP/1.1 400 Bad Request");
             print json_encode(['errormesg' => "Method $method not allowed here."]);
