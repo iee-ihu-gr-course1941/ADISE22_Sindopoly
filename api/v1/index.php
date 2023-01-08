@@ -13,48 +13,39 @@ require_once "lib/board.php";
 
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
-$GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
+$request_path = trim($_SERVER['PATH_INFO'],'/');
+$input = json_decode(file_get_contents('php://input'),true);
 
-//Print it out for example purposes.
-// echo $_COOKIE['tokenC'];
+//$GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
 
-
-$gamename="metal gear";
-$p1name=$_POST['p1name'];
-$p2name=$_POST['p2name'];
 
 switch ($request[0]) {
     case 'exchange':
+        printgame();
+
+        /*
         if ($method == 'POST') {
             echo "POST COMPLETE";
             //givedata();
-            
-        } else if($method == 'GET'){
-            echo "GET COMPLETE";
-            senddata();
-            
-        }
+        }*/
         break;
-
 }
 
-/*
-$message="The game is ".$gamename;
-$response=array();
-$response["success"]=true;
-$response["message"]=$message;
+function printgame(){
+    global $myqsli;
+    $sql="SELECT gamename,p1name,p2name FROM sgame";
+    $st=$mysqli->prepare($sql);
 
-echo json_encode($response);
+    $st->execute();
+    $res = $st->get_result();
 
-
-function senddata(){
     header('Content-type: application/json');
-    echo  json_encode($gamename);
+    print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);
 }
-*/
 
-print json_encode($gamename, JSON_PRETTY_PRINT);
+
+
 
 ?>
 

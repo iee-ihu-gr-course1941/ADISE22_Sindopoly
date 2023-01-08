@@ -12,7 +12,7 @@ $(function() {
 function givedata() {
 
     $.ajax({
-        url: "api/v1/index.php",
+        url: "api/v1/index.php/exchange",
         success: cry
     }
     );
