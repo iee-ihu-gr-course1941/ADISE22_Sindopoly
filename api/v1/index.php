@@ -1,6 +1,6 @@
 <?php
 define('Access', TRUE);
-alert("<br>KILL ME");
+
 require_once "lib/dbconnect.php";
 require_once "lib/login.php";
 require_once "lib/game.php";
@@ -15,7 +15,7 @@ $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 // echo $_COOKIE['tokenC'];
 
 echo "<br>FML";
-/*
+
 switch ($request[0]) {
     case 'login':
         if ($method == 'POST') {
@@ -27,7 +27,7 @@ switch ($request[0]) {
         }
         break;
 
-}*/
+}
 ?>
 
 
