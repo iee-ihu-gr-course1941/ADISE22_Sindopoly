@@ -1,6 +1,6 @@
 <?php
     function printgame(){
-        global $myqsli;
+        global $mysqli;
         $sql="SELECT gamename,p1name,p2name,p1money,p2money FROM game";
         $st=$mysqli->prepare($sql);
     
