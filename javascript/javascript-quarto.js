@@ -5,13 +5,27 @@
 var x = { username: null, pass: null };
 
 $(function() {
-    $('#sub').click(login_to_game);
+    $('#inbut').click(givedata);
+    $('#outbut').click(getdata);
 });
 
-function login_to_game() {
+function givedata() {
     $.ajax({
-        url: "api/v1/index.php/login",
+        url: "api/v1/index.php/data",
         method: 'POST',
+        dataType: "json",
+        contentType: 'application/json',/*
+        data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() 
+    }),*/
+        success: onsuccess
+            // error: login_error 
+    });
+
+}
+function getdata() {
+    $.ajax({
+        url: "api/v1/index.php/data",
+        method: 'GET',
         dataType: "json",
         contentType: 'application/json',
         data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
@@ -20,7 +34,6 @@ function login_to_game() {
     });
 
 }
-
 
 function regist_to_game() {
     $.ajax({
