@@ -1,6 +1,6 @@
 <?php
 define('Access', TRUE);
-echo "KILL ME";
+echo "<br>KILL ME";
 require_once "lib/dbconnect.php";
 require_once "lib/login.php";
 require_once "lib/game.php";
@@ -14,7 +14,7 @@ $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 //Print it out for example purposes.
 // echo $_COOKIE['tokenC'];
 
-echo "FML";
+echo "<br>FML";
 /*
 switch ($request[0]) {
     case 'login':

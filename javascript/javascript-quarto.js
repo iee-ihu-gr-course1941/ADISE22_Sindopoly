@@ -10,7 +10,7 @@ $(function() {
 
 function login_to_game() {
     $.ajax({
-        url: "api/v1/index",
+        url: "api/v1/index.php",
         method: 'POST',
         dataType: "json",
         contentType: 'application/json',
