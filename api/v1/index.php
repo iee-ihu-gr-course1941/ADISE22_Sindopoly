@@ -3,8 +3,8 @@ define('Access', TRUE);
 
 require_once "lib/dbconnect.php";
 require_once "lib/login.php";
-//require_once "lib/game.php";
-//require_once "lib/board.php";
+require_once "lib/game.php";
+require_once "lib/board.php";
 
 
 $method = $_SERVER['REQUEST_METHOD'];
