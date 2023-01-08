@@ -5,14 +5,14 @@ var last_update=new Date().getTime();
 var timer=null;
 
 $(function () {
-	draw_empty_board();
-	fill_board();
+	/*draw_empty_board();
+	fill_board();*/
 	
 	$('#chess_login').click( login_to_game);
 	$('#chess_reset').click( reset_board);
 	$('#do_move').click( do_move);
 	$('#move_div').hide();
-	game_status_update();
+	/*game_status_update();*/
 	$('#the_move_src').change( update_moves_selector);
 	$('#do_move2').click( do_move2);
 });
