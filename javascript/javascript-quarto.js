@@ -15,7 +15,7 @@ function givedata() {
         method: 'POST',
         dataType: "json",
         contentType: 'application/json',
-        //data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
+        data: JSON.stringify({ p1name: $('#p1name').val(), p2name: $('#p2name').val() }),
         //success: onsuccess
         // error: login_error 
     });
@@ -28,12 +28,13 @@ function getdata() {
         dataType: "json",
         contentType: 'application/json',
         //data: JSON.stringify({ username: $('#username').val(), pass: $('#pass').val() }),
-        //success: onsuccess
+        success: onsuccess
         // error: login_error 
     });
 
 }
 
+function onsuccess(){}
 
 
 
