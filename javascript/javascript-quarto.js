@@ -5,7 +5,7 @@
 var x = { username: null, pass: null };
 
 $(function() {
-    $('#sub').click(login_to_game);
+    $('#inbut').click(login_to_game);
 });
 
 function login_to_game() {
