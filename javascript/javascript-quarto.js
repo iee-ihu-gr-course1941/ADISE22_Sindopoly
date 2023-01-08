@@ -22,7 +22,7 @@ function givedata() {
 
 }
 function getdata() {
-    var p1=$("$p1name").val();
+    var p1=$("#p1name").val();
     alert(p1);
     $.ajax({
         url: "api/v1/index.php/exchange",
