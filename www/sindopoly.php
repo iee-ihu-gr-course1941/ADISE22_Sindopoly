@@ -3,7 +3,7 @@ require_once "../lib/dbconnect.php";
 require_once "../lib/create.php";
 require_once "../lib/join.php";
 
-
+echo "help";
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
 $request_path = trim($_SERVER['PATH_INFO'],'/');
