@@ -21,8 +21,8 @@ $GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
 
 $gamename="metal gear";
-$p1name="2";
-$p2name="3";
+$p1name=$_POST['p1name'];
+$p2name=$_POST['p2name'];
 
 switch ($request[0]) {
     case 'exchange':
