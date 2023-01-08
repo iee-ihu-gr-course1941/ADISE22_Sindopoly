@@ -1,6 +1,6 @@
 <?php
 define('Access', TRUE);
-
+echo "KILL ME";
 require_once "lib/dbconnect.php";
 require_once "lib/login.php";
 require_once "lib/game.php";
