@@ -44,9 +44,9 @@
         }
 
 
-
-        //header('Content-type: application/json');
-        //print json_encode("iam":"$iam",JSON_PRETTY_PRINT);
+        $sent=array("iam"=>$iam);
+        header('Content-type: application/json');
+        print json_encode($sent,JSON_PRETTY_PRINT);
     }
     function rolldice1(){
         global $mysqli;
