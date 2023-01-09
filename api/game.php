@@ -92,9 +92,9 @@
                 $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
                 $result=mysqli_query($mysqli,$sql);
 
-                //$turn=2;
-                //$sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
-                //$result=mysqli_query($mysqli,$sql);
+                $turn=2;
+                $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
+                $result=mysqli_query($mysqli,$sql);
 
                 tile();
             }else{
@@ -129,9 +129,9 @@
                 $sql="UPDATE game SET `p2pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
                 $result=mysqli_query($mysqli,$sql);
 
-                //$turn=1;
-                //$sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
-                //$result=mysqli_query($mysqli,$sql);
+                $turn=1;
+                $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
+                $result=mysqli_query($mysqli,$sql);
 
                 tile();
             }else{
@@ -139,18 +139,7 @@
             }
         }
     }
-    function endturn(){
-        $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
-        $result=mysqli_query($mysqli,$sql);
-        $row = mysqli_fetch_array($result);
-        $turn=$row["pturn"];
-
-        if($turn==1){$turn=2;}
-        if($turn==2){$turn=1;}
-
-        $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
-        $result=mysqli_query($mysqli,$sql);
-    }
+    
     function tile(){
         global $mysqli;
         global $input;
