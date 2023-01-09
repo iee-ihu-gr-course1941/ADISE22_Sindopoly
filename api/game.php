@@ -131,7 +131,7 @@
         global $gamename;
         global $iam;
 
-        
+        $echo "PUSSY";
         $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
