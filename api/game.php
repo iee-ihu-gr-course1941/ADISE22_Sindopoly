@@ -183,11 +183,7 @@
             case 39: owner();break;
         }
         */
-        echo "<br>FUCK".$iam;
-
-
-
-
+        echo "<br>FUCK";
     }
     function owner(){echo "<br>owner is"}
     function givemoney($sum){echo "<br>money given";}
