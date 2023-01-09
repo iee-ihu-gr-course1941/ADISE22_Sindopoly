@@ -123,7 +123,7 @@
         }
         
         if(($playerfound==1&&$whoseturn==2)||($playerfound==2&&$whoseturn==1)){//IF ITS NOT THE CORRECT PLAYERS TURN
-            echo "<br>It is not your turn yet.You need to wait for you opponent to play";
+            echo "<br>It is not your turn yet player ".$whoseturn.".You need to wait for you opponent to play";
         }
     }
     function printdb(){//PRINTS THE WHOLE DATABASE
