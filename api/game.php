@@ -60,7 +60,7 @@
                 $nextpos=$nextpos-39;
             }
              
-            //echo "<br>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
+            echo "<br>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
             $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         }
