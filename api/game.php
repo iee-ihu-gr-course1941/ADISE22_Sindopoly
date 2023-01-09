@@ -83,56 +83,59 @@
         echo "<br>On end of turn he plays: ".$whoseturn;
     }
     */
-    function rolldice(){
+    function rolldice1(){
         global $mysqli;
         global $input;
         global $playerfound;
         global $gamename;
         global $whoseturn;
+        $roll=rand(1,6);//ROLL THE DICE
 
-        $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//UPLOAD NEW TURN INT
-        $result=mysqli_query($mysqli,$sql);
-        $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TURN INT
+        $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
-        $playerwhocanplay=$row["pturn"];
+        $turn=$row["pturn"];
+        echo "<br>PLAYER WHO PLAYS NOW".$turn;
         
-        $roll=rand(1,6);//ROLL THE DICE
-        if($playerfound==1&&$whoseturn==1){//IF CURRENT PLAYER IS PLAYER 1
+        if($turn==1){//IF PLAYER 1 PLAYS
             $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
 
-            $currentpos=$row["p1pos"];
-            $nextpos=$currentpos+$roll;
-            if($nextpos>39){//IF PLAYER PASSED START SUBSTRACT THE SUM OF TILES FROM HIS POSITION
+            $pastpos=$row["p1pos"];
+            $nextpos=$pastpos+$roll;
+            if($nextpos>39){//PASSED START
                 $nextpos=$nextpos-40;
             }
-             
-            echo "<brFOR P1->>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
+            
             $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
-        }
-        if($playerfound==2&&$whoseturn==2){//IF CURRENT PLAYER IS PLAYER 2
-            $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
-            $result=mysqli_query($mysqli,$sql);
-            $row = mysqli_fetch_array($result);
 
-            $currentpos=$row["p2pos"];
-            $nextpos=$currentpos+$roll;
-            if($nextpos>39){//IF PLAYER PASSED START SUBSTRACT THE SUM OF TILES FROM HIS POSITION
-                $nextpos=$nextpos-40;
-            }
-             
-            echo "<br>FOR P2->Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
-            $sql="UPDATE game SET `p2pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
+            $turn=2;
+            $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//CHANGE TURN
             $result=mysqli_query($mysqli,$sql);
         }
         
+        
+
+        
+
         if(($playerfound==1&&$whoseturn==2)||($playerfound==2&&$whoseturn==1)){//IF ITS NOT THE CORRECT PLAYERS TURN
             echo "<br>It is not your turn yet player ".$whoseturn.".You need to wait for you opponent to play";
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
     function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
         $sql="SELECT * FROM game";

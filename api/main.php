@@ -27,16 +27,17 @@ switch($r=array_shift($request)){
     case 'show' :
         printdb();
     break;
-    case 'rolldice' :
-        getturn();
-        rolldice();
-        endturn();
+    case 'rolldice/1' :
+        rolldice1();
+    break;
+    case 'rolldice/2' :
+        rolldice2();
     break;
 }
 
 
 echo "<br>You are player: ".$playerfound;
-echo "<br>You can play next: ".$whoseturn;
+echo "<br>Player ".$whoseturn." finished his turn";
 ?>
 
 
