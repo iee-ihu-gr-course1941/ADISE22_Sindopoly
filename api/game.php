@@ -70,8 +70,10 @@
 
         if($whoseturn==1){
             $whoseturn=2;
+            echo "<br>I AM: "$whoseturn;
         }else if($whoseturn==2){
             $whoseturn==1;
+            echo "<br>I NEED TO BECOME: "$whoseturn;
         }
 
         $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//UPLOAD NEW TURN INT
@@ -100,7 +102,7 @@
                 $nextpos=$nextpos-40;
             }
              
-            //echo "<brFOR P1->>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
+            echo "<brFOR P1->>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
             $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         }
@@ -115,7 +117,7 @@
                 $nextpos=$nextpos-40;
             }
              
-            //echo "<br>FOR P2->Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
+            echo "<br>FOR P2->Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
             $sql="UPDATE game SET `p2pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         }
