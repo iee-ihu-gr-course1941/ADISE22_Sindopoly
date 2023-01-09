@@ -214,9 +214,9 @@
             }else if($choice=='n'){
                 echo "<br> You didn't buy the property";
             }
-        }/*else if($owner==$iam){//PLAYER ALREADY HAS THIS PROPERTY
+        }else if($owner==$iam){//PLAYER ALREADY HAS THIS PROPERTY
             echo "<br> You already own this property<br>";
-        }else{//PROPERTY BELONGS TO OPPONENT
+        }/*else{//PROPERTY BELONGS TO OPPONENT
             if($bank=="p1money"){$enemybank="p2money";}
             if($bank=="p2money"){$enemybank="p1money";}
             minusmoney($pay,$bank);
