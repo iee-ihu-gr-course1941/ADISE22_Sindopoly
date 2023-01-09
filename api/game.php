@@ -163,7 +163,7 @@
             case 18: owner(18);break;
             case 19: owner(19);break;
             case 20: //FREE PARKING
-            case 21: owner()21;break;
+            case 21: owner(21);break;
             case 22: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 23: owner(23);break;
             case 24: owner(24);break;
