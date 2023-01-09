@@ -26,7 +26,7 @@ switch($r=array_shift($request)){
 */
 
 $p1name=$input['p1'];
-echo $p1name
+echo $p1name;
 
 switch($r=array_shift($request)){
     case 'show' :
