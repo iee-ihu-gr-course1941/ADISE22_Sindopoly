@@ -53,7 +53,7 @@
         $playerwhocanplay=$row["pturn"];
 
         $whoseturn=$playerwhocanplay;
-        echo "<br>On start of turn he plays: ".$whoseturn;
+        //echo "<br>On start of turn he plays: ".$whoseturn;
     }
     function endturn(){
         global $mysqli;
@@ -77,7 +77,7 @@
         $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//UPLOAD NEW TURN INT
         $result=mysqli_query($mysqli,$sql);
 
-        echo "<br>On end of turn he plays: "$whoseturn;
+        //echo "<br>On end of turn he plays: "$whoseturn;
     }
     function rolldice(){
         global $mysqli;
@@ -100,7 +100,7 @@
                 $nextpos=$nextpos-40;
             }
              
-            echo "<brFOR P1->>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
+            //echo "<brFOR P1->>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
             $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         }
@@ -115,13 +115,14 @@
                 $nextpos=$nextpos-40;
             }
              
-            echo "<br>FOR P2->Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
+            //echo "<br>FOR P2->Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
             $sql="UPDATE game SET `p2pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         }
+        /*
         if(($playerfound==1&&$whoseturn==2)||($playerfound==2&&$whoseturn==1)){//IF ITS NOT THE CORRECT PLAYERS TURN
             echo "<br>It is not your turn yet.You need to wait for you opponent to play";
-        }
+        }*/
     }
     function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
