@@ -9,7 +9,7 @@ var x = { username: null, pass: null };
 
 $(function() {
     $('#inbut').click(givedata);
-    $('#outbut').click(getdata);
+    //$('#outbut').click(getdata);
 });
 
 function givedata() {
