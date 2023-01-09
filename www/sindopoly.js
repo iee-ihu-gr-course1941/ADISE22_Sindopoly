@@ -11,6 +11,7 @@ function dome() {
         //success: cry
         method: "POST",
         dataType: "json",
+        contentType: 'application/json',
         data:{
         "gamename":"solid",
         "p1name":"snake",
