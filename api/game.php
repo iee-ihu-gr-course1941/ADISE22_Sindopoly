@@ -23,34 +23,26 @@
         $gamename=$input['gamename'];
         $pname=$input['pname'];
         
-        /*
-        $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
-        $st=$mysqli->prepare($sql);
-        $st->execute();
-        $res1 = $st->get_result();
-        */
         echo "<br>Gamename: ".$gamename;
         $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
-        echo "<br>Name found bruh: ".$row["p1name"];
-        
-        //$st=$mysqli->prepare($sql);
-        //$st->execute();
-        //$res2 = $st->get_result();
-
-        /*
-        if($res1==$pname){
+        $namefound=$row["p1name"];
+        if($namefound==$pname){
             $playerfound=1;
-        }else if($res2==$pname){
+        }
+
+        
+        $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
+        $result=mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result);
+        $namefound=$row["p2name"];
+        if($namefound==$pname){
             $playerfound=2;
-        }*/
-        //echo $row["p2name"];
-        $playerfound=5;
-        //echo "<br> 1-".$res1;
-        //echo "<br> 2-".$res2;
-        //echo "<br> 3-".$playerfound;
-      
+        }
+        
+        
+        
     }
     function change(){
         global $fml;
