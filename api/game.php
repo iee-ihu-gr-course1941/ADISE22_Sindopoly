@@ -70,10 +70,10 @@
 
         if($whoseturn==1){
             $whoseturn=2;
-            echo "<br>I AM: "$whoseturn;
+            echo "<br>I AM: ".$whoseturn;
         }else if($whoseturn==2){
             $whoseturn==1;
-            echo "<br>I NEED TO BECOME: "$whoseturn;
+            echo "<br>I NEED TO BECOME: ".$whoseturn;
         }
 
         $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//UPLOAD NEW TURN INT
