@@ -197,7 +197,7 @@
         $row = mysqli_fetch_array($result);
         $owner=$row;
 
-        echo "Current tile owner is".$owner;
+        echo "<br>Current tile owner is ".$owner;
 
     }
     
