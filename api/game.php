@@ -29,7 +29,7 @@
         $st->execute();
         $res1 = $st->get_result();
         */
-
+        echo "<br>Gamename: ".$gamename;
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
         while($row = mysqli_fetch_array($result)) {
