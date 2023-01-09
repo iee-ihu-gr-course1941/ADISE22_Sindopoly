@@ -10,10 +10,9 @@ $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
 $input = json_decode(file_get_contents('php://input'),true);
 
+//FOR DEBUG
 echo json_encode($input);
 
-//$playerfound=-1;
-$fml=0;
 switch($r=array_shift($request)){
     case 'creategame' :
         creategame();
@@ -24,8 +23,8 @@ switch($r=array_shift($request)){
     case 'show' :
         printdb();
     break;
-    case 'change' :
-        change();
+    case 'rolldice' :
+        rolldice();
     break;
 }
 

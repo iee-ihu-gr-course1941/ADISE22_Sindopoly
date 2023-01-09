@@ -23,7 +23,6 @@
         $gamename=$input['gamename'];
         $pname=$input['pname'];
         
-        
         //CHECK FOR PLAYER 1
         $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
@@ -32,8 +31,7 @@
         if($namefound==$pname){
             $playerfound=1;
         }
-
-        //CHECKS OF PLAYER 2
+        //CHECK FOR PLAYER 2
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
@@ -41,13 +39,13 @@
         if($namefound==$pname){
             $playerfound=2;
         }
-        
-        
-        
     }
-    function change(){
-        global $fml;
-         $fml=2;
+    function rolldice(){
+        global $mysqli;
+        global $input;
+        global $playerfound;
+
+        echo "<br>".rand(1,6);
     }
     function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
