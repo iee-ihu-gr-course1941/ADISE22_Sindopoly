@@ -25,10 +25,12 @@ switch($r=array_shift($request)){
 }
 */
 
+
 $p1name=$input['p1'];
 echo $p1name;
-echo "shit";
-
+echo $p2name;
+echo "shit<br>";
+echo json_encode($input);
 switch($r=array_shift($request)){
     case 'show' :
         printgame();
