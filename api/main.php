@@ -25,7 +25,7 @@ switch($r=array_shift($request)){
     break;
 }
 
-echo "<br>".global $playerfound;
+//echo "<br>".global $playerfound;
 ?>
 
 
