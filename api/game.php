@@ -49,13 +49,13 @@
         global $turn;
         $roll=rand(1,6);//ROLL THE DICE
 
-        echo "<br>STARTING ROLLDICE1";
+        echo "<br>STARTING ROLLDICE 1";
 
         $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $turn=$row["pturn"];
-        echo "<br>1! PLAYER WHO PLAYS NOW IS ".$turn;
+        echo "<br>1! PLAYER WHO PLAYS NOW IS :".$turn;
         
         if($turn==1){//IF PLAYER 1 PLAYS
             $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
@@ -88,7 +88,7 @@
         global $turn;
         $roll=rand(1,6);//ROLL THE DICE
 
-        echo "<br>STARTING ROLLDICE2";
+        echo "<br>STARTING ROLLDICE 2";
 
         $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
         $result=mysqli_query($mysqli,$sql);
@@ -96,7 +96,7 @@
         $turn=$row["pturn"];
         echo "<br>2! PLAYER WHO PLAYS NOW IS :".$turn;
         
-        if($turn==1){//IF PLAYER 1 PLAYS
+        if($turn==2){//IF PLAYER 2 PLAYS
             $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
