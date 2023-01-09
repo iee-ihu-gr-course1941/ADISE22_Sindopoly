@@ -221,15 +221,9 @@
             if($bank=="p2money"){$enemybank="p1money";}
             minusmoney($pay,$bank);
             plusmoney($pay,$enemybank);
-            echo "<br>You gave your opponent ".$pay." dollars";
+            echo "<br>You gave your opponent ".$pay." dollars because he owns the property";
         }
-
-
-        //echo "My choice is ".$choice;
-        //echo "<br>You are in tile ".$where;
-        //echo "<br>Current tile owner is ".$owner;
     }
-    
     function plusmoney($sum,$bankaccount){
         global $mysqli;
         global $input;

@@ -22,8 +22,6 @@ switch($r=array_shift($request)){
     break;
     case 'rolldice' :
         rolldice();
-    break;
-    case 'tile' :
         tile();
     break;
 }
