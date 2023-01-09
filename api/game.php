@@ -55,7 +55,7 @@
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $turn=$row["pturn"];
-        echo "<br>PLAYER WHO PLAYS NOW".$turn;
+        echo "<br>PLAYER WHO PLAYS NOW IS ".$turn;
         
         if($turn==1){//IF PLAYER 1 PLAYS
             $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
@@ -75,7 +75,7 @@
             $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
             $result=mysqli_query($mysqli,$sql);
         }else{
-            echo "Its not you turn yet.Wait for you opponent to play";
+            echo "<br>Its not you turn yet player 1.Wait for you opponent to play";
         }
     }
 
@@ -114,7 +114,7 @@
             $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
             $result=mysqli_query($mysqli,$sql);
         }else{
-            echo "Its not you turn yet.Wait for you opponent to play";
+            echo "<br>Its not you turn yet player 2.Wait for you opponent to play";
         }
     }
 
