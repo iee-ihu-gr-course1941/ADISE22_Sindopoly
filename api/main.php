@@ -27,10 +27,10 @@ switch($r=array_shift($request)){
     case 'show' :
         printdb();
     break;
-    case 'rolldice/1' :
+    case 'rolldice1' :
         rolldice1();
     break;
-    case 'rolldice/2' :
+    case 'rolldice2' :
         rolldice2();
     break;
 }
