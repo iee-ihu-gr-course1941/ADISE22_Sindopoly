@@ -14,7 +14,7 @@ function givedata() {
 }
 
 function cry(data){
-    var fuckme=data[0];
+    var fuckme=data[0].gamename;
     alert(fuckme);
     $(resultdiv).html(fuckme.gamename);
 }
