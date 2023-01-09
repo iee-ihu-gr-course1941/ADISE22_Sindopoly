@@ -221,7 +221,7 @@
             if($bank=="p2money"){$enemybank="p1money";}
             minusmoney($pay,$bank);
             plusmoney($pay,$enemybank);
-            echo "You gave your opponent ".$pay." dollars";
+            echo "<br>You gave your opponent ".$pay." dollars";
         }
 
 
