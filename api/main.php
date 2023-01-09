@@ -1,9 +1,9 @@
 <?php
-require_once "lib/dbconnect.php";
+require_once "dbconnect.php";
 
-require_once "lib/login.php";
+require_once "login.php";
 
-require_once "lib/game.php";
+require_once "game.php";
 
 
 $method = $_SERVER['REQUEST_METHOD'];

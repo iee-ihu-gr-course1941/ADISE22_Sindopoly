@@ -1,8 +1,6 @@
 <?php
 
 function givedata(){
-
-    
     global $mysqli;
     global $gamename;
     global $p1name;
@@ -10,10 +8,6 @@ function givedata(){
     $sql = "INSERT INTO sgame(gamename,p1name,p2name) VALUES ('$gamename','$p1name','$p2name')";
     $mysqli->query($sql);
 }
-
-
-
-
 
 function getdata(){
     echo "<br>DID THE SELECT";
