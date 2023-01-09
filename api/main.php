@@ -26,7 +26,7 @@ switch($r=array_shift($request)){
     break;
 }
 
-echo $playerfound;
+//echo $playerfound;
 ?>
 
 
