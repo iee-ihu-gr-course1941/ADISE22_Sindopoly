@@ -117,7 +117,7 @@
             echo "<br>Its player ".$turn."'s turn";
             
             if($turn==2){//IF PLAYER 2 PLAYS
-                echo "<br>Rolling dice for player 1. You rolled a ".$roll;
+                echo "<br>Rolling dice for player 2. You rolled a ".$roll;
                 $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
                 $result=mysqli_query($mysqli,$sql);
                 $row = mysqli_fetch_array($result);
