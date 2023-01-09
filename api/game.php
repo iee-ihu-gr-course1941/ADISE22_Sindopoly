@@ -43,7 +43,7 @@
         }else if($res2==$pname){
             $playerfound=2;
         }*/
-        echo $row["p2name"];
+        //echo $row["p2name"];
         $playerfound=5;
         //echo "<br> 1-".$res1;
         //echo "<br> 2-".$res2;
