@@ -194,7 +194,20 @@
     function owner($where){echo "<br>owner is".$where;}
     
     function plusmoney($sum,$bankaccount){
-        echo "<br>money given";
+        global $mysqli;
+        global $input;
+        global $gamename;
+        
+        $sql="SELECT $bankaccount FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT BALANCE
+        $result=mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result);
+
+        $oldbalance=$row[$bankaccount];
+        $newbalance=$oldbalance+$sum;
+
+        $sql="UPDATE game SET $bankaccount=$newbalance WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
+        $result=mysqli_query($mysqli,$sql);
+        echo "<br>Money given to ".$bankaccount." bankaccount. New balance is : ".$newbalance."<br>";
     }
     function minusmoney($sum,$bankaccount){
         global $mysqli;
@@ -229,5 +242,4 @@
         header('Content-type: application/json');
         print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS 100% !!PUT GLOBAL WHEN NEEDED
     }
-
 ?>
