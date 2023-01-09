@@ -1,5 +1,5 @@
 <?php
-    function printgame(){
+    function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
         $sql="SELECT * FROM game";
         $st=$mysqli->prepare($sql);
@@ -14,9 +14,9 @@
     function creategame(){//CREATES THE GAME WITH NAME P1NAME AND P2NAME VALUES
         
         global $mysqli;
-        $gamename=$input['gamename'];
-        $p1name=$input['p1name'];
-        $p2name=$input['p2name'];
+        global $gamename=$input['gamename'];
+        global $p1name=$input['p1name'];
+        global $p2name=$input['p2name'];
         $sql="INSERT INTO game(gamename,p1name,p2name) VALUES ('$gamename','$p1name','$p2name')";
         $st=$mysqli->prepare($sql);
         $st->execute();
