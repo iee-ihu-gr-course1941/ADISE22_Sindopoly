@@ -186,9 +186,9 @@
         */
         //echo "<br>FUCK".$pos;
     }
-    function owner(){echo "<br>owner is";}
-    function givemoney($sum){echo "<br>money given";}
-    function takemoney($sum){echo "<br>money taken";}
+    //function owner(){echo "<br>owner is";}
+    //function givemoney(){echo "<br>money given";}
+    //function takemoney(){echo "<br>money taken";}
 
 
 
