@@ -42,7 +42,7 @@
         $playerfound=5;
         echo "<br> 1-".$res1;
         echo "<br> 2-".$res2;
-        echo "<br> 3-".$playerfound;
+        //echo "<br> 3-".$playerfound;
       
     }
     function change(){
