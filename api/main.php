@@ -10,29 +10,17 @@ $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
 $input = json_decode(file_get_contents('php://input'),true);
 
-$gamename="test0";
-$p1name="test1";
-$p2name="test2";
+$gamename=$input['gamename'];
+$p1name=$input['p1name'];
+$p2name=$input['p2name'];
 //$request_path = trim($_SERVER['PATH_INFO'],'/');
 //$GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
-/*
-switch($r=array_shift($request)){
-    case 'exchange':
-        if($method=='GET'){
-            printgame();
-        }break;
-}
-*/
 
-
-$p1name=$input['p1'];
-echo $p1name;
-echo $p2name;
-echo "shit<br>";
-echo $input;
-
-
+echo $gamename."<br>";
+echo $p1name."<br>";
+echo $p2name."<br>";
+echo json_encode($input);
 
 
 switch($r=array_shift($request)){
@@ -46,24 +34,6 @@ switch($r=array_shift($request)){
         defaultgame();
     break;
 }
-
-
-
-
-
-
-/*
-switch ($request[0]) {
-    case 'exchange':
-        printgame();
-
-        
-        if ($method == 'POST') {
-            echo "POST COMPLETE";
-            //givedata();
-        }
-        break;
-}*/
 ?>
 
 
