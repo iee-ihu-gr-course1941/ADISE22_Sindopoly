@@ -137,23 +137,25 @@
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
             $pos=$row["p1pos"];
+            $balance="p1money";
         }else if($iam==2){
             $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
             $pos=$row["p2pos"];
+            $balance="p2money";
         }
         echo "<br>YOU ARE IN ".$pos."<br>";
         
         switch($pos){
-            case 0: givemoney(200);break;
+            case 0: givemoney(200,$balance);break;
             case 1: owner(1);break;
-            case 2: takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 2: takemoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 3: owner(3);break;
-            case 4: takemoney(100);break;//TAX
+            case 4: takemoney(100,$balance);break;//TAX
             case 5: owner(5);break;
             case 6: owner(6);break;
-            case 7: takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 7: takemoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 8: owner(8);break;
             case 9: owner(9);break;
             //JAIL DOESNT WORK NOW
@@ -163,12 +165,12 @@
             case 14: owner(14);break;
             case 15: owner(15);break;
             case 16: owner(17);break;
-            case 17: takemoney(50);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 17: takemoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 18: owner(18);break;
             case 19: owner(19);break;
             case 20: //FREE PARKING
             case 21: owner(21);break;
-            case 22: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 22: givemoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 23: owner(23);break;
             case 24: owner(24);break;
             case 25: owner(25);break;
@@ -179,20 +181,30 @@
             case 30: //JAIL DOESNT WORK NOW
             case 31: owner(31);break;
             case 32: owner(32);break;
-            case 33: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 33: givemoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 34: owner(34);break;
             case 35: owner(35);break;
-            case 36: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 36: givemoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 37: owner(37);break;
-            case 38: givemoney(200);break;//TAX
+            case 38: givemoney(200,$balance);break;//BIG TAX
             case 39: owner(39);break;
-        }        
+        }       
+        echo "<br>YOU ARE IN ".$pos." AND YOU HAVE ".$balance; 
     }
     function owner($where){echo "<br>owner is".$where;}
-    function givemoney($sum){
+    
+    function plusmoney($sum,$who){
         echo "<br>money given";
     }
-    function takemoney($sum){echo "<br>money taken";}
+    function minusmoney($sum,$who){
+        global $mysqli;
+        global $input;
+        global $gamename;
+
+        //GET CURRENT MONEY
+        
+        echo "<br>money taken";
+    }
 
 
 
