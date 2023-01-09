@@ -43,7 +43,7 @@
         echo $playerfound;
     }
     function change(){
-        global $fml=1;
+         $fml=1;
     }
     function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
