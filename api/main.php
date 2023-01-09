@@ -8,8 +8,8 @@ $input = json_decode(file_get_contents('php://input'),true);
 $iam=$input['iam'];
 $gamename=$input['gamename'];
 
-echo "DATA SENT TO SERVER: ".json_encode($input)."<br><br>";//FOR DEBUG
-echo "<br>OUTPUT TO FRONTEND(Note: For simplicity and ease of understanding JSON output has been replaced by simple echo text)";
+echo "DATA SENT TO SERVER: ".json_encode($input)."";//FOR DEBUG
+echo "<br>OUTPUT TO FRONTEND(Note: For simplicity and ease of understanding JSON output has been replaced by simple echo text)<br><br>";
 switch($r=array_shift($request)){
     case 'creategame' :
         creategame();
