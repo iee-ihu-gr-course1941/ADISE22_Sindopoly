@@ -53,7 +53,7 @@
         $playerwhocanplay=$row["pturn"];
 
         $whoseturn=$playerwhocanplay;
-        //echo "<br>On start of turn he plays: ".$whoseturn;
+        echo "<br>On start of turn he plays: ".$whoseturn;
     }
     function endturn(){
         global $mysqli;
