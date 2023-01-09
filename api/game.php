@@ -56,8 +56,8 @@
             $currentpos=$row["p1pos"];
             $nextpos=$currentpos+$roll;
 
-            if($nextpos>39){//IF PLAYER PASSED START
-                $nextpos=$nextpos-39;
+            if($nextpos>39){//IF PLAYER PASSED START SUBSTRACT THE SUM OF TILES FROM HIS POSITION
+                $nextpos=$nextpos-40;
             }
              
             echo "<br>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
