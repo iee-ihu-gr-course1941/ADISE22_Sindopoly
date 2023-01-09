@@ -40,49 +40,7 @@
             $playerfound=2;
         }
     }
-    /*
-    function getturn(){//CHECKS WHOSE TURN IT IS
-        global $mysqli;
-        global $input;
-        global $playerfound;
-        global $gamename;
-        global $whoseturn;
-
-        $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TURN INT
-        $result=mysqli_query($mysqli,$sql);
-        $row = mysqli_fetch_array($result);
-        $playerwhocanplay=$row["pturn"];
-
-        $whoseturn=$playerwhocanplay;
-        echo "<br>On start of turn he plays: ".$whoseturn;
-    }
-    function endturn(){//CHANGES PLAYER TURN IN DB FROM 1 TO 2 vice versa...
-        global $mysqli;
-        global $input;
-        global $playerfound;
-        global $gamename;
-        global $whoseturn;
-
-        $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TURN INT
-        $result=mysqli_query($mysqli,$sql);
-        $row = mysqli_fetch_array($result);
-        $playerwhocanplay=$row["pturn"];
-        $whoseturn=$playerwhocanplay;
-
-        if($whoseturn==1){
-            $whoseturn=2;
-            echo "<br>I AM: ".$whoseturn;
-        }else if($whoseturn==2){
-            $whoseturn==1;
-            echo "<br>I NEED TO BECOME: ".$whoseturn;
-        }
-
-        $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//UPLOAD NEW TURN INT
-        $result=mysqli_query($mysqli,$sql);
-
-        echo "<br>On end of turn he plays: ".$whoseturn;
-    }
-    */
+   
     function rolldice1(){
         global $mysqli;
         global $input;
@@ -91,7 +49,7 @@
         global $turn;
         $roll=rand(1,6);//ROLL THE DICE
 
-        echo "FUCK";
+        echo "<br>STARTING ROLLDICE1";
 
         $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
         $result=mysqli_query($mysqli,$sql);
@@ -119,16 +77,46 @@
         }else{
             echo "Its not you turn yet.Wait for you opponent to play";
         }
-        
-        
-
-        
-
-        
     }
 
 
+    function rolldice2(){
+        global $mysqli;
+        global $input;
+        global $playerfound;
+        global $gamename;
+        global $turn;
+        $roll=rand(1,6);//ROLL THE DICE
 
+        echo "<br>STARTING ROLLDICE2";
+
+        $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
+        $result=mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result);
+        $turn=$row["pturn"];
+        echo "<br>PLAYER WHO PLAYS NOW IS :".$turn;
+        
+        if($turn==1){//IF PLAYER 1 PLAYS
+            $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+            $result=mysqli_query($mysqli,$sql);
+            $row = mysqli_fetch_array($result);
+
+            $pastpos=$row["p2pos"];
+            $nextpos=$pastpos+$roll;
+            if($nextpos>39){//PASSED START
+                $nextpos=$nextpos-40;
+            }
+            
+            $sql="UPDATE game SET `p2pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
+            $result=mysqli_query($mysqli,$sql);
+
+            $turn=1;
+            $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
+            $result=mysqli_query($mysqli,$sql);
+        }else{
+            echo "Its not you turn yet.Wait for you opponent to play";
+        }
+    }
 
 
 
