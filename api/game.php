@@ -16,14 +16,15 @@
         $st=$mysqli->prepare($sql);
         $st->execute();
     }
-    function joingame(){
+    function joingame(){//CHECKS IF THERE ARE THE NAMES OF THE PLAYERS PROVIDED IN PROVIDED GAME AND RETURNS THE NUMBER OF THE PLAYER THE NAME BELONGS TO
         global $mysqli;
         global $input;
         global $playerfound;
         $gamename=$input['gamename'];
         $pname=$input['pname'];
         
-        echo "<br>Gamename: ".$gamename;
+        
+        //CHECK FOR PLAYER 1
         $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
@@ -32,7 +33,7 @@
             $playerfound=1;
         }
 
-        
+        //CHECKS OF PLAYER 2
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
