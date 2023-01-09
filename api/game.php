@@ -139,46 +139,46 @@
             
         
         switch($pos){
-            case '0': givemoney(200);break;
-            case '1': owner();break;
-            case '2': takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '3': owner();break;
-            case '4': takemoney(100);break;//TAX
-            case '5': owner();break;
-            case '6': owner();break;
-            case '7': takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '8': owner();break;
-            case '9': owner();break;
-            case '10': /*JAIL DOESNT WORK NOW*/
-            case '11': owner();break;
-            case '12': owner();break;
-            case '13': owner();break;
-            case '14': owner();break;
-            case '15': owner();break;
-            case '16': owner();break;
-            case '17': takemoney(50);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '18': owner();break;
-            case '19': owner();break;
-            case '20': /*FREE PARKING*/
-            case '21': owner();break;
-            case '22': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '23': owner();break;
-            case '24': owner();break;
-            case '25': owner();break;
-            case '26': owner();break;
-            case '27': owner();break;
-            case '28': owner();break;
-            case '29': owner();break;
-            case '30': /*JAIL DOESNT WORK NOW*/
-            case '31': owner();break;
-            case '32': owner();break;
-            case '33': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '34': owner();break;
-            case '35': owner();break;
-            case '36': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '37': owner();break;
-            case '38': givemoney(200);break;//TAX
-            case '39': owner();break;
+            case 0: givemoney(200);break;
+            case 1: owner();break;
+            case 2: takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 3: owner();break;
+            case 4: takemoney(100);break;//TAX
+            case 5: owner();break;
+            case 6: owner();break;
+            case 7: takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 8: owner();break;
+            case 9: owner();break;
+            //JAIL DOESNT WORK NOW
+            case 11: owner();break;
+            case 12: owner();break;
+            case 13: owner();break;
+            case 14: owner();break;
+            case 15: owner();break;
+            case 16: owner();break;
+            case 17: takemoney(50);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 18: owner();break;
+            case 19: owner();break;
+            case 20: /*FREE PARKING*/
+            case 21: owner();break;
+            case 22: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 23: owner();break;
+            case 24: owner();break;
+            case 25: owner();break;
+            case 26: owner();break;
+            case 27: owner();break;
+            case 28: owner();break;
+            case 29: owner();break;
+            case 30: //JAIL DOESNT WORK NOW
+            case 31: owner();break;
+            case 32: owner();break;
+            case 33: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 34: owner();break;
+            case 35: owner();break;
+            case 36: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 37: owner();break;
+            case 38: givemoney(200);break;//TAX
+            case 39: owner();break;
         }
 
         echo "<br>FUCK".$pos;
