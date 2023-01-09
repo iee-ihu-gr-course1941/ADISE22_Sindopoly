@@ -95,7 +95,7 @@
         }
 
         //PLAYER 2-----------------------------------
-        IF($IAM==2){
+        IF($iam==2){
             echo "<br>STARTING ROLLDICE 2";
 
             $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
