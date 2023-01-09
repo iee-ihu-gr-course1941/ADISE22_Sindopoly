@@ -15,7 +15,6 @@ function dome() {
         "p1name":"snake",
         "p2name":"rules"
         },
-        dataType: "application/json",
         success: letsgo
     }
     );
