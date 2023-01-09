@@ -19,7 +19,7 @@
     function joingame(){
         global $mysqli;
         global $input;
-        $playerfound=0;
+        global $playerfound=0;
         $gamename=$input['gamename'];
         $pname=$input['pname'];
         
@@ -40,7 +40,6 @@
             $playerfound=2;
         }
     }
-
     function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
         $sql="SELECT * FROM game";
