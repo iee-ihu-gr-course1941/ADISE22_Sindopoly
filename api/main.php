@@ -18,7 +18,9 @@ switch($r=array_shift($request)){
         joingame();
     break;
     case 'show' :
-        printdb();
+        if($method='GET'){
+            printdb();
+        }
     break;
     case 'rolldice' :
         rolldice();
