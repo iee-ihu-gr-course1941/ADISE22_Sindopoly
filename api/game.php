@@ -193,17 +193,26 @@
     }
     function owner($where){echo "<br>owner is".$where;}
     
-    function plusmoney($sum,$whomoney){
+    function plusmoney($sum,$bankaccount){
         echo "<br>money given";
     }
-    function minusmoney($sum,$whomoney){
+    function minusmoney($sum,$bankaccount){
         global $mysqli;
         global $input;
         global $gamename;
 
         //GET CURRENT MONEY
-        
-        echo "<br>money taken from ".$whomoney;
+        $sql="SELECT '$bankaccount' FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT BALANCE
+        $result=mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result);
+
+        $oldbalance=$row["p1money"];
+        $newbalance=$balance-$sum;
+
+        $sql="UPDATE game SET '$bankaccount'='$newbalance' WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
+        $result=mysqli_query($mysqli,$sql);
+
+        echo "<br>money taken from ".$bankaccount;
     }
 
 
