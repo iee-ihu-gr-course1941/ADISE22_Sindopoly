@@ -16,7 +16,7 @@ function givedata() {
 function cry(data){
     var fuckme=data[0];
     alert(fuckme);
-    $(resultdiv).html(fuckme);
+    $(resultdiv).html(fuckme.gamename);
 }
 
 
