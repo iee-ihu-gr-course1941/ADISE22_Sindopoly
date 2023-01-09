@@ -23,16 +23,18 @@
         $gamename=$input['gamename'];
         $pname=$input['pname'];
         
-        
+        /*
         $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
         $st=$mysqli->prepare($sql);
         $st->execute();
         $res1 = $st->get_result();
-
+        */
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
-        $st=$mysqli->prepare($sql);
-        $st->execute();
-        $res2 = $st->get_result();
+        $result=mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result)
+        //$st=$mysqli->prepare($sql);
+        //$st->execute();
+        //$res2 = $st->get_result();
 
         /*
         if($res1==$pname){
@@ -40,6 +42,7 @@
         }else if($res2==$pname){
             $playerfound=2;
         }*/
+        echo $row[p2name];
         $playerfound=5;
         //echo "<br> 1-".$res1;
         //echo "<br> 2-".$res2;
