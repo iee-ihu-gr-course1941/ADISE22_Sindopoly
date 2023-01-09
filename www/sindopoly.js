@@ -4,6 +4,9 @@
 // var timer = null;
 var x = { username: null, pass: null };
 
+
+
+
 $(function() {
     $('#inbut').click(givedata);
     $('#outbut').click(getdata);
@@ -47,23 +50,9 @@ function givedata() {
     */
 }
 
-function cry(){
+function cry(data){
     alert("DICKS");
-}
-function getdata() {
-    
-
-    /*
-    $.ajax({
-        url: "api/v1/index.php/exchange",
-        method: 'GET',
-        dataType: "json",
-        contentType: 'application/json',
-    }).done(function(data){
-        var result=$.parseJSON(data);
-        alert(result);
-    });
-    */
+    $(resultdiv).html(data[0]);
 }
 
 
