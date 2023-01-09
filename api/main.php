@@ -30,7 +30,7 @@ switch($r=array_shift($request)){
     break;
 }
 
-echo "<br>Your method is : ".$method;
+echo "<br><br>Your method is : ".$method;
 echo "<br>Player: ".$iam." has finished his turn<br>";
 //echo "<br>Player ".$turn." plays next";
 ?>
