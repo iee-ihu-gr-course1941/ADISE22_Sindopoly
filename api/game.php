@@ -131,13 +131,13 @@
         global $gamename;
         global $iam;
 
-        echo "PUSS";
-        /*
+        echo "PUSSY";
+        
         $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
 
-        $pos=$row["p1pos"];*/
+        $pos=$row["p1pos"];
             
         
         /*
@@ -184,6 +184,7 @@
             case 39: owner();break;
         }
         */
+        echo "DICKS";
         //echo "<br>FUCK".$pos;
     }
     function owner(){echo "<br>owner is";}
