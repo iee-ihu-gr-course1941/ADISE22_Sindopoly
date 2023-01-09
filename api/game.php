@@ -33,7 +33,7 @@
         $namefound=$row["p1name"];
         if($namefound==$joinname){
             $iam=1;
-            echo "<br> YOU ARE PLAYER 1<br>";
+            echo "<br> Joined game: ".$gamename." as Player 2<br>";
         }
         //CHECK FOR PLAYER 2
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
@@ -42,15 +42,18 @@
         $namefound=$row["p2name"];
         if($namefound==$joinname){
             $iam=2;
-            echo "<br> YOU ARE PLAYER 2<br>";
+            echo "<br> Joined game as Player 2<br>";
         }
 
-        //SENDS TO FRONTEND IF YOU ARE P1 OR P2
-        if(($iam==1)||($iam==2)){
+        
+
+        
+        if(($iam==1)||($iam==2)){//SENDS TO FRONTEND IF YOU ARE P1 OR P2
             $sent=array("iam"=>$iam);
             header('Content-type: application/json');
             print json_encode($sent,JSON_PRETTY_PRINT);
-        }else{
+        }else{//IF THE USERNAME ISNT REGISTERED IN THE GAME
+            echo "<br>No player with the given username exists in the game you provided";
             $sent=array("iam"=>"notfound");
             header('Content-type: application/json');
             print json_encode($sent,JSON_PRETTY_PRINT);
