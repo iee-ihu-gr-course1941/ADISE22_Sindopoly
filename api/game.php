@@ -202,6 +202,8 @@
         $row = mysqli_fetch_array($result);
         $owner=$row[$where];
 
+        echo "<br>Owner: ".$owner;
+
         if($owner==0){
             $choice=$input['choice'];
             if($choice=='y'){
