@@ -53,7 +53,7 @@
             header('Content-type: application/json');
             print json_encode($sent,JSON_PRETTY_PRINT);
         }else{//IF THE USERNAME ISNT REGISTERED IN THE GAME
-            echo "<br>No player with the given username exists in the game you provided";
+            echo "<br>No player with the given username exists in the game you provided<br>";
             $sent=array("iam"=>"notfound");
             header('Content-type: application/json');
             print json_encode($sent,JSON_PRETTY_PRINT);
