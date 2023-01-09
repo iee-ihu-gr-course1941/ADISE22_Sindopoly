@@ -39,6 +39,7 @@
         }else if($res2==$pname){
             $playerfound=2;
         }
+        $playerfound=5;
         echo "<br> 1-".$res1;
         echo "<br> 2-".$res2;
         echo "<br> 3-".$playerfound;
