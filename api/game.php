@@ -44,8 +44,22 @@
         global $mysqli;
         global $input;
         global $playerfound;
+        global $gamename;
 
-        echo "<br>".rand(1,6);
+        $roll=rand(1,6);//ROLL THE DICE
+        //if($playerfound==1){//IF CURRENT PLAYER IS PLAYER 1
+            $sql="SELECT p1pos WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+            $result=mysqli_query($mysqli,$sql);
+            $row = mysqli_fetch_array($result);
+            $currentpos=$row["p1pos"];
+            $nextpos=$currentpos+$roll;
+
+            $sql="UPDATE game SET `p1pos`=6 WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
+            $result=mysqli_query($mysqli,$sql);
+        //}
+
+
+
     }
     function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
