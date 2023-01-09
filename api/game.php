@@ -33,7 +33,7 @@
         $namefound=$row["p1name"];
         if($namefound==$joinname){
             $iam=1;
-            echo "<br> Joined game: ".$gamename." as Player 2<br>";
+            echo "<br> Joined game: ".$gamename." as Player 1<br>";
         }
         //CHECK FOR PLAYER 2
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
@@ -42,7 +42,7 @@
         $namefound=$row["p2name"];
         if($namefound==$joinname){
             $iam=2;
-            echo "<br> Joined game as Player 2<br>";
+            echo "<br> Joined game: ".$gamename." as Player 2<br>";
         }
 
         
