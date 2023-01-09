@@ -55,7 +55,7 @@
         $whoseturn=$playerwhocanplay;
         echo "<br>On start of turn he plays: ".$whoseturn;
     }
-    function endturn(){
+    function endturn(){//CHANGES PLAYER TURN IN DB FROM 1 TO 2 vice versa...
         global $mysqli;
         global $input;
         global $playerfound;
@@ -119,10 +119,10 @@
             $sql="UPDATE game SET `p2pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         }
-        /*
+        
         if(($playerfound==1&&$whoseturn==2)||($playerfound==2&&$whoseturn==1)){//IF ITS NOT THE CORRECT PLAYERS TURN
             echo "<br>It is not your turn yet.You need to wait for you opponent to play";
-        }*/
+        }
     }
     function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
