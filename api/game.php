@@ -32,7 +32,7 @@
 
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
-        $row = mysqli_fetch_array($result)
+        //$row = mysqli_fetch_array($result)
         //$st=$mysqli->prepare($sql);
         //$st->execute();
         //$res2 = $st->get_result();
