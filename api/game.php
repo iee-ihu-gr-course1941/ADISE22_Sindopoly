@@ -140,45 +140,45 @@
         
         switch($pos){
             case '0': givemoney(200);break;
-            case '1': tile();break;
+            case '1': owner();break;
             case '2': takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '3': tile();break;
+            case '3': owner();break;
             case '4': takemoney(100);break;//TAX
-            case '5': tile();break;
-            case '6': tile();break;
+            case '5': owner();break;
+            case '6': owner();break;
             case '7': takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '8': tile();break;
-            case '9': tile();break;
+            case '8': owner();break;
+            case '9': owner();break;
             case '10': /*JAIL DOESNT WORK NOW*/break;
-            case '11': tile();break;
-            case '12': tile();break;
-            case '13': tile();break;
-            case '14': tile();break;
-            case '15': tile();break;
-            case '16': tile();break;
+            case '11': owner();break;
+            case '12': owner();break;
+            case '13': owner();break;
+            case '14': owner();break;
+            case '15': owner();break;
+            case '16': owner();break;
             case '17': takemoney(50);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '18': tile();break;
-            case '19': tile();break;
+            case '18': owner();break;
+            case '19': owner();break;
             case '20': /*FREE PARKING*/break;
-            case '21': tile();break;
+            case '21': owner();break;
             case '22': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '23': tile();break;
-            case '24': tile();break;
-            case '25': tile();break;
-            case '26': tile();break;
-            case '27': tile();break;
-            case '28': tile();break;
-            case '29': tile();break;
+            case '23': owner();break;
+            case '24': owner();break;
+            case '25': owner();break;
+            case '26': owner();break;
+            case '27': owner();break;
+            case '28': owner();break;
+            case '29': owner();break;
             case '30': /*JAIL DOESNT WORK NOW*/break;
-            case '31': tile();break;
-            case '32': tile();break;
+            case '31': owner();break;
+            case '32': owner();break;
             case '33': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '34': tile();break;
-            case '35': tile();break;
+            case '34': owner();break;
+            case '35': owner();break;
             case '36': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case '37': tile();break;
+            case '37': owner();break;
             case '38': givemoney(200);break;//TAX
-            case '39': tile();break;
+            case '39': owner();break;
         }
 
         echo "<br>FUCK".$pos;
@@ -187,19 +187,9 @@
 
 
     }
-    function pay(){
-        global $mysqli;
-        global $input;
-
-        $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
-                $result=mysqli_query($mysqli,$sql);
-                $row = mysqli_fetch_array($result);
-                $pos=$row["p1pos"];
-
-
-    }
-    function givemoney($sum){echo "money given";}
-    function takemoney($sum){echo "money taken";}
+    function owner(){echo "<br>owner is"}
+    function givemoney($sum){echo "<br>money given";}
+    function takemoney($sum){echo "<br>money taken";}
 
 
 
