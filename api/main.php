@@ -15,23 +15,23 @@ switch($r=array_shift($request)){
     case 'creategame' :
         if($method=='POST'){
             creategame();
-        }
+        }else { header('HTTP/1.1 405 Method Not Allowed');}
     break;
     case 'joingame' :
         if($method=='POST'){
             joingame();
-        }
+        }else { header('HTTP/1.1 405 Method Not Allowed');}
     break;
     case 'show' :
         if($method=='GET'){
             printdb();
-        }
+        }else { header('HTTP/1.1 405 Method Not Allowed');}
     break;
     case 'rolldice' :
         if($method=='POST'){
             rolldice();
             tile();
-        }
+        }else { header('HTTP/1.1 405 Method Not Allowed');}
     break;
 }
 
