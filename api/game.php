@@ -193,17 +193,17 @@
     }
     function owner($where){echo "<br>owner is".$where;}
     
-    function plusmoney($sum,$who){
+    function plusmoney($sum,$whomoney){
         echo "<br>money given";
     }
-    function minusmoney($sum,$who){
+    function minusmoney($sum,$whomoney){
         global $mysqli;
         global $input;
         global $gamename;
 
         //GET CURRENT MONEY
         
-        echo "<br>money taken";
+        echo "<br>money taken from ".$whomoney;
     }
 
 
