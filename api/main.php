@@ -37,7 +37,7 @@ switch($r=array_shift($request)){
 
 
 echo "<br>You are player: ".$playerfound;
-echo "<br>Player ".$whoseturn." finished his turn";
+echo "<br>Player ".$turn." finished his turn";
 ?>
 
 

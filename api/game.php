@@ -88,7 +88,7 @@
         global $input;
         global $playerfound;
         global $gamename;
-        global $whoseturn;
+        global $turn;
         $roll=rand(1,6);//ROLL THE DICE
 
         $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
@@ -112,17 +112,17 @@
             $result=mysqli_query($mysqli,$sql);
 
             $turn=2;
-            $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//CHANGE TURN
+            $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
             $result=mysqli_query($mysqli,$sql);
+        }else{
+            echo "Its not you turn yet.Wait for you opponent to play";
         }
         
         
 
         
 
-        if(($playerfound==1&&$whoseturn==2)||($playerfound==2&&$whoseturn==1)){//IF ITS NOT THE CORRECT PLAYERS TURN
-            echo "<br>It is not your turn yet player ".$whoseturn.".You need to wait for you opponent to play";
-        }
+        
     }
 
 
