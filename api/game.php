@@ -264,7 +264,8 @@
 
     function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
-        $sql="SELECT * FROM game";
+        global $gamename;
+        $sql="SELECT * FROM game WHERE gamename='$gamename'";
         $st=$mysqli->prepare($sql);
     
         $st->execute();
