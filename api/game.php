@@ -191,7 +191,15 @@
         }       
          
     }
-    function owner($where){echo "<br>owner is".$where;}
+    function owner($where,$buy,$pay){
+        $sql="SELECT $bankaccount FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TILE OWNER
+        $result=mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result);
+        $owner=$row;
+
+        echo "Current tile owner is".$owner;
+
+    }
     
     function plusmoney($sum,$bankaccount){
         global $mysqli;
