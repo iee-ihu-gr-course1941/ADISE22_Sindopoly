@@ -210,7 +210,7 @@
                 minusmoney($buy,$bank);
                 $sql="UPDATE game SET `$where`=$iam WHERE gamename='$gamename'";//UPLOAD NEW OWNER
                 $result=mysqli_query($mysqli,$sql);
-                echo "<br> New owner set player ".$iam;
+                echo "<br> You bought this property. Set player ".$iam." as owner or property";
             }else if($choice=='n'){
                 echo "<br> You didn't buy the property";
             }
