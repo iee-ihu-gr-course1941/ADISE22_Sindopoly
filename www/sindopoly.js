@@ -14,9 +14,9 @@ function givedata() {
 }
 
 function cry(data){
-    var de=data[0];
-    alert(de);
-    $(resultdiv).html(de);
+    var fuckme=data[0];
+    alert(fuckme);
+    $(resultdiv).html(fuckme);
 }
 
 
