@@ -208,6 +208,7 @@
                 minusmoney($buy,$bank);
                 $sql="UPDATE game SET `$where`=$iam WHERE gamename='$gamename'";//UPLOAD NEW OWNER
                 $result=mysqli_query($mysqli,$sql);
+                echo "<br> New owner set player ".$iam;
             }
         }
 
