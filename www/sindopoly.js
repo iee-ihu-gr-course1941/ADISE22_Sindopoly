@@ -12,7 +12,7 @@ function dome() {
         method: "POST",
         dataType: "json",
         contentType: 'application/json',
-        data: JSON.stringify( {"gamename":"solid","p1name":"snake","p2name":"badass"}),
+        data: JSON.stringify( {"gamename":"metal gear solid","p1name":"solid snake","p2name":"liquid snake"}),
         success: letsgo
     }
     );
