@@ -131,14 +131,14 @@
         global $gamename;
         global $iam;
 
-        /*
+        
         $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
 
         $pos=$row["p1pos"];
             
-        */
+        
         /*
         switch($pos){
             case 0: givemoney(200);break;
@@ -183,7 +183,7 @@
             case 39: owner();break;
         }
         */
-        echo "<br>FUCK";
+        echo "<br>FUCK".$pos;
     }
     function owner(){echo "<br>owner is";}
     function givemoney($sum){echo "<br>money given";}
