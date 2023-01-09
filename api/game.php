@@ -270,7 +270,23 @@
         $result=mysqli_query($mysqli,$sql);
         echo "<br>--NEW TRANSACTION--<br>Amount: ".$sum." taken from ".$bankaccount." bank account. New balance is : ".$newbalance;
     } 
+    function endcheck(){
+        global $mysqli;
+        global $input;
+        global $gamename;
 
+        $sql="SELECT p1money,p2money FROM game WHERE gamename='$gamename'";//DOWNLOAD BANK BALANCE OF BOTH PLAYERS
+        $result=mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result);
+        $p1balance=$row['p1money'];
+        $p2balance=$row['p2money'];
+        if($p1balance<0){
+            echo "<br>PLAYER 2 WINS<br>";
+        }
+        if($p2balance<0){
+            echo "<br>PLAYER 1 WINS<br>";
+        }
+    }
 
 
 
@@ -285,7 +301,7 @@
         $st->execute();
         $res = $st->get_result();
         
-        echo "<br><br> This is all the information of the game being played.At the end of each turn it is sent to the frontend to refresh the board<br><br>";
+        echo "<br><br> Below is all the information of the game being played in JSON form.At the end of each turn it is sent to the frontend to refresh the board<br><br>";
         header('Content-type: application/json');
         print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS 100% !!PUT GLOBAL WHEN NEEDED
     }

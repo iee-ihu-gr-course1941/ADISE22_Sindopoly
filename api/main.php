@@ -34,10 +34,8 @@ switch($r=array_shift($request)){
     break;
 }
 
-
-
-printboard();
-
+printboard();//SENDS ALL THE INFORMATION OF THE GAME BEING PLAYED TO THE FRONTEND
+endcheck();//CHECK IF ANY PLAYER'S BALANCE IS LESS THAN 0
 
 
 //FOR DEBUG
