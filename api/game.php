@@ -15,6 +15,8 @@
         $sql="update game SET p2token=md5(CONCAT( p2name, NOW())) where gamename='$gamename'";
         $st=$mysqli->prepare($sql);
         $st->execute();
+
+        echo "<br>Game created with name: ".$gamename." Player 1 name: ".$p1name." Player 2 name: ".$p1name; 
     }
     function joingame(){//CHECKS IF GIVEN NAME IS P1 OR P2 IN GIVEN GAME
         global $mysqli;
