@@ -24,8 +24,9 @@
     }
 
     function defaultgame(){
+        global $p1name;
         global $mysqli;
-        $sql="INSERT INTO game(gamename,p1name,p2name) VALUES ('test','test','test')";
+        $sql="INSERT INTO game(gamename,p1name,p2name) VALUES ('student','$p1name','kostis')";
         $st=$mysqli->prepare($sql);
     
         $st->execute();
