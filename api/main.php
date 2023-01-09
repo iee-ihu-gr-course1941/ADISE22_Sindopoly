@@ -30,13 +30,19 @@ switch($r=array_shift($request)){
     case 'rolldice' :
         if($method=='POST'){
             rolldice();
-            
         }else { header('HTTP/1.1 405 Method Not Allowed');}
     break;
 }
 
+
+
+printboard();
+
+
+
+//FOR DEBUG
 //echo "<br><br>Your method is : ".$method;
-echo "<br><br>Player: ".$iam." has finished his turn<br>";
+//echo "<br><br>Player: ".$iam." has finished his turn<br>";
 //echo "<br>Player ".$turn." plays next";
 ?>
 

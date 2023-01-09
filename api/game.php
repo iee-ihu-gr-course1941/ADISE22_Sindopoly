@@ -69,7 +69,7 @@
 
         //PLAYER 1-----------------------------------
         if($iam==1){
-            echo "<br>Rolling dice for player 1. You rolled a".$roll;
+            echo "<br>Rolling dice for player 1. You rolled a ".$roll;
 
             $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
             $result=mysqli_query($mysqli,$sql);
@@ -106,8 +106,8 @@
 
         //PLAYER 2-----------------------------------
         IF($iam==2){
-            echo "<br>Rolling dice for player 1. You rolled a".$roll
-            ;
+            echo "<br>Rolling dice for player 1. You rolled a ".$roll;
+
             $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
@@ -276,7 +276,7 @@
 
 
 
-    function printdb(){//PRINTS THE WHOLE DATABASE
+    function printboard(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
         global $gamename;
         $sql="SELECT * FROM game WHERE gamename='$gamename'";
@@ -284,7 +284,8 @@
     
         $st->execute();
         $res = $st->get_result();
-    
+        
+        echo "<br><br> This is all the information of the game being played.At the end of each turn it is sent to the frontend to refresh the board<br><br>";
         header('Content-type: application/json');
         print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS 100% !!PUT GLOBAL WHEN NEEDED
     }
