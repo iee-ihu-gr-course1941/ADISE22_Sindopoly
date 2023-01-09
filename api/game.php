@@ -47,19 +47,23 @@
         global $gamename;
 
 
-        //echo "<br>Working in ".$gamename;
+        
         $roll=rand(1,6);//ROLL THE DICE
-        //if($playerfound==1){//IF CURRENT PLAYER IS PLAYER 1
+        if($playerfound==1){//IF CURRENT PLAYER IS PLAYER 1
             $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
             $currentpos=$row["p1pos"];
             $nextpos=$currentpos+$roll;
+
+            if($nextpos>39){//IF PLAYER PASSED START
+                $nextpos=$nextpos-39;
+            }
              
-            echo "<br>Current:".$currentpos." Next".$nextpos." Dice".$roll;
+            //echo "<br>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
             $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
-        //}
+        }
 
 
 
