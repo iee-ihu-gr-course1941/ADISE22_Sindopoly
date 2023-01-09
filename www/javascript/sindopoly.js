@@ -1,4 +1,4 @@
-// var me = { username: null, player_id: null, token: null, role: null };
+ // var me = { username: null, player_id: null, token: null, role: null };
 // var game_status = { status: null, p_turn: null, current_piece: null, result: null, win_direction: null, last_change: null };
 // var last_update = new Date().getTime();
 // var timer = null;
@@ -12,7 +12,7 @@ $(function() {
 function givedata() {
 
     $.ajax({
-        url: "api/v1/index.php/",
+        url: "../api/index.php/",
         type: "POST"
     }
     );
