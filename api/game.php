@@ -30,10 +30,10 @@
         $res1 = $st->get_result();
         */
         echo "<br>Gamename: ".$gamename;
-        $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
+        $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
-        echo "<br>Name found bruh: ".$row["p2name"];
+        echo "<br>Name found bruh: ".$row["p1name"];
         
         //$st=$mysqli->prepare($sql);
         //$st->execute();
