@@ -14,6 +14,10 @@ echo json_encode($input);
 
 //FOR DEBUG
 
+
+echo "<br>IAM BEFORE ".$iam;
+
+
 switch($r=array_shift($request)){
     case 'creategame' :
         creategame();
