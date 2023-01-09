@@ -75,8 +75,8 @@
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
             $turn=$row["pturn"];
-            
-            echo "<br>Its player :".$turn."'s turn";
+
+            echo "<br>Its player ".$turn."'s turn";
             
             if($turn==1){//IF PLAYER 1 PLAYS
                 $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
@@ -109,7 +109,7 @@
             $row = mysqli_fetch_array($result);
             $turn=$row["pturn"];
 
-            echo "<br>Its player :".$turn."'s turn";
+            echo "<br>Its player ".$turn."'s turn";
             
             if($turn==2){//IF PLAYER 2 PLAYS
                 $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
@@ -153,7 +153,7 @@
             $pos=$row["p2pos"];
             $balance="p2money";
         }
-        echo "<br>YOU ARE IN ".$pos." AND YOUR BANK ACCOUNT IS ".$balance;
+        echo "<br>You are in tile ".$pos." and your bank account's name is ".$balance;
         
         switch($pos){
             case 0: plusmoney(200,$balance);break;
@@ -246,7 +246,7 @@
 
         $sql="UPDATE game SET $bankaccount=$newbalance WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
         $result=mysqli_query($mysqli,$sql);
-        echo "<br>Amount: ".$sum." given to ".$bankaccount." bank account. New balance is : ".$newbalance;
+        echo "<br>--NEW TRANSACTION--<br>Amount: ".$sum." given to ".$bankaccount." bank account. New balance is : ".$newbalance;
     }
     function minusmoney($sum,$bankaccount){
         global $mysqli;
@@ -262,7 +262,7 @@
 
         $sql="UPDATE game SET $bankaccount=$newbalance WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
         $result=mysqli_query($mysqli,$sql);
-        echo "<br>Amount: ".$sum." taken from ".$bankaccount." bank account. New balance is : ".$newbalance;
+        echo "<br>--NEW TRANSACTION--<br>Amount: ".$sum." taken from ".$bankaccount." bank account. New balance is : ".$newbalance;
     } 
 
 
