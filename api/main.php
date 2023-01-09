@@ -23,12 +23,9 @@ switch($r=array_shift($request)){
     case 'show' :
         printdb();
     break;
-    case 'login' :
-        logingame();
-    break;
 }
 
-//echo "<br>".$found;
+echo "<br>".$playerfound;
 ?>
 
 
