@@ -195,14 +195,17 @@
         global $mysqli;
         global $input;
         global $gamename;
+        $choice=$input['choice'];
 
         $sql="SELECT $where FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TILE OWNER
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $owner=$row[$where];
 
-        echo "<br>You are in tile ".$where;
-        echo "<br>Current tile owner is ".$owner;
+        echo "My choice is ".$choice;
+
+        //echo "<br>You are in tile ".$where;
+        //echo "<br>Current tile owner is ".$owner;
 
     }
     
