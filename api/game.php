@@ -143,51 +143,51 @@
         
         switch($pos){
             case 0: givemoney(200);break;
-            case 1: owner();break;
+            case 1: owner(1);break;
             case 2: takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 3: owner();break;
+            case 3: owner(3);break;
             case 4: takemoney(100);break;//TAX
-            case 5: owner();break;
-            case 6: owner();break;
+            case 5: owner(5);break;
+            case 6: owner(6);break;
             case 7: takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 8: owner();break;
-            case 9: owner();break;
+            case 8: owner(8);break;
+            case 9: owner(9);break;
             //JAIL DOESNT WORK NOW
-            case 11: owner();break;
-            case 12: owner();break;
-            case 13: owner();break;
-            case 14: owner();break;
-            case 15: owner();break;
-            case 16: owner();break;
+            case 11: owner(11);break;
+            case 12: owner(12);break;
+            case 13: owner(13);break;
+            case 14: owner(14);break;
+            case 15: owner(15);break;
+            case 16: owner(17);break;
             case 17: takemoney(50);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 18: owner();break;
-            case 19: owner();break;
+            case 18: owner(18);break;
+            case 19: owner(19);break;
             case 20: //FREE PARKING
-            case 21: owner();break;
+            case 21: owner()21;break;
             case 22: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 23: owner();break;
-            case 24: owner();break;
-            case 25: owner();break;
-            case 26: owner();break;
-            case 27: owner();break;
-            case 28: owner();break;
-            case 29: owner();break;
+            case 23: owner(23);break;
+            case 24: owner(24);break;
+            case 25: owner(25);break;
+            case 26: owner(26);break;
+            case 27: owner(27);break;
+            case 28: owner(28);break;
+            case 29: owner(29);break;
             case 30: //JAIL DOESNT WORK NOW
-            case 31: owner();break;
-            case 32: owner();break;
+            case 31: owner(31);break;
+            case 32: owner(32);break;
             case 33: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 34: owner();break;
-            case 35: owner();break;
+            case 34: owner(34);break;
+            case 35: owner(35);break;
             case 36: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 37: owner();break;
+            case 37: owner(37);break;
             case 38: givemoney(200);break;//TAX
-            case 39: owner();break;
+            case 39: owner(39);break;
         }
         
         echo " DICKS";
         
     }
-    function owner(){echo "<br>owner is";}
+    function owner($where){echo "<br>owner is".$where;}
     function givemoney($sum){echo "<br>money given";}
     function takemoney($sum){echo "<br>money taken";}
 
