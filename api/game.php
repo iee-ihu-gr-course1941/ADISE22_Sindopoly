@@ -195,18 +195,25 @@
         global $mysqli;
         global $input;
         global $gamename;
-        $choice=$input['choice'];
+        global $iam;
 
         $sql="SELECT $where FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TILE OWNER
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $owner=$row[$where];
 
-        echo "My choice is ".$choice;
+        if($owner==0){
+            $choice=$input['choice'];
+            if($choice=='y'){
+                minusmoney($buy,$bank);
+                $sql="UPDATE game SET `$where`=$iam WHERE gamename='$gamename'";//UPLOAD NEW OWNER
+                $result=mysqli_query($mysqli,$sql);
+            }
+        }
 
+        //echo "My choice is ".$choice;
         //echo "<br>You are in tile ".$where;
         //echo "<br>Current tile owner is ".$owner;
-
     }
     
     function plusmoney($sum,$bankaccount){
