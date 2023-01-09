@@ -139,8 +139,8 @@
 
         $pos=$row["p1pos"];
             
-        echo "<br>I EAT".$pos;
-        /*
+        echo "<br>I EAT".$pos." ";
+        
         switch($pos){
             case 0: givemoney(200);break;
             case 1: owner();break;
@@ -183,13 +183,13 @@
             case 38: givemoney(200);break;//TAX
             case 39: owner();break;
         }
-        */
-        echo "DICKS";
-        //echo "<br>FUCK".$pos;
+        
+        echo " DICKS";
+        
     }
     function owner(){echo "<br>owner is";}
-    function givemoney(){echo "<br>money given";}
-    function takemoney(){echo "<br>money taken";}
+    function givemoney($sum){echo "<br>money given";}
+    function takemoney($sum){echo "<br>money taken";}
 
 
 
