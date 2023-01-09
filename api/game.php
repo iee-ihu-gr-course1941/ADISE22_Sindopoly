@@ -55,7 +55,7 @@
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $turn=$row["pturn"];
-        echo "<br>PLAYER WHO PLAYS NOW IS ".$turn;
+        echo "<br>1! PLAYER WHO PLAYS NOW IS ".$turn;
         
         if($turn==1){//IF PLAYER 1 PLAYS
             $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
@@ -94,7 +94,7 @@
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $turn=$row["pturn"];
-        echo "<br>PLAYER WHO PLAYS NOW IS :".$turn;
+        echo "<br>2! PLAYER WHO PLAYS NOW IS :".$turn;
         
         if($turn==1){//IF PLAYER 1 PLAYS
             $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
