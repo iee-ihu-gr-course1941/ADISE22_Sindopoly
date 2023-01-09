@@ -139,7 +139,7 @@
 
         $pos=$row["p1pos"];
             
-        
+        echo "<br>I EAT".$pos;
         /*
         switch($pos){
             case 0: givemoney(200);break;
