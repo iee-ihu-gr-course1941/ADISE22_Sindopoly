@@ -40,6 +40,7 @@
             $playerfound=2;
         }
     }
+    /*
     function getturn(){//CHECKS WHOSE TURN IT IS
         global $mysqli;
         global $input;
@@ -81,6 +82,7 @@
 
         echo "<br>On end of turn he plays: ".$whoseturn;
     }
+    */
     function rolldice(){
         global $mysqli;
         global $input;
@@ -88,7 +90,12 @@
         global $gamename;
         global $whoseturn;
 
-
+        $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//UPLOAD NEW TURN INT
+        $result=mysqli_query($mysqli,$sql);
+        $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TURN INT
+        $result=mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result);
+        $playerwhocanplay=$row["pturn"];
         
         $roll=rand(1,6);//ROLL THE DICE
         if($playerfound==1&&$whoseturn==1){//IF CURRENT PLAYER IS PLAYER 1
