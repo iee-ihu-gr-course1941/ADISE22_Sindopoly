@@ -1,15 +1,4 @@
 <?php
-    function printdb(){//PRINTS THE WHOLE DATABASE
-        global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
-        $sql="SELECT * FROM game";
-        $st=$mysqli->prepare($sql);
-    
-        $st->execute();
-        $res = $st->get_result();
-    
-        header('Content-type: application/json');
-        print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS 100% !!PUT GLOBAL WHEN NEEDED
-    }
     function creategame(){//CREATES THE GAME WITH NAME P1NAME AND P2NAME VALUES
         global $mysqli;
         global $input;
@@ -27,7 +16,7 @@
         $st=$mysqli->prepare($sql);
         $st->execute();
     }
-    function logingame(){
+    function joingame(){
         global $mysqli;
         global $input;
         global $playerfound=0;
@@ -50,6 +39,18 @@
         }else if($res2==$pname){
             $playerfound=2;
         }
+    }
+
+    function printdb(){//PRINTS THE WHOLE DATABASE
+        global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
+        $sql="SELECT * FROM game";
+        $st=$mysqli->prepare($sql);
+    
+        $st->execute();
+        $res = $st->get_result();
+    
+        header('Content-type: application/json');
+        print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS 100% !!PUT GLOBAL WHEN NEEDED
     }
 
 ?>
