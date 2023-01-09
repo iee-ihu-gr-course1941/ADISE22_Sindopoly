@@ -1,14 +1,7 @@
- // var me = { username: null, player_id: null, token: null, role: null };
-// var game_status = { status: null, p_turn: null, current_piece: null, result: null, win_direction: null, last_change: null };
-// var last_update = new Date().getTime();
-// var timer = null;
-var x = { username: null, pass: null };
-
-
-
-
 $(function() {
+    givedata();
     $('#inbut').click(givedata);
+
     //$('#outbut').click(getdata);
 });
 
@@ -51,8 +44,7 @@ function givedata() {
 }
 
 function cry(data){
-    alert("DICKS");
-    $(resultdiv).html(data[0]);
+    alert(data[0]);
 }
 
 
