@@ -10,14 +10,13 @@
         header('Content-type: application/json');
         print json_encode($res->fetch_all(MYSQLI_ASSOC),JSON_PRETTY_PRINT);//WORKS 100% !!PUT GLOBAL WHEN NEEDED
     }
-
     function creategame(){//CREATES THE GAME WITH NAME P1NAME AND P2NAME VALUES
-        
         global $mysqli;
         global $input;
         $gamename=$input['gamename'];
         $p1name=$input['p1name'];
         $p2name=$input['p2name'];
+
         $sql="INSERT INTO game(gamename,p1name,p2name) VALUES ('$gamename','$p1name','$p2name')";
         $st=$mysqli->prepare($sql);
         $st->execute();
@@ -28,4 +27,29 @@
         $st=$mysqli->prepare($sql);
         $st->execute();
     }
+    function logingame(){
+        global $mysqli;
+        global $input;
+        global $playerfound=0;
+        $gamename=$input['gamename'];
+        $pname=$input['pname'];
+        
+        
+        $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
+        $st=$mysqli->prepare($sql);
+        $st->execute();
+        $res1 = $st->get_result();
+
+        $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
+        $st=$mysqli->prepare($sql);
+        $st->execute();
+        $res2 = $st->get_result();
+
+        if($res1==$pname){
+            $playerfound=1;
+        }else if($res2==$pname){
+            $playerfound=2;
+        }
+    }
+
 ?>

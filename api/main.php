@@ -17,10 +17,18 @@ switch($r=array_shift($request)){
     case 'creategame' :
         creategame();
     break;
+    case 'joingame' :
+        joingame();
+    break;
     case 'show' :
         printdb();
     break;
+    case 'login' :
+        logingame();
+    break;
 }
+
+echo "<br>".$found;
 ?>
 
 
