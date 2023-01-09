@@ -28,7 +28,10 @@ switch($r=array_shift($request)){
         printdb();
     break;
     case 'rolldice' :
+        getturn();
         rolldice();
+        endturn();
+        echo global $whoseturn;
     break;
 }
 
