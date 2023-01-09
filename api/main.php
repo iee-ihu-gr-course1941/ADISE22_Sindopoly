@@ -28,7 +28,7 @@ switch($r=array_shift($request)){
     break;
 }
 
-echo "<br>".$found;
+//echo "<br>".$found;
 ?>
 
 
