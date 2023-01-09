@@ -185,7 +185,7 @@
         */
         echo "<br>FUCK";
     }
-    function owner(){echo "<br>owner is"}
+    function owner(){echo "<br>owner is";}
     function givemoney($sum){echo "<br>money given";}
     function takemoney($sum){echo "<br>money taken";}
 
