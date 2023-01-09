@@ -145,7 +145,7 @@
             $pos=$row["p2pos"];
             $balance="p2money";
         }
-        echo "<br>YOU ARE IN ".$pos."<br>";
+        echo "<br>YOU ARE IN ".$pos." AND YOU HAVE ".$balance;
         
         switch($pos){
             case 0: givemoney(200,$balance);break;
@@ -189,7 +189,7 @@
             case 38: givemoney(200,$balance);break;//BIG TAX
             case 39: owner(39);break;
         }       
-        echo "<br>YOU ARE IN ".$pos." AND YOU HAVE ".$balance; 
+         
     }
     function owner($where){echo "<br>owner is".$where;}
     
