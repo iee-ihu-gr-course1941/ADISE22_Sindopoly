@@ -12,7 +12,7 @@ $(function() {
 function givedata() {
 
     $.ajax({
-        url: "../api/index.php/",
+        url: "../api/main.php/",
         type: "POST"
     }
     );
