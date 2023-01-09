@@ -131,12 +131,11 @@
         global $gamename;
         global $iam;
 
-            $sql="SELECT p'$iam'pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+            $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
-            $pos=$row["p'.$iam.'pos"];
-
-            echo "pos of ".$iam." is ".$pos; 
+            $pos=$row["p1pos"];
+            
             switch($pos){
                 case '0': givemoney(200);break;
                 case '1': tile();break;
