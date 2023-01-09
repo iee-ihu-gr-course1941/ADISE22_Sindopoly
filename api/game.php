@@ -136,6 +136,7 @@
             $row = mysqli_fetch_array($result);
             $pos=$row["p1pos"];
             
+            /*
             switch($pos){
                 case '0': givemoney(200);break;
                 case '1': tile();break;
@@ -177,7 +178,7 @@
                 case '37': tile();break;
                 case '38': givemoney(200);break;//TAX
                 case '39': tile();break;
-            }
+            }*/
 
 
 
