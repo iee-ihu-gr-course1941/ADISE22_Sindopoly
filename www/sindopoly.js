@@ -12,8 +12,8 @@ $(function() {
 function givedata() {
 
     $.ajax({
-        url: "../api/main.php/",
-        type: "POST"
+        url: "../api/main.php/show",
+        success: cry
     }
     );
 
@@ -47,8 +47,8 @@ function givedata() {
     */
 }
 
-function cry(data){
-    alert(data[0]);
+function cry(){
+    alert("DICKS");
 }
 function getdata() {
     
