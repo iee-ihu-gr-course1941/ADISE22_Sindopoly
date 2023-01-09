@@ -16,12 +16,13 @@
         $st=$mysqli->prepare($sql);
         $st->execute();
     }
-    function joingame(){//CHECKS IF THERE ARE THE NAMES OF THE PLAYERS PROVIDED IN PROVIDED GAME AND RETURNS THE NUMBER OF THE PLAYER THE NAME BELONGS TO
+    function joingame(){//CHECKS IF GIVEN NAME IS P1 OR P2 IN GIVEN GAME
         global $mysqli;
         global $input;
         global $iam;
         $gamename=$input['gamename'];
         $joinname=$input['joinname'];
+        $iam=0;//IF NOT FOUND
         
         //CHECK FOR PLAYER 1
         $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
@@ -30,6 +31,7 @@
         $namefound=$row["p1name"];
         if($namefound==$joinname){
             $iam=1;
+            echo "<br> YOU ARE PLAYER 1";
         }
         //CHECK FOR PLAYER 2
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
@@ -38,13 +40,17 @@
         $namefound=$row["p2name"];
         if($namefound==$joinname){
             $iam=2;
+            echo "<br> YOU ARE PLAYER 2";
         }
-        
+
+
+
+        header('Content-type: application/json');
+        print json_encode($iam,JSON_PRETTY_PRINT);
     }
     function rolldice1(){
         global $mysqli;
         global $input;
-        global $playerfound;
         global $gamename;
         global $turn;
         $roll=rand(1,6);//ROLL THE DICE
@@ -81,7 +87,6 @@
     function rolldice2(){
         global $mysqli;
         global $input;
-        global $playerfound;
         global $gamename;
         global $turn;
         $roll=rand(1,6);//ROLL THE DICE
