@@ -24,11 +24,19 @@
     }
 
     function defaultgame(){
-        global $p1name;
+        
         global $mysqli;
-        $sql="INSERT INTO game(gamename,p1name,p2name) VALUES ('student','$p1name','kostis')";
+        global $gamename;
+        global $p1name;
+        global $p2name;
+        $sql="INSERT INTO game(gamename,p1name,p2name) VALUES ('$gamename','$p1name','$p2name')";
         $st=$mysqli->prepare($sql);
-    
+        $st->execute();
+        $sql="update game SET p1token=md5(CONCAT( p1name, NOW())) where gamename='$gamename'";
+        $st=$mysqli->prepare($sql);
+        $st->execute();
+        $sql="update game SET p2token=md5(CONCAT( p2name, NOW())) where gamename='$gamename'";
+        $st=$mysqli->prepare($sql);
         $st->execute();
     }
 ?>
