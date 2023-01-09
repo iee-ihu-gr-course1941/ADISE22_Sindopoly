@@ -24,7 +24,7 @@ switch($r=array_shift($request)){
     break;
     case 'show' :
         if($method=='GET'){
-            printdb();
+            printboard();
         }else { header('HTTP/1.1 405 Method Not Allowed');}
     break;
     case 'rolldice' :
