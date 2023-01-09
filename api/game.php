@@ -184,7 +184,7 @@
             case 19: owner('pr19',50,100,$balance);break;
             case 20: //FREE PARKING
             case 21: owner('pr21',50,100,$balance);break;
-            case 22: plusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 22: minusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 23: owner('pr23',50,100,$balance);break;
             case 24: owner('pr24',50,100,$balance);break;
             case 25: owner('pr25',50,100,$balance);break;
@@ -195,12 +195,12 @@
             case 30: //JAIL DOESNT WORK NOW
             case 31: owner('pr31',50,100,$balance);break;
             case 32: owner('pr32',50,100,$balance);break;
-            case 33: plusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 33: minusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 34: owner('pr34',50,100,$balance);break;
             case 35: owner('pr35',50,100,$balance);break;
-            case 36: plusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+            case 36: minusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 37: owner('pr37',50,100,$balance);break;
-            case 38: plusmoney(200,$balance);break;//BIG TAX
+            case 38: minusmoney(200,$balance);break;//BIG TAX
             case 39: owner('pr39',50,100,$balance);break;
         }       
          
