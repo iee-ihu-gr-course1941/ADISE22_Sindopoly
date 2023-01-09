@@ -6,7 +6,7 @@ $(function() {
 });
 
 function dome() {
-    $.ajax({
+    $.ajax({//WORKS BUT DOESNT TRIGGER ON SUCCESS
         url: "../api/main.php/creategame",
         //success: cry
         method: "POST",
