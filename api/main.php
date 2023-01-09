@@ -13,10 +13,14 @@ echo "<br>OUTPUT TO FRONTEND:<br>(Note: For simplicity and ease of understanding
 
 switch($r=array_shift($request)){
     case 'creategame' :
-        creategame();
+        if($method=='POST'){
+            creategame();
+        }
     break;
     case 'joingame' :
-        joingame();
+        if($method=='POST'){
+            joingame();
+        }
     break;
     case 'show' :
         if($method=='GET'){
