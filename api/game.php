@@ -54,7 +54,7 @@
             $currentpos=$row["p1pos"];
             $nextpos=$currentpos+$roll;
 
-            $sql="UPDATE game SET `p1pos`=6 WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
+            $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         //}
 
