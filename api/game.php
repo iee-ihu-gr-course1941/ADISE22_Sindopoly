@@ -149,53 +149,54 @@
         
         switch($pos){
             case 0: plusmoney(200,$balance);break;
-            case 1: owner(1);break;
+            case 1: owner('pr1',50,100,$balance);break;
             case 2: minusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 3: owner(3);break;
+            case 3: owner('pr2',50,100,$balance);break;
             case 4: minusmoney(100,$balance);break;//TAX
-            case 5: owner(5);break;
-            case 6: owner(6);break;
+            case 5: owner('pr5',50,100,$balance);break;
+            case 6: owner('pr6',50,100,$balance);break;
             case 7: minusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 8: owner(8);break;
-            case 9: owner(9);break;
+            case 8: owner('pr8',50,100,$balance);break;
+            case 9: owner('pr9',50,100,$balance);break;
             //JAIL DOESNT WORK NOW
-            case 11: owner(11);break;
-            case 12: owner(12);break;
-            case 13: owner(13);break;
-            case 14: owner(14);break;
-            case 15: owner(15);break;
-            case 16: owner(17);break;
+            case 11: owner('pr11',50,100,$balance);break;
+            case 12: owner('pr12',50,100,$balance);break;
+            case 13: owner('pr13',50,100,$balance);break;
+            case 14: owner('pr14',50,100,$balance);break;
+            case 15: owner('pr15',50,100,$balance);break;
+            case 16: owner('pr17',50,100,$balance);break;
             case 17: minusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 18: owner(18);break;
-            case 19: owner(19);break;
+            case 18: owner('pr18',50,100,$balance);break;
+            case 19: owner('pr19',50,100,$balance);break;
             case 20: //FREE PARKING
-            case 21: owner(21);break;
+            case 21: owner('pr21',50,100,$balance);break;
             case 22: plusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 23: owner(23);break;
-            case 24: owner(24);break;
-            case 25: owner(25);break;
-            case 26: owner(26);break;
-            case 27: owner(27);break;
-            case 28: owner(28);break;
-            case 29: owner(29);break;
+            case 23: owner('pr23',50,100,$balance);break;
+            case 24: owner('pr24',50,100,$balance);break;
+            case 25: owner('pr25',50,100,$balance);break;
+            case 26: owner('pr26',50,100,$balance);break;
+            case 27: owner('pr27',50,100,$balance);break;
+            case 28: owner('pr28',50,100,$balance);break;
+            case 29: owner('pr29',50,100,$balance);break;
             case 30: //JAIL DOESNT WORK NOW
-            case 31: owner(31);break;
-            case 32: owner(32);break;
+            case 31: owner('pr31',50,100,$balance);break;
+            case 32: owner('pr32',50,100,$balance);break;
             case 33: plusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 34: owner(34);break;
-            case 35: owner(35);break;
+            case 34: owner('pr34',50,100,$balance);break;
+            case 35: owner('pr35',50,100,$balance);break;
             case 36: plusmoney(50,$balance);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-            case 37: owner(37);break;
+            case 37: owner('pr37',50,100,$balance);break;
             case 38: plusmoney(200,$balance);break;//BIG TAX
-            case 39: owner(39);break;
+            case 39: owner('pr39',50,100,$balance);break;
         }       
          
     }
-    function owner($where,$buy,$pay){
+    function owner($where,$buy,$pay,$bank){
         $sql="SELECT $bankaccount FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TILE OWNER
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $owner=$row;
+
 
         echo "<br>Current tile owner is ".$owner;
 
