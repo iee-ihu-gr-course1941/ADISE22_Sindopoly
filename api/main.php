@@ -29,7 +29,8 @@ switch($r=array_shift($request)){
     break;
 }
 
-echo $fml;
+echo "k".$fml;
+echo "h".$playerfound;
 ?>
 
 
