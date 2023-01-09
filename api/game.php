@@ -53,7 +53,7 @@
             $row = mysqli_fetch_array($result);
             $currentpos=$row["p1pos"];
             $nextpos=$currentpos+$roll;
-            echo $nextpos;
+            echo "Current:".$currentpos." Next".$nextpos." Dice".$roll;
             $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         //}
