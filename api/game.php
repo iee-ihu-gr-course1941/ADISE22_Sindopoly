@@ -91,6 +91,8 @@
         global $turn;
         $roll=rand(1,6);//ROLL THE DICE
 
+        echo "FUCK";
+
         $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
