@@ -77,7 +77,7 @@
         $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//UPLOAD NEW TURN INT
         $result=mysqli_query($mysqli,$sql);
 
-        echo "<br>On end of turn he plays: "$whoseturn;
+        echo "<br>On end of turn he plays: ".$whoseturn;
     }
     function rolldice(){
         global $mysqli;
