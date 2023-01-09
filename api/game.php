@@ -137,7 +137,7 @@
 
         $pos=$row["p1pos"];
             
-        
+        /*
         switch($pos){
             case 0: givemoney(200);break;
             case 1: owner();break;
@@ -159,7 +159,7 @@
             case 17: takemoney(50);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 18: owner();break;
             case 19: owner();break;
-            case 20: /*FREE PARKING*/
+            case 20: //FREE PARKING
             case 21: owner();break;
             case 22: givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
             case 23: owner();break;
@@ -180,7 +180,7 @@
             case 38: givemoney(200);break;//TAX
             case 39: owner();break;
         }
-
+        */
         echo "<br>FUCK".$pos;
 
 
