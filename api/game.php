@@ -40,7 +40,7 @@
             $playerfound=2;
         }
 
-        echo "fuck";
+        echo $playerfound;
     }
     function printdb(){//PRINTS THE WHOLE DATABASE
         global $mysqli;//WORKS 100% !!PUT GLOBAL WHEN NEEDED
