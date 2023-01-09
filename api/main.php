@@ -5,14 +5,10 @@ $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
 $input = json_decode(file_get_contents('php://input'),true);
 
-
-
-$iam=$input['iam'];//FOR DEBUG
+$iam=$input['iam'];
 $gamename=$input['gamename'];
 
-echo json_encode($input);
-
-//FOR DEBUG
+echo json_encode($input);//FOR DEBUG
 
 switch($r=array_shift($request)){
     case 'creategame' :
@@ -33,8 +29,8 @@ switch($r=array_shift($request)){
 }
 
 
-echo "<br>You are player: ".$iam;
-echo "<br>Player ".$turn." plays next";
+echo "<br>Player: ".$iam." has finished his turn<br>";
+//echo "<br>Player ".$turn." plays next";
 ?>
 
 

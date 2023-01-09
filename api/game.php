@@ -204,15 +204,26 @@
 
         echo "<br>Owner: ".$owner;
 
-        if($owner==0){
-            $choice=$input['choice'];
+        if($owner==0){//IF NO OWNER
+            $choice=$input['choice'];//PLAYERS CHOICE SENT THROUGH JSON
             if($choice=='y'){
                 minusmoney($buy,$bank);
                 $sql="UPDATE game SET `$where`=$iam WHERE gamename='$gamename'";//UPLOAD NEW OWNER
                 $result=mysqli_query($mysqli,$sql);
                 echo "<br> New owner set player ".$iam;
+            }else($choice=='n'){
+                echo "<br> You didn't buy the property";
             }
+        }else if($owner==$iam){//PLAYER ALREADY HAS THIS PROPERTY
+            echo "<br> You already own this property<br>";
+        }else{//PROPERTY BELONGS TO OPPONENT
+            if($bank=="p1money"){$enemybank="p2money";}
+            if($bank=="p2money"){$enemybank="p1money";}
+            minusmoney($pay,$bank);
+            plusmoney($pay,$enemybank);
+            echo "You gave your opponent ".$pay." dollars";
         }
+
 
         //echo "My choice is ".$choice;
         //echo "<br>You are in tile ".$where;
@@ -249,7 +260,7 @@
 
         $sql="UPDATE game SET $bankaccount=$newbalance WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
         $result=mysqli_query($mysqli,$sql);
-        echo "<br>Money taken from ".$bankaccount." bankaccount. New balance is : ".$newbalance."<br>";
+        echo "<br>Money taken from ".$bankaccount." bank account. New balance is : ".$newbalance."<br>";
     }
 
 
