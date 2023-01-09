@@ -202,7 +202,7 @@
         global $gamename;
 
         //GET CURRENT MONEY
-        $sql="SELECT '$bankaccount' FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT BALANCE
+        $sql="SELECT $bankaccount FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT BALANCE
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
 
