@@ -134,7 +134,7 @@
             $sql="SELECT p'$iam'pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
-            $pos=$row["p'$iam'pos"];
+            $pos=$row["p'.$iam.'pos"];
 
             echo "pos of ".$iam." is ".$pos; 
             switch($pos){
