@@ -75,7 +75,8 @@
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
             $turn=$row["pturn"];
-            echo "<br>PLAYER WHO PLAYS NOW IS :".$turn;
+            
+            echo "<br>Its player :".$turn."'s turn";
             
             if($turn==1){//IF PLAYER 1 PLAYS
                 $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
@@ -101,12 +102,14 @@
 
         //PLAYER 2-----------------------------------
         IF($iam==2){
-            echo "<br>Rolling dice for player 1. You rolled a".$roll;
+            echo "<br>Rolling dice for player 1. You rolled a".$roll
+            ;
             $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
             $turn=$row["pturn"];
-            echo "<br>2! PLAYER WHO PLAYS NOW IS :".$turn;
+
+            echo "<br>Its player :".$turn."'s turn";
             
             if($turn==2){//IF PLAYER 2 PLAYS
                 $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
