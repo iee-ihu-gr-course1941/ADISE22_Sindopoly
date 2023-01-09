@@ -30,7 +30,7 @@ switch($r=array_shift($request)){
 }
 
 echo "<br>FML: ".$fml;
-echo "<br>PLAYERFOUND".$playerfound;
+echo "<br>PLAYERFOUND: ".$playerfound;
 ?>
 
 
