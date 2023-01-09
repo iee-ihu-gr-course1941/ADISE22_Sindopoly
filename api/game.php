@@ -31,7 +31,7 @@
         $namefound=$row["p1name"];
         if($namefound==$joinname){
             $iam=1;
-            echo "<br> YOU ARE PLAYER 1";
+            echo "<br> YOU ARE PLAYER 1<br>";
         }
         //CHECK FOR PLAYER 2
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
@@ -40,13 +40,13 @@
         $namefound=$row["p2name"];
         if($namefound==$joinname){
             $iam=2;
-            echo "<br> YOU ARE PLAYER 2";
+            echo "<br> YOU ARE PLAYER 2<br>";
         }
 
 
 
         header('Content-type: application/json');
-        print json_encode($iam,JSON_PRETTY_PRINT);
+        print json_encode("iam":"$iam",JSON_PRETTY_PRINT);
     }
     function rolldice1(){
         global $mysqli;
