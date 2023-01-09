@@ -14,9 +14,11 @@ function givedata() {
 }
 
 function cry(data){
-    var fuckme=data[0].gamename;
-    alert(fuckme);
-    $(resultdiv).html(fuckme);
+    var gamename=data[0].gamename;
+    var p1name=data[0].p1name;
+    var p2name=data[0].p2name;
+
+    $(resultdiv).html("GAME IS: "+gamename+" P1 NAME IS: "+p1name+" P2 NAME IS: ".p2name);
 }
 
 
