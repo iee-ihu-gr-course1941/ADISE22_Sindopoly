@@ -30,7 +30,7 @@ switch($r=array_shift($request)){
     case 'rolldice' :
         if($method=='POST'){
             rolldice();
-            tile();
+            
         }else { header('HTTP/1.1 405 Method Not Allowed');}
     break;
 }
