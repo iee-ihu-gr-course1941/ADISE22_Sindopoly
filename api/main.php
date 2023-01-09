@@ -10,7 +10,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
 $input = json_decode(file_get_contents('php://input'),true);
 
-$playerfound=1;//SET BACK TO 0
+$iam=$input['iam'];
 $gamename=$input['gamename'];
 //FOR DEBUG
 echo json_encode($input);
@@ -36,7 +36,7 @@ switch($r=array_shift($request)){
 }
 
 
-echo "<br>You are player: ".$playerfound;
+echo "<br>You are player: ".$iam;
 echo "<br>Player ".$turn." plays next";
 ?>
 

@@ -19,28 +19,28 @@
     function joingame(){//CHECKS IF THERE ARE THE NAMES OF THE PLAYERS PROVIDED IN PROVIDED GAME AND RETURNS THE NUMBER OF THE PLAYER THE NAME BELONGS TO
         global $mysqli;
         global $input;
-        global $playerfound;
+        global $iam;
         $gamename=$input['gamename'];
-        $pname=$input['pname'];
+        $joinname=$input['joinname'];
         
         //CHECK FOR PLAYER 1
         $sql="SELECT p1name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $namefound=$row["p1name"];
-        if($namefound==$pname){
-            $playerfound=1;
+        if($namefound==$joinname){
+            $iam=1;
         }
         //CHECK FOR PLAYER 2
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $namefound=$row["p2name"];
-        if($namefound==$pname){
-            $playerfound=2;
+        if($namefound==$joinname){
+            $iam=2;
         }
+        
     }
-   
     function rolldice1(){
         global $mysqli;
         global $input;
@@ -78,8 +78,6 @@
             echo "<br>Its not you turn yet player 1.Wait for you opponent to play";
         }
     }
-
-
     function rolldice2(){
         global $mysqli;
         global $input;
@@ -117,8 +115,15 @@
             echo "<br>Its not you turn yet player 2.Wait for you opponent to play";
         }
     }
+    function tile(){
 
+    }
+    function pay(){
+        global $mysqli;
+        global $input;
+        
 
+    }
 
 
 
