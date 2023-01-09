@@ -10,6 +10,7 @@ function dome() {
         url: "../api/main.php/creategame",
         //success: cry
         method: "POST",
+        dataType: "json",
         data:{
         "gamename":"solid",
         "p1name":"snake",
