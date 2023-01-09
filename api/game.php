@@ -69,7 +69,7 @@
 
         //PLAYER 1-----------------------------------
         if($iam==1){
-            echo "<br>Rolling dice for player 1. You rolled a ".$roll;
+            
 
             $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
             $result=mysqli_query($mysqli,$sql);
@@ -79,6 +79,7 @@
             echo "<br>Its player ".$turn."'s turn";
             
             if($turn==1){//IF PLAYER 1 PLAYS
+                echo "<br>Rolling dice for player 1. You rolled a ".$roll;
                 $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
                 $result=mysqli_query($mysqli,$sql);
                 $row = mysqli_fetch_array($result);
@@ -106,7 +107,7 @@
 
         //PLAYER 2-----------------------------------
         IF($iam==2){
-            echo "<br>Rolling dice for player 1. You rolled a ".$roll;
+            
 
             $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
             $result=mysqli_query($mysqli,$sql);
@@ -116,6 +117,7 @@
             echo "<br>Its player ".$turn."'s turn";
             
             if($turn==2){//IF PLAYER 2 PLAYS
+                echo "<br>Rolling dice for player 1. You rolled a ".$roll;
                 $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
                 $result=mysqli_query($mysqli,$sql);
                 $row = mysqli_fetch_array($result);
