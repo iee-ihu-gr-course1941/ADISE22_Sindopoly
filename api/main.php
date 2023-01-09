@@ -22,16 +22,17 @@ switch($r=array_shift($request)){
 }
 */
 
+switch($r=array_shift($request)){
+    case 'show' :
+        printgame();
+    break;
+    case 'showfull' :
+        printgameall();
+    break;
+    case 'creategame' :
+        defaultgame();
+}
 
-if($request[0]=='show'){
-    printgame();
-}
-if($request[0]=='showfull'){
-    printgameall();
-}
-if($method=='POST'){
-    defaultgame();
-}
 
 
 
