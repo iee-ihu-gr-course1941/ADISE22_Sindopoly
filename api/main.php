@@ -23,8 +23,10 @@ switch($r=array_shift($request)){
         }
     break;
     case 'rolldice' :
-        rolldice();
-        tile();
+        if($method=='POST'){
+            rolldice();
+            tile();
+        }
     break;
 }
 
