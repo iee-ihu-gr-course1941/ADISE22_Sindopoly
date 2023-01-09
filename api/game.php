@@ -29,6 +29,7 @@
         $st->execute();
         $res1 = $st->get_result();
         */
+
         $sql="SELECT p2name FROM game WHERE gamename='$gamename'";
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result)
@@ -42,7 +43,7 @@
         }else if($res2==$pname){
             $playerfound=2;
         }*/
-        echo $row[p2name];
+        echo $row["p2name"];
         $playerfound=5;
         //echo "<br> 1-".$res1;
         //echo "<br> 2-".$res2;
