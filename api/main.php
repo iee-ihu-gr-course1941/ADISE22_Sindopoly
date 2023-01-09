@@ -8,7 +8,7 @@ $input = json_decode(file_get_contents('php://input'),true);
 $iam=$input['iam'];
 $gamename=$input['gamename'];
 
-echo json_encode($input)."<br><br>";//FOR DEBUG
+echo "DATA SENT TO SERVER: ".json_encode($input)."<br><br>";//FOR DEBUG
 
 switch($r=array_shift($request)){
     case 'creategame' :
