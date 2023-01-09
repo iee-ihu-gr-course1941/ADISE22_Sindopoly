@@ -18,7 +18,7 @@ switch($r=array_shift($request)){
         joingame();
     break;
     case 'show' :
-        if($method='GET'){
+        if($method=='GET'){
             printdb();
         }
     break;
