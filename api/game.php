@@ -131,15 +131,19 @@
         global $gamename;
         global $iam;
 
-        echo "PUSSY";
-        
-        $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
-        $result=mysqli_query($mysqli,$sql);
-        $row = mysqli_fetch_array($result);
-
-        $pos=$row["p1pos"];
-            
-        echo "<br>I EAT".$pos." ";
+      
+        if($iam==1){
+            $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+            $result=mysqli_query($mysqli,$sql);
+            $row = mysqli_fetch_array($result);
+            $pos=$row["p1pos"];
+        }else if($iam==2){
+            $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+            $result=mysqli_query($mysqli,$sql);
+            $row = mysqli_fetch_array($result);
+            $pos=$row["p2pos"];
+        }
+        echo "<br>YOU ARE IN ".$pos."<br>";
         
         switch($pos){
             case 0: givemoney(200);break;
@@ -182,13 +186,12 @@
             case 37: owner(37);break;
             case 38: givemoney(200);break;//TAX
             case 39: owner(39);break;
-        }
-        
-        echo " DICKS";
-        
+        }        
     }
     function owner($where){echo "<br>owner is".$where;}
-    function givemoney($sum){echo "<br>money given";}
+    function givemoney($sum){
+        echo "<br>money given";
+    }
     function takemoney($sum){echo "<br>money taken";}
 
 
