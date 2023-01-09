@@ -280,12 +280,12 @@
         $row = mysqli_fetch_array($result);
         $p1balance=$row['p1money'];
         $p2balance=$row['p2money'];
-        echo "<br>p1money:".$p1balance." p2money:".$p2balance;
+        
         if($p1balance<0){
-            echo "<br>----------------------<br>PLAYER 2 WINS<br>>----------------------<br>";
+            echo "<br>-------------------------<br>PLAYER 2 WINS<br>-------------------------<br>";
         }
         if($p2balance<0){
-            echo "<br>----------------------<br>PLAYER 1 WINS<br>>----------------------<br>";
+            echo "<br>-------------------------<br>PLAYER 1 WINS<br>-------------------------<br>";
         }
 
     }
