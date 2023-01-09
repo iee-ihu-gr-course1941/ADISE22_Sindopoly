@@ -210,7 +210,7 @@
 
         $sql="UPDATE game SET $bankaccount=$newbalance WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
         $result=mysqli_query($mysqli,$sql);
-        echo "Money taken from ".$bankaccount." bankaccount. New balance is : ".$newbalance;
+        echo "<br>Money taken from ".$bankaccount." bankaccount. New balance is : ".$newbalance."<br>";
     }
 
 
