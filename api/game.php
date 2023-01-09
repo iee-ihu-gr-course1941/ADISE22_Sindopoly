@@ -19,7 +19,7 @@
     function joingame(){
         global $mysqli;
         global $input;
-        $playerfound=0;
+        global $playerfound=0;
         $gamename=$input['gamename'];
         $pname=$input['pname'];
         
