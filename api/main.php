@@ -31,7 +31,6 @@ switch($r=array_shift($request)){
     break;
     case 'creategame' :
         defaultgame();
-        header("HTTP/1.1 New game created");
     break;
 }
 
