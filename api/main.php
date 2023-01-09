@@ -9,7 +9,7 @@ $iam=$input['iam'];
 $gamename=$input['gamename'];
 
 echo "DATA SENT TO SERVER: ".json_encode($input)."";//FOR DEBUG
-echo "<br>OUTPUT TO FRONTEND:<br>(Note: For simplicity and ease of understanding JSON output has been replaced by simple echo text.For example of JSON output see joingame())<br><br>";
+echo "<br>OUTPUT TO FRONTEND:<br>(Note: For simplicity and ease of understanding JSON output has been replaced by simple echo text.For example of JSON output see joingame() function)<br><br>";
 
 switch($r=array_shift($request)){
     case 'creategame' :
@@ -36,7 +36,7 @@ switch($r=array_shift($request)){
 }
 
 //echo "<br><br>Your method is : ".$method;
-echo "<br>Player: ".$iam." has finished his turn<br>";
+echo "<br><br>Player: ".$iam." has finished his turn<br>";
 //echo "<br>Player ".$turn." plays next";
 ?>
 
