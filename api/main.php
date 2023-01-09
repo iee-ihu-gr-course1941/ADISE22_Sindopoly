@@ -12,6 +12,8 @@ $input = json_decode(file_get_contents('php://input'),true);
 
 //FOR DEBUG
 echo json_encode($input);
+$playerfound=1;
+//FOR DEBUG
 
 switch($r=array_shift($request)){
     case 'creategame' :
