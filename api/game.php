@@ -207,9 +207,11 @@
         $row = mysqli_fetch_array($result);
 
         $oldbalance=$row[$bankaccount];
-        $newbalance=$balance-$sum;
+        $newbalance=$oldbalance-$sum;
+
         echo "<br>Old money= ".$oldbalance." new money= ".$newbalance;
-        $sql="UPDATE game SET '$bankaccount'='$newbalance' WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
+
+        $sql="UPDATE game SET $bankaccount=$newbalance WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
         $result=mysqli_query($mysqli,$sql);
 
         echo "<br>money taken from ".$bankaccount;
