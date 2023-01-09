@@ -10,7 +10,9 @@ $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
 $input = json_decode(file_get_contents('php://input'),true);
 
+$gamename="student";
 $p1name="dimitris";
+$p2name="kostis";
 //$request_path = trim($_SERVER['PATH_INFO'],'/');
 //$GLOBALS['input'] = json_decode(file_get_contents('php://input'), true);
 
