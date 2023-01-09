@@ -43,10 +43,16 @@
             echo "<br> YOU ARE PLAYER 2<br>";
         }
 
-
-        $sent=array("iam"=>$iam);
-        header('Content-type: application/json');
-        print json_encode($sent,JSON_PRETTY_PRINT);
+        //SENDS TO FRONTEND IF YOU ARE P1 OR P2
+        if(($iam==1)||($iam==2)){
+            $sent=array("iam"=>$iam);
+            header('Content-type: application/json');
+            print json_encode($sent,JSON_PRETTY_PRINT);
+        }else{
+            $sent=array("iam"=>"notfound");
+            header('Content-type: application/json');
+            print json_encode($sent,JSON_PRETTY_PRINT);
+        }
     }
     function rolldice1(){
         global $mysqli;
