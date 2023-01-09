@@ -192,6 +192,10 @@
          
     }
     function owner($where,$buy,$pay,$bank){
+        global $mysqli;
+        global $input;
+        global $gamename;
+        
         $sql="SELECT $bankaccount FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TILE OWNER
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
