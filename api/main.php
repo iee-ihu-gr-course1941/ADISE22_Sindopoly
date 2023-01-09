@@ -24,11 +24,11 @@ echo json_encode($input);
 
 
 switch($r=array_shift($request)){
-    case 'show' :
-        printdb();
-    break;
     case 'creategame' :
         creategame();
+    break;
+    case 'show' :
+        printdb();
     break;
 }
 ?>
