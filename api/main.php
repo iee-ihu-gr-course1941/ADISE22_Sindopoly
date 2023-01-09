@@ -29,8 +29,8 @@ switch($r=array_shift($request)){
     break;
 }
 
-echo "<br>FML: ".$fml;
-echo "<br>PLAYERFOUND: ".$playerfound;
+
+echo "<br>You are player: ".$playerfound;
 ?>
 
 
