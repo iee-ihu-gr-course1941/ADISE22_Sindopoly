@@ -210,7 +210,7 @@
                 minusmoney($buy,$bank);
                 $sql="UPDATE game SET `$where`=$iam WHERE gamename='$gamename'";//UPLOAD NEW OWNER
                 $result=mysqli_query($mysqli,$sql);
-                echo "<br> You bought this property. Set player ".$iam." as owner or property";
+                echo "<br> You bought this property. Set player ".$iam." as owner of property";
             }else if($choice=='n'){
                 echo "<br> You didn't buy the property";
             }
@@ -244,7 +244,7 @@
 
         $sql="UPDATE game SET $bankaccount=$newbalance WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
         $result=mysqli_query($mysqli,$sql);
-        echo "<br>Money given to ".$bankaccount." bankaccount. New balance is : ".$newbalance."<br>";
+        echo "<br>Amount: ".$sum." given to ".$bankaccount." bank account. New balance is : ".$newbalance;
     }
     function minusmoney($sum,$bankaccount){
         global $mysqli;
@@ -260,8 +260,8 @@
 
         $sql="UPDATE game SET $bankaccount=$newbalance WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
         $result=mysqli_query($mysqli,$sql);
-        echo "<br>Money taken from ".$bankaccount." bank account. New balance is : ".$newbalance."<br>";
-    }
+        echo "<br>Amount: ".$sum." taken from ".$bankaccount." bank account. New balance is : ".$newbalance;
+    } 
 
 
 
