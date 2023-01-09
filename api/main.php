@@ -24,14 +24,12 @@ switch($r=array_shift($request)){
     case 'show' :
         printdb();
     break;
-    case 'rolldice1' :
-        rolldice1();
+    case 'rolldice' :
+        rolldice();
     break;
-    case 'rolldice2' :
-        rolldice2();
+    case 'tile' :
+        tile();
     break;
-    
-    
 }
 
 

@@ -54,7 +54,7 @@
             print json_encode($sent,JSON_PRETTY_PRINT);
         }
     }
-    function rolldice1(){
+    function rolldice(){
         global $mysqli;
         global $input;
         global $gamename;
@@ -97,7 +97,6 @@
         //PLAYER 2-----------------------------------
         IF($iam==2){
             echo "<br>STARTING ROLLDICE 2";
-
             $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
@@ -126,54 +125,80 @@
             }
         }
     }
-    function rolldice2(){
+    function tile(){
         global $mysqli;
         global $input;
         global $gamename;
-        global $turn;
-        $roll=rand(1,6);//ROLL THE DICE
+        global $iam;
 
-        echo "<br>STARTING ROLLDICE 2";
-
-        $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
-        $result=mysqli_query($mysqli,$sql);
-        $row = mysqli_fetch_array($result);
-        $turn=$row["pturn"];
-        echo "<br>2! PLAYER WHO PLAYS NOW IS :".$turn;
-        
-        if($turn==2){//IF PLAYER 2 PLAYS
-            $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+            $sql="SELECT p'$iam'pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
+            $pos=$row["p'$iam'pos"];
 
-            $pastpos=$row["p2pos"];
-            $nextpos=$pastpos+$roll;
-            if($nextpos>39){//PASSED START
-                $nextpos=$nextpos-40;
+            echo "pos of ".$iam." is ".$pos; 
+            switch($pos){
+                case '0': givemoney(200);break;
+                case '1': tile();break;
+                case '2': takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+                case '3': tile();break;
+                case '4': takemoney(100);break;//TAX
+                case '5': tile();break;
+                case '6': tile();break;
+                case '7': takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+                case '8': tile();break;
+                case '9': tile();break;
+                case '10': /*JAIL DOESNT WORK NOW*/break;
+                case '11': tile();break;
+                case '12': tile();break;
+                case '13': tile();break;
+                case '14': tile();break;
+                case '15': tile();break;
+                case '16': tile();break;
+                case '17': takemoney(50);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+                case '18': tile();break;
+                case '19': tile();break;
+                case '20': /*FREE PARKING*/break;
+                case '21': tile();break;
+                case '22': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+                case '23': tile();break;
+                case '24': tile();break;
+                case '25': tile();break;
+                case '26': tile();break;
+                case '27': tile();break;
+                case '28': tile();break;
+                case '29': tile();break;
+                case '30': /*JAIL DOESNT WORK NOW*/break;
+                case '31': tile();break;
+                case '32': tile();break;
+                case '33': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+                case '34': tile();break;
+                case '35': tile();break;
+                case '36': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
+                case '37': tile();break;
+                case '38': givemoney(200);break;//TAX
+                case '39': tile();break;
             }
-            
-            $sql="UPDATE game SET `p2pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
-            $result=mysqli_query($mysqli,$sql);
 
-            $turn=1;
-            $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
-            $result=mysqli_query($mysqli,$sql);
-        }else{
-            echo "<br>Its not you turn yet player 2.Wait for you opponent to play";
-        }
+
+
+
+
+
     }
-    function tile1(){
-        $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
-            $result=mysqli_query($mysqli,$sql);
-            $row = mysqli_fetch_array($result);
-    }
-    function pay1(){
+    function pay(){
         global $mysqli;
         global $input;
-        
+
+        $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+                $result=mysqli_query($mysqli,$sql);
+                $row = mysqli_fetch_array($result);
+                $pos=$row["p1pos"];
+
 
     }
-
+    function givemoney($sum){echo "money given";}
+    function takemoney($sum){echo "money taken";}
 
 
 
