@@ -14,6 +14,7 @@
     function creategame(){//CREATES THE GAME WITH NAME P1NAME AND P2NAME VALUES
         
         global $mysqli;
+        global $input;
         $gamename=$input['gamename'];
         $p1name=$input['p1name'];
         $p2name=$input['p2name'];
