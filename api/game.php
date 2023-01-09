@@ -131,54 +131,14 @@
         global $gamename;
         global $iam;
 
-            $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
-            $result=mysqli_query($mysqli,$sql);
-            $row = mysqli_fetch_array($result);
-            $pos=$row["p1pos"];
+        $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+        $result=mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result);
+
+        $pos=$row["p1pos"];
             
-            /*
-            switch($pos){
-                case '0': givemoney(200);break;
-                case '1': tile();break;
-                case '2': takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-                case '3': tile();break;
-                case '4': takemoney(100);break;//TAX
-                case '5': tile();break;
-                case '6': tile();break;
-                case '7': takemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-                case '8': tile();break;
-                case '9': tile();break;
-                case '10': /*JAIL DOESNT WORK NOW*/break;
-                case '11': tile();break;
-                case '12': tile();break;
-                case '13': tile();break;
-                case '14': tile();break;
-                case '15': tile();break;
-                case '16': tile();break;
-                case '17': takemoney(50);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-                case '18': tile();break;
-                case '19': tile();break;
-                case '20': /*FREE PARKING*/break;
-                case '21': tile();break;
-                case '22': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-                case '23': tile();break;
-                case '24': tile();break;
-                case '25': tile();break;
-                case '26': tile();break;
-                case '27': tile();break;
-                case '28': tile();break;
-                case '29': tile();break;
-                case '30': /*JAIL DOESNT WORK NOW*/break;
-                case '31': tile();break;
-                case '32': tile();break;
-                case '33': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-                case '34': tile();break;
-                case '35': tile();break;
-                case '36': givemoney(200);break;//COMMUNITY CHEST AND CHANCE DONT WORK -50
-                case '37': tile();break;
-                case '38': givemoney(200);break;//TAX
-                case '39': tile();break;
-            }*/
+        echo "FUCK".$pos;
+        
 
 
 
