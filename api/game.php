@@ -60,34 +60,70 @@
         global $gamename;
         global $turn;
         $roll=rand(1,6);//ROLL THE DICE
+        global $iam;
 
-        echo "<br>STARTING ROLLDICE 1";
+        //PLAYER 1-----------------------------------
+        if($iam==1){
+            echo "<br>STARTING ROLLDICE 1";
 
-        $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
-        $result=mysqli_query($mysqli,$sql);
-        $row = mysqli_fetch_array($result);
-        $turn=$row["pturn"];
-        echo "<br>1! PLAYER WHO PLAYS NOW IS :".$turn;
-        
-        if($turn==1){//IF PLAYER 1 PLAYS
-            $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+            $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
             $result=mysqli_query($mysqli,$sql);
             $row = mysqli_fetch_array($result);
-
-            $pastpos=$row["p1pos"];
-            $nextpos=$pastpos+$roll;
-            if($nextpos>39){//PASSED START
-                $nextpos=$nextpos-40;
-            }
+            $turn=$row["pturn"];
+            echo "<br>1! PLAYER WHO PLAYS NOW IS :".$turn;
             
-            $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
-            $result=mysqli_query($mysqli,$sql);
+            if($turn==1){//IF PLAYER 1 PLAYS
+                $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+                $result=mysqli_query($mysqli,$sql);
+                $row = mysqli_fetch_array($result);
 
-            $turn=2;
-            $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
+                $pastpos=$row["p1pos"];
+                $nextpos=$pastpos+$roll;
+                if($nextpos>39){//PASSED START
+                    $nextpos=$nextpos-40;
+                }
+                
+                $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
+                $result=mysqli_query($mysqli,$sql);
+
+                $turn=2;
+                $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
+                $result=mysqli_query($mysqli,$sql);
+            }else{
+                echo "<br>Its not you turn yet player 1.Wait for you opponent to play";
+            }
+        }
+
+        //PLAYER 2-----------------------------------
+        IF($IAM==2){
+            echo "<br>STARTING ROLLDICE 2";
+
+            $sql="SELECT pturn FROM game WHERE gamename='$gamename'";//DOWNLOAD TURN
             $result=mysqli_query($mysqli,$sql);
-        }else{
-            echo "<br>Its not you turn yet player 1.Wait for you opponent to play";
+            $row = mysqli_fetch_array($result);
+            $turn=$row["pturn"];
+            echo "<br>2! PLAYER WHO PLAYS NOW IS :".$turn;
+            
+            if($turn==2){//IF PLAYER 2 PLAYS
+                $sql="SELECT p2pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+                $result=mysqli_query($mysqli,$sql);
+                $row = mysqli_fetch_array($result);
+
+                $pastpos=$row["p2pos"];
+                $nextpos=$pastpos+$roll;
+                if($nextpos>39){//PASSED START
+                    $nextpos=$nextpos-40;
+                }
+                
+                $sql="UPDATE game SET `p2pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
+                $result=mysqli_query($mysqli,$sql);
+
+                $turn=1;
+                $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
+                $result=mysqli_query($mysqli,$sql);
+            }else{
+                echo "<br>Its not you turn yet player 2.Wait for you opponent to play";
+            }
         }
     }
     function rolldice2(){
@@ -126,10 +162,12 @@
             echo "<br>Its not you turn yet player 2.Wait for you opponent to play";
         }
     }
-    function tile(){
-
+    function tile1(){
+        $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
+            $result=mysqli_query($mysqli,$sql);
+            $row = mysqli_fetch_array($result);
     }
-    function pay(){
+    function pay1(){
         global $mysqli;
         global $input;
         
