@@ -31,7 +31,7 @@ switch($r=array_shift($request)){
         getturn();
         rolldice();
         endturn();
-        echo global $whoseturn;
+        //echo global $whoseturn;
     break;
 }
 
