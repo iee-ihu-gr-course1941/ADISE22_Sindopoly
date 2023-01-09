@@ -47,7 +47,7 @@
         global $gamename;
 
 
-        echo "<br>Working in ".$gamename;
+        //echo "<br>Working in ".$gamename;
         $roll=rand(1,6);//ROLL THE DICE
         //if($playerfound==1){//IF CURRENT PLAYER IS PLAYER 1
             $sql="SELECT p1pos FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT POSITION
