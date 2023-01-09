@@ -196,7 +196,7 @@
         global $input;
         global $gamename;
 
-        $sql="SELECT '$where' FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TILE OWNER
+        $sql="SELECT $where FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT TILE OWNER
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
         $owner=$row[$where];
