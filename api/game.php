@@ -200,7 +200,7 @@
         global $mysqli;
         global $input;
         global $gamename;
-
+        echo "<br>SELECT ".$bankaccount." FROM game WHERE gamename=".$gamename."<br>";
         //GET CURRENT MONEY
         $sql="SELECT $bankaccount FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT BALANCE
         $result=mysqli_query($mysqli,$sql);
