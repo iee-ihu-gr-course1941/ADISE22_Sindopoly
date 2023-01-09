@@ -200,8 +200,7 @@
         global $mysqli;
         global $input;
         global $gamename;
-        echo "<br>SELECT ".$bankaccount." FROM game WHERE gamename=".$gamename."<br>";
-        //GET CURRENT MONEY
+        
         $sql="SELECT $bankaccount FROM game WHERE gamename='$gamename'";//DOWNLOAD CURRENT BALANCE
         $result=mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
@@ -209,12 +208,9 @@
         $oldbalance=$row[$bankaccount];
         $newbalance=$oldbalance-$sum;
 
-        echo "<br>Old money= ".$oldbalance." new money= ".$newbalance;
-
         $sql="UPDATE game SET $bankaccount=$newbalance WHERE gamename='$gamename'";//UPLOAD NEW BALANCE
         $result=mysqli_query($mysqli,$sql);
-
-        echo "<br>money taken from ".$bankaccount;
+        echo "Money taken from ".$bankaccount." bankaccount. New balance is : ".$newbalance;
     }
 
 
