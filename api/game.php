@@ -53,6 +53,7 @@
         $playerwhocanplay=$row["pturn"];
 
         $whoseturn=$playerwhocanplay;
+        echo "<br>On start of turn he plays: ".$whoseturn;
     }
     function endturn(){
         global $mysqli;
@@ -74,7 +75,9 @@
         }
 
         $sql="UPDATE game SET `pturn`=$whoseturn WHERE gamename='$gamename'";//UPLOAD NEW TURN INT
-            $result=mysqli_query($mysqli,$sql);
+        $result=mysqli_query($mysqli,$sql);
+
+        echo "<br>On end of turn he plays: "$whoseturn;
     }
     function rolldice(){
         global $mysqli;
@@ -97,7 +100,7 @@
                 $nextpos=$nextpos-40;
             }
              
-            //echo "<br>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
+            echo "<brFOR P1->>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
             $sql="UPDATE game SET `p1pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         }
@@ -112,7 +115,7 @@
                 $nextpos=$nextpos-40;
             }
              
-            //echo "<br>Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
+            echo "<br>FOR P2->Current:".$currentpos." -Next:".$nextpos." -Diceroll was:".$roll;
             $sql="UPDATE game SET `p2pos`=$nextpos WHERE gamename='$gamename'";//UPLOAD NEXT POSITION
             $result=mysqli_query($mysqli,$sql);
         }
