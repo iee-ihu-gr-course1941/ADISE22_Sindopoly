@@ -95,9 +95,13 @@
                 $turn=2;
                 $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
                 $result=mysqli_query($mysqli,$sql);
+
+                tile();
             }else{
-                echo "<br>Its not you turn yet player 1.Wait for you opponent to play";
+                echo "<br>Its not your turn yet player 1.Wait for you opponent to play";
             }
+
+
         }
 
         //PLAYER 2-----------------------------------
@@ -128,8 +132,10 @@
                 $turn=1;
                 $sql="UPDATE game SET `pturn`=$turn WHERE gamename='$gamename'";//CHANGE TURN
                 $result=mysqli_query($mysqli,$sql);
+
+                tile();
             }else{
-                echo "<br>Its not you turn yet player 2.Wait for you opponent to play";
+                echo "<br>Its not your turn yet player 2.Wait for you opponent to play";
             }
         }
     }
