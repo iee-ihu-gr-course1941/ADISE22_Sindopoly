@@ -43,6 +43,7 @@
         echo $playerfound;
     }
     function change(){
+        global $fml;
          $fml=1;
     }
     function printdb(){//PRINTS THE WHOLE DATABASE
